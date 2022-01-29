@@ -2,6 +2,7 @@
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import request from "../node_modules/superagent";
 
 const navigation = [
   { name: 'Product', href: '#' },
@@ -11,6 +12,21 @@ const navigation = [
 ]
 
 export default function Example() {
+  var test;
+  request
+.post('https://data.mongodb-api.com/app/data-ogtvp/endpoint/data/beta/action/find')
+.set({'Content-Type':'application/json',
+'api-key':'ZFQ1gZmfP7bZsMF6r4dNDHcJLk9NGiGY0ZO0dO5unqoo1JYI2afQtnucKmin6Uu1',
+'Access-Control-Allow-Origin':'*',
+'Host': 'data.mongodb-api.com',
+'Access-Control-Allow-Headers': "X-Requested-With"
+
+})
+.send({ collection: "studio", database: "tommy",dataSource:"Cluster0" })
+.end(function(err, res){
+test=res;
+console.log(test);
+});  
   return (
     <div className="relative bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
