@@ -9,6 +9,6 @@ export default async (req, res) => {
     .sort({ metacritic: -1 })
     .limit(20)
     .toArray();
-
+  console.log(movies)
   res.json(movies);
 };
