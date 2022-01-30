@@ -1,7 +1,12 @@
 {
   "/_app": "pages/_app.js",
+  "/api/hello": "pages/api/hello.js",
+  "/api/mongo": "pages/api/mongo.js",
+  "/api/personalnfo": "pages/api/personalnfo.js",
+  "/": "pages/index.html",
+  "/info": "pages/info.js",
+  "/submit": "pages/submit.html",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/info": "pages/info.js",
-  "/api/personalnfo": "pages/api/personalnfo.js"
+  "/404": "pages/404.html"
 }
