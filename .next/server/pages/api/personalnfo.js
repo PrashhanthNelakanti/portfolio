@@ -5,7 +5,7 @@ exports.id = 105;
 exports.ids = [105];
 exports.modules = {
 
-/***/ 13:
+/***/ 8013:
 /***/ ((module) => {
 
 module.exports = require("mongodb");
@@ -20,8 +20,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ handler)
 /* harmony export */ });
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-const { connectToDatabase  } = __webpack_require__(57);
-const ObjectId = (__webpack_require__(13).ObjectId);
+const { connectToDatabase  } = __webpack_require__(6057);
+const ObjectId = (__webpack_require__(8013).ObjectId);
 async function handler(req, res) {
     // switch the methods
     switch(req.method){
