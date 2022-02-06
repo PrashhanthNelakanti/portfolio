@@ -1,7 +1,11 @@
-/* This example requires Tailwind CSS v2.0+ */
-import { PaperClipIcon } from '@heroicons/react/solid'
+import React,{useEffect} from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Info({ data }) {
+    useEffect(()=>{
+        Aos.init({duration:2000})
+    },[])
   return (
     <div>
         <div className="bg-white shadow overflow-hidden sm:rounded-lg">
@@ -14,7 +18,7 @@ export default function Info({ data }) {
             ) : (
                 <ul>
                     {data.map((info, i) => (
-                        <div className="border-t border-gray-300" key={info.id}>
+                        <div data-aos="fade-up" className="border-t border-gray-300" key={info.id}>
                           <dl>
                             <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                               <dt className="text-sm font-medium text-gray-500">Full name</dt>

@@ -1,15 +1,5 @@
 {
-  "/404": "pages/404.html",
   "/_app": "pages/_app.js",
-  "/about": "pages/about.html",
-  "/api/hello": "pages/api/hello.js",
-  "/api/mongo": "pages/api/mongo.js",
-  "/api/personalnfo": "pages/api/personalnfo.js",
-  "/dashboard": "pages/dashboard.html",
-  "/": "pages/index.html",
-  "/info": "pages/info.js",
-  "/ninjas/ninja": "pages/ninjas/ninja.html",
-  "/submit": "pages/submit.html",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js"
 }

@@ -1,7 +1,7 @@
 
 const Footer = () => {
     return (<>
-        <div id="footer" className="text-center bg-gradient-to-r from-purple-500 to-blue-500">
+        <div className="text-center bg-gradient-to-r from-purple-500 to-blue-500">
             <div className="container p-6">
                 <div className="">
                     <p className="flex justify-center items-center border-white text-white">
@@ -13,7 +13,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="text-center border-white text-white p-4" style={{'background-color': 'rgba(0, 0, 0, 0.2)'}}>
+            <div className="text-center border-white text-white p-4" style={{'backgroundColor': 'rgba(0, 0, 0, 0.2)'}}>
                 © 2022 Copyright: Prashhanth
             </div>
         </div>
