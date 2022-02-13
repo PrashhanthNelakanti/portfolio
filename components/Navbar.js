@@ -4,8 +4,8 @@ import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { useRouter } from 'next/router'
 
 const user = {
-  name: 'Tom Cook',
-  email: 'tom@example.com',
+  name: 'Prashhanth Nelakanti',
+  email: 'prashhanth.nelakanti@gmail.com',
   imageUrl:
     'https://media-exp1.licdn.com/dms/image/C5603AQEj4AWtH8N89A/profile-displayphoto-shrink_200_200/0/1605781245678?e=1649894400&v=beta&t=qn2RuS29GWM2GpG7ZrkBrP33HwgkUn-Fx0yKb19aOIY',
 }
@@ -62,7 +62,7 @@ export default function Navbar() {
                       </div>
                     </div>
                   </div>
-                  <div className="hidden md:block">
+                  {/* <div className="hidden md:block">
                     <div className="ml-4 flex items-center md:ml-6">
                       <button
                         type="button"
@@ -71,9 +71,7 @@ export default function Navbar() {
                         <span className="sr-only">View notifications</span>
                         <BellIcon className="h-6 w-6" aria-hidden="true" />
                         <div class="absolute top-6 right-21 -mr-1 -mt-1 w-5 h-5 rounded-full bg-gray-50 animate-ping"></div>
-                      </button>
-                     
-                      {/* Profile dropdown */}
+                      </button>           
                       <Menu as="div" className="ml-3 relative">
                         <div>
                           <Menu.Button className="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
@@ -110,7 +108,7 @@ export default function Navbar() {
                         </Transition>
                       </Menu>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="-mr-2 flex md:hidden">
                     {/* Mobile menu button */}
                     <Disclosure.Button className="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">

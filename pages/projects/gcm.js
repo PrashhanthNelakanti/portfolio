@@ -15,16 +15,6 @@ const project = {
   duration: {
     tenure: 'Sep 2017 - Dec 2019'
   },
-  sizes: [
-    { name: 'XXS', inStock: false },
-    { name: 'XS', inStock: true },
-    { name: 'S', inStock: true },
-    { name: 'M', inStock: true },
-    { name: 'L', inStock: true },
-    { name: 'XL', inStock: true },
-    { name: '2XL', inStock: true },
-    { name: '3XL', inStock: true },
-  ],
   description:
     "GCM is a Enterprise Application Software which is uses the internal framework called VEC Framework which is built on the Spring Frame framework itself. The application interacts with various other application in the organization and play a vital role in gather the information of the user issues such as ticket creations, status of the ticket, ticket implementation etc.",
   highlights: [
@@ -33,7 +23,7 @@ const project = {
     'Integrated third party APIs like CISCO to analyze the reports and billing generated based on contract',
   ],
   details:
-    ' Worked on Cloud platforms like AWS and PCF. Having 4.5 years of experience at in developing Spring framework and 2 years into Angular 7 applications.',
+    'Worked on Cloud platforms like AWS and PCF. Having 4.5 years of experience at in developing Spring framework and 2 years into Angular 7 applications.',
 
   reviews: [
     { average: 4, name: "Java-8" },

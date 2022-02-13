@@ -12,7 +12,7 @@ const Home = () => {
           I love to covert coffee ☕️ to code 👨🏽‍💻.
           </p>
           <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-          "The only way to learn a new programming language is by writing programs in it." - Dennis Ritchie
+          "In some ways, programming is like painting. You start with a blank canvas and certain basic raw materials. You use a combination of science, art, and craft to determine what to do with them." - Andrew Hunt
           </p>
           <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
             <div className="rounded-md shadow">
