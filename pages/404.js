@@ -10,7 +10,7 @@ const NotFound = () => {
                             <h1 className="text-9xl font-bold text-purple-400">404</h1>
                             <h1 className="text-6xl font-medium py-8">oops! Page not found</h1>
                             <p className="text-2xl pb-8 px-12 font-medium">Oops! The page you are looking for does not exist. It might have been moved or deleted.</p>
-                            <Link href="/dashboard">
+                            <Link href="/home">
                                 <a className="bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-white font-semibold px-6 py-3 rounded-md mr-6">
                                     Go Back Home
                                 </a>
