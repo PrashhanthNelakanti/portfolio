@@ -30,10 +30,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/about.js"
     ],
-    "/submit": [
+    "/info": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/submit.js"
+      "static/chunks/pages/info.js"
     ]
   },
   "ampFirstPages": []
