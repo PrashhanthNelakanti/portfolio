@@ -20,7 +20,7 @@ const about = {
     'Integrated third party APIs like CISCO to analyze the reports and billing generated based on contract',
   ],
   details:
-    'Worked on Cloud platforms like AWS and PCF. Having 4.5 years of experience at in developing Spring framework and 2 years into Angular 7 applications.',
+    'Worked on Cloud platforms like AWS and PCF. Having 4.5 years of experience in developing Spring framework and 2 years into Angular 7 applications.',
   reviews: [
     { average: 4, name: "Java-8" },
     { average: 4, name: "Spring Boot" },
