@@ -1,123 +1,273 @@
-/*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
+"use strict";
 (() => {
 var exports = {};
-exports.id = "pages/_app";
-exports.ids = ["pages/_app"];
+exports.id = 888;
+exports.ids = [888,229];
 exports.modules = {
 
-/***/ "./components/Footer.js":
-/*!******************************!*\
-  !*** ./components/Footer.js ***!
-  \******************************/
+/***/ 1132:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n\nconst Footer = ()=>{\n    return(/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {}, void 0, false));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL0Zvb3Rlci5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQ0EsS0FBSyxDQUFDQSxNQUFNLE9BQVMsQ0FBQztJQUNsQixNQUFNO0FBRVYsQ0FBQztBQUVELGlFQUFlQSxNQUFNLEVBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9wcm9maWxlLy4vY29tcG9uZW50cy9Gb290ZXIuanM/ZTFhYiJdLCJzb3VyY2VzQ29udGVudCI6WyJcbmNvbnN0IEZvb3RlciA9ICgpID0+IHtcbiAgICByZXR1cm4gKDw+XG4gICAgPC8+KTtcbn1cblxuZXhwb3J0IGRlZmF1bHQgRm9vdGVyOyJdLCJuYW1lcyI6WyJGb290ZXIiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./components/Footer.js\n");
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ _app)
+});
+
+// EXTERNAL MODULE: external "react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(997);
+;// CONCATENATED MODULE: ./components/Footer.js
+
+const Footer = ()=>{
+    return(/*#__PURE__*/ jsx_runtime_.jsx(jsx_runtime_.Fragment, {}));
+};
+/* harmony default export */ const components_Footer = (Footer);
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(6689);
+;// CONCATENATED MODULE: external "@headlessui/react"
+const react_namespaceObject = require("@headlessui/react");
+// EXTERNAL MODULE: external "@heroicons/react/outline"
+var outline_ = __webpack_require__(8768);
+;// CONCATENATED MODULE: external "next/router"
+const router_namespaceObject = require("next/router");
+;// CONCATENATED MODULE: ./components/Navbar.js
+
+
+
+
+
+const user = {
+    name: 'Prashhanth Nelakanti',
+    email: 'prashhanth.nelakanti@gmail.com',
+    imageUrl: 'https://media-exp1.licdn.com/dms/image/C5603AQEj4AWtH8N89A/profile-displayphoto-shrink_200_200/0/1605781245678?e=1649894400&v=beta&t=qn2RuS29GWM2GpG7ZrkBrP33HwgkUn-Fx0yKb19aOIY'
+};
+const navigation = [
+    {
+        name: 'Home',
+        href: '/home',
+        current: true
+    },
+    {
+        name: 'About',
+        href: '/about',
+        current: false
+    },
+    {
+        name: 'Info',
+        href: '/info',
+        current: false
+    },
+    {
+        name: 'Projects',
+        href: '/projects',
+        current: false
+    },
+    {
+        name: 'Forms',
+        href: '/submit',
+        current: false
+    }, 
+];
+const userNavigation = [
+    {
+        name: 'Your Profile',
+        href: '#'
+    },
+    {
+        name: 'Settings',
+        href: '#'
+    },
+    {
+        name: 'Sign out',
+        href: '#'
+    }, 
+];
+function classNames(...classes) {
+    return classes.filter(Boolean).join(' ');
+}
+function Navbar() {
+    const router = (0,router_namespaceObject.useRouter)();
+    return(/*#__PURE__*/ jsx_runtime_.jsx(jsx_runtime_.Fragment, {
+        children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
+            className: "min-h-full",
+            children: /*#__PURE__*/ jsx_runtime_.jsx(react_namespaceObject.Disclosure, {
+                as: "nav",
+                className: "bg-gray-800",
+                children: ({ open  })=>/*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
+                        children: [
+                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+                                children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                    className: "flex items-center justify-between h-16",
+                                    children: [
+                                        /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                            className: "flex items-center",
+                                            children: [
+                                                /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                                    className: "flex-shrink-0",
+                                                    children: /*#__PURE__*/ jsx_runtime_.jsx("img", {
+                                                        className: "h-8 w-8",
+                                                        src: "https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg",
+                                                        alt: "Workflow"
+                                                    })
+                                                }),
+                                                /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                                    className: "hidden md:block",
+                                                    children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                                        className: "ml-10 flex items-baseline space-x-4",
+                                                        children: navigation.map((item)=>/*#__PURE__*/ jsx_runtime_.jsx("a", {
+                                                                href: item.href,
+                                                                className: classNames('text-gray-300 hover:bg-gray-700 hover:text-white', 'px-3 py-2 rounded-md text-sm font-medium'),
+                                                                "aria-current": item.current ? 'page' : undefined,
+                                                                children: item.name
+                                                            }, item.name)
+                                                        )
+                                                    })
+                                                })
+                                            ]
+                                        }),
+                                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                            className: "-mr-2 flex md:hidden",
+                                            children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(react_namespaceObject.Disclosure.Button, {
+                                                className: "bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white",
+                                                children: [
+                                                    /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                                        className: "sr-only",
+                                                        children: "Open main menu"
+                                                    }),
+                                                    open ? /*#__PURE__*/ jsx_runtime_.jsx(outline_.XIcon, {
+                                                        className: "block h-6 w-6",
+                                                        "aria-hidden": "true"
+                                                    }) : /*#__PURE__*/ jsx_runtime_.jsx(outline_.MenuIcon, {
+                                                        className: "block h-6 w-6",
+                                                        "aria-hidden": "true"
+                                                    })
+                                                ]
+                                            })
+                                        })
+                                    ]
+                                })
+                            }),
+                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(react_namespaceObject.Disclosure.Panel, {
+                                className: "md:hidden",
+                                children: [
+                                    /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                        className: "px-2 pt-2 pb-3 space-y-1 sm:px-3",
+                                        children: navigation.map((item)=>/*#__PURE__*/ jsx_runtime_.jsx(react_namespaceObject.Disclosure.Button, {
+                                                as: "a",
+                                                href: item.href,
+                                                className: classNames(item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'block px-3 py-2 rounded-md text-base font-medium'),
+                                                "aria-current": item.current ? 'page' : undefined,
+                                                children: item.name
+                                            }, item.name)
+                                        )
+                                    }),
+                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                        className: "pt-4 pb-3 border-t border-gray-700",
+                                        children: [
+                                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                                className: "flex items-center px-5",
+                                                children: [
+                                                    /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                                        className: "flex-shrink-0",
+                                                        children: /*#__PURE__*/ jsx_runtime_.jsx("img", {
+                                                            className: "h-10 w-10 rounded-full",
+                                                            src: user.imageUrl,
+                                                            alt: ""
+                                                        })
+                                                    }),
+                                                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                                        className: "ml-3",
+                                                        children: [
+                                                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                                                className: "text-base font-medium leading-none text-white",
+                                                                children: user.name
+                                                            }),
+                                                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                                                className: "text-sm font-medium leading-none text-gray-400",
+                                                                children: user.email
+                                                            })
+                                                        ]
+                                                    }),
+                                                    /*#__PURE__*/ jsx_runtime_.jsx("button", {
+                                                        type: "button",
+                                                        className: "ml-auto bg-gray-800 flex-shrink-0 p-1 rounded-full text-red-400 hover:text-red focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                                                    })
+                                                ]
+                                            }),
+                                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                                className: "mt-3 px-2 space-y-1",
+                                                children: userNavigation.map((item)=>/*#__PURE__*/ jsx_runtime_.jsx(react_namespaceObject.Disclosure.Button, {
+                                                        as: "a",
+                                                        href: item.href,
+                                                        className: "block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700",
+                                                        children: item.name
+                                                    }, item.name)
+                                                )
+                                            })
+                                        ]
+                                    })
+                                ]
+                            })
+                        ]
+                    })
+            })
+        })
+    }));
+};
+
+;// CONCATENATED MODULE: ./components/Layout.js
+
+
+
+const Layout = ({ children  })=>{
+    return(/*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx(Navbar, {}),
+            children,
+            /*#__PURE__*/ jsx_runtime_.jsx(components_Footer, {})
+        ]
+    }));
+};
+/* harmony default export */ const components_Layout = (Layout);
+
+;// CONCATENATED MODULE: ./pages/_app.js
+
+
+
+function MyApp({ Component , pageProps  }) {
+    return(/*#__PURE__*/ jsx_runtime_.jsx(components_Layout, {
+        children: /*#__PURE__*/ jsx_runtime_.jsx(Component, {
+            ...pageProps
+        })
+    }));
+}
+/* harmony default export */ const _app = (MyApp);
+
 
 /***/ }),
 
-/***/ "./components/Layout.js":
-/*!******************************!*\
-  !*** ./components/Layout.js ***!
-  \******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Footer */ \"./components/Footer.js\");\n/* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navbar */ \"./components/Navbar.js\");\n\n\n\nconst Layout = ({ children  })=>{\n    return(/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_Navbar__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {}, void 0, false, {\n                fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Layout.js\",\n                lineNumber: 6,\n                columnNumber: 6\n            }, undefined),\n            children,\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_Footer__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {}, void 0, false, {\n                fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Layout.js\",\n                lineNumber: 8,\n                columnNumber: 6\n            }, undefined)\n        ]\n    }, void 0, true));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Layout);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL0xheW91dC5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7QUFBNkI7QUFDQTtBQUU3QixLQUFLLENBQUNFLE1BQU0sSUFBSSxDQUFDQyxDQUFBQSxRQUFRLEdBQUMsR0FBSyxDQUFDO0lBQzVCLE1BQU07O3dGQUNKRiwrQ0FBTTs7Ozs7WUFDTkUsUUFBUTt3RkFDUkgsK0NBQU07Ozs7Ozs7QUFFWixDQUFDO0FBRUQsaUVBQWVFLE1BQU0sRUFBQyIsInNvdXJjZXMiOlsid2VicGFjazovL3Byb2ZpbGUvLi9jb21wb25lbnRzL0xheW91dC5qcz81MTVjIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBGb290ZXIgZnJvbSBcIi4vRm9vdGVyXCI7XG5pbXBvcnQgTmF2YmFyIGZyb20gXCIuL05hdmJhclwiO1xuXG5jb25zdCBMYXlvdXQgPSAoe2NoaWxkcmVufSkgPT4ge1xuICAgIHJldHVybiAoPD5cbiAgICAgPE5hdmJhci8+XG4gICAgIHtjaGlsZHJlbn1cbiAgICAgPEZvb3Rlci8+XG4gICAgPC8+ICApO1xufVxuIFxuZXhwb3J0IGRlZmF1bHQgTGF5b3V0OyJdLCJuYW1lcyI6WyJGb290ZXIiLCJOYXZiYXIiLCJMYXlvdXQiLCJjaGlsZHJlbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./components/Layout.js\n");
-
-/***/ }),
-
-/***/ "./components/Navbar.js":
-/*!******************************!*\
-  !*** ./components/Navbar.js ***!
-  \******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Navbar)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _headlessui_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @headlessui/react */ \"@headlessui/react\");\n/* harmony import */ var _headlessui_react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_headlessui_react__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _heroicons_react_outline__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @heroicons/react/outline */ \"@heroicons/react/outline\");\n/* harmony import */ var _heroicons_react_outline__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_heroicons_react_outline__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/router */ \"next/router\");\n/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_4__);\n\n\n\n\n\nconst user = {\n    name: 'Prashhanth Nelakanti',\n    email: 'prashhanth.nelakanti@gmail.com',\n    imageUrl: 'https://media-exp1.licdn.com/dms/image/C5603AQEj4AWtH8N89A/profile-displayphoto-shrink_200_200/0/1605781245678?e=1649894400&v=beta&t=qn2RuS29GWM2GpG7ZrkBrP33HwgkUn-Fx0yKb19aOIY'\n};\nconst navigation = [\n    {\n        name: 'Home',\n        href: '/home',\n        current: true\n    },\n    {\n        name: 'About',\n        href: '/about',\n        current: false\n    },\n    {\n        name: 'Info',\n        href: '/info',\n        current: false\n    },\n    {\n        name: 'Projects',\n        href: '/projects',\n        current: false\n    },\n    {\n        name: 'Forms',\n        href: '/submit',\n        current: false\n    }, \n];\nconst userNavigation = [\n    {\n        name: 'Your Profile',\n        href: '#'\n    },\n    {\n        name: 'Settings',\n        href: '#'\n    },\n    {\n        name: 'Sign out',\n        href: '#'\n    }, \n];\nfunction classNames(...classes) {\n    return classes.filter(Boolean).join(' ');\n}\nfunction Navbar() {\n    const router = (0,next_router__WEBPACK_IMPORTED_MODULE_4__.useRouter)();\n    return(/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n            className: \"min-h-full\",\n            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_headlessui_react__WEBPACK_IMPORTED_MODULE_2__.Disclosure, {\n                as: \"nav\",\n                className: \"bg-gray-800\",\n                children: ({ open  })=>/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                className: \"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\",\n                                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    className: \"flex items-center justify-between h-16\",\n                                    children: [\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                            className: \"flex items-center\",\n                                            children: [\n                                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                                    className: \"flex-shrink-0\",\n                                                    children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"img\", {\n                                                        className: \"h-8 w-8\",\n                                                        src: \"https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg\",\n                                                        alt: \"Workflow\"\n                                                    }, void 0, false, {\n                                                        fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Navbar.js\",\n                                                        lineNumber: 41,\n                                                        columnNumber: 23\n                                                    }, this)\n                                                }, void 0, false, {\n                                                    fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Navbar.js\",\n                                                    lineNumber: 40,\n                                                    columnNumber: 21\n                                                }, this),\n                                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                                    className: \"hidden md:block\",\n                                                    children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                                        className: \"ml-10 flex items-baseline space-x-4\",\n                                                        children: navigation.map((item)=>/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"a\", {\n                                                                href: item.href,\n                                                                className: classNames('text-gray-300 hover:bg-gray-700 hover:text-white', 'px-3 py-2 rounded-md text-sm font-medium'),\n                                                                \"aria-current\": item.current ? 'page' : undefined,\n                                                                children: item.name\n                                                            }, item.name, false, {\n                                                                fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Navbar.js\",\n                                                                lineNumber: 50,\n                                                                columnNumber: 27\n                                                            }, this)\n                                                        )\n                                                    }, void 0, false, {\n                                                        fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Navbar.js\",\n                                                        lineNumber: 48,\n                                                        columnNumber: 23\n                                                    }, this)\n                                                }, void 0, false, {\n                                                    fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Navbar.js\",\n                                                    lineNumber: 47,\n                                                    columnNumber: 21\n                                                }, this)\n                                            ]\n                                        }, void 0, true, {\n                                            fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Navbar.js\",\n                                            lineNumber: 39,\n                                            columnNumber: 19\n                                        }, this),\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                            className: \"-mr-2 flex md:hidden\",\n                                            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_headlessui_react__WEBPACK_IMPORTED_MODULE_2__.Disclosure.Button, {\n                                                className: \"bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white\",\n                                                children: [\n                                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n                                                        className: \"sr-only\",\n                                                        children: \"Open main menu\"\n                                                    }, void 0, false, {\n                                                        fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Navbar.js\",\n                                                        lineNumber: 115,\n                                                        columnNumber: 23\n                                                    }, this),\n                                                    open ? /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_heroicons_react_outline__WEBPACK_IMPORTED_MODULE_3__.XIcon, {\n                                                        className: \"block h-6 w-6\",\n                                                        \"aria-hidden\": \"true\"\n                                                    }, void 0, false, {\n                                                        fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Navbar.js\",\n                                                        lineNumber: 117,\n                                                        columnNumber: 25\n                                                    }, this) : /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_heroicons_react_outline__WEBPACK_IMPORTED_MODULE_3__.MenuIcon, {\n                                                        className: \"block h-6 w-6\",\n                                                        \"aria-hidden\": \"true\"\n                                                    }, void 0, false, {\n                                                        fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Navbar.js\",\n                                                        lineNumber: 119,\n                                                        columnNumber: 25\n                                                    }, this)\n                                                ]\n                                            }, void 0, true, {\n                                                fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Navbar.js\",\n                                                lineNumber: 114,\n                                                columnNumber: 21\n                                            }, this)\n                                        }, void 0, false, {\n                                            fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Navbar.js\",\n                                            lineNumber: 112,\n                                            columnNumber: 19\n                                        }, this)\n                                    ]\n                                }, void 0, true, {\n                                    fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Navbar.js\",\n                                    lineNumber: 38,\n                                    columnNumber: 17\n                                }, this)\n                            }, void 0, false, {\n                                fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Navbar.js\",\n                                lineNumber: 37,\n                                columnNumber: 15\n                            }, this),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_headlessui_react__WEBPACK_IMPORTED_MODULE_2__.Disclosure.Panel, {\n                                className: \"md:hidden\",\n                                children: [\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                        className: \"px-2 pt-2 pb-3 space-y-1 sm:px-3\",\n                                        children: navigation.map((item)=>/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_headlessui_react__WEBPACK_IMPORTED_MODULE_2__.Disclosure.Button, {\n                                                as: \"a\",\n                                                href: item.href,\n                                                className: classNames(item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'block px-3 py-2 rounded-md text-base font-medium'),\n                                                \"aria-current\": item.current ? 'page' : undefined,\n                                                children: item.name\n                                            }, item.name, false, {\n                                                fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Navbar.js\",\n                                                lineNumber: 129,\n                                                columnNumber: 21\n                                            }, this)\n                                        )\n                                    }, void 0, false, {\n                                        fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Navbar.js\",\n                                        lineNumber: 127,\n                                        columnNumber: 17\n                                    }, this),\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                        className: \"pt-4 pb-3 border-t border-gray-700\",\n                                        children: [\n                                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                                className: \"flex items-center px-5\",\n                                                children: [\n                                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                                        className: \"flex-shrink-0\",\n                                                        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"img\", {\n                                                            className: \"h-10 w-10 rounded-full\",\n                                                            src: user.imageUrl,\n                                                            alt: \"\"\n                                                        }, void 0, false, {\n                                                            fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Navbar.js\",\n                                                            lineNumber: 146,\n                                                            columnNumber: 23\n                                                        }, this)\n                                                    }, void 0, false, {\n                                                        fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Navbar.js\",\n                                                        lineNumber: 145,\n                                                        columnNumber: 21\n                                                    }, this),\n                                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                                        className: \"ml-3\",\n                                                        children: [\n                                                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                                                className: \"text-base font-medium leading-none text-white\",\n                                                                children: user.name\n                                                            }, void 0, false, {\n                                                                fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Navbar.js\",\n                                                                lineNumber: 149,\n                                                                columnNumber: 23\n                                                            }, this),\n                                                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                                                className: \"text-sm font-medium leading-none text-gray-400\",\n                                                                children: user.email\n                                                            }, void 0, false, {\n                                                                fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Navbar.js\",\n                                                                lineNumber: 150,\n                                                                columnNumber: 23\n                                                            }, this)\n                                                        ]\n                                                    }, void 0, true, {\n                                                        fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Navbar.js\",\n                                                        lineNumber: 148,\n                                                        columnNumber: 21\n                                                    }, this),\n                                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n                                                        type: \"button\",\n                                                        className: \"ml-auto bg-gray-800 flex-shrink-0 p-1 rounded-full text-red-400 hover:text-red focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white\"\n                                                    }, void 0, false, {\n                                                        fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Navbar.js\",\n                                                        lineNumber: 152,\n                                                        columnNumber: 21\n                                                    }, this)\n                                                ]\n                                            }, void 0, true, {\n                                                fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Navbar.js\",\n                                                lineNumber: 144,\n                                                columnNumber: 19\n                                            }, this),\n                                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                                className: \"mt-3 px-2 space-y-1\",\n                                                children: userNavigation.map((item)=>/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_headlessui_react__WEBPACK_IMPORTED_MODULE_2__.Disclosure.Button, {\n                                                        as: \"a\",\n                                                        href: item.href,\n                                                        className: \"block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700\",\n                                                        children: item.name\n                                                    }, item.name, false, {\n                                                        fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Navbar.js\",\n                                                        lineNumber: 160,\n                                                        columnNumber: 23\n                                                    }, this)\n                                                )\n                                            }, void 0, false, {\n                                                fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Navbar.js\",\n                                                lineNumber: 158,\n                                                columnNumber: 19\n                                            }, this)\n                                        ]\n                                    }, void 0, true, {\n                                        fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Navbar.js\",\n                                        lineNumber: 143,\n                                        columnNumber: 17\n                                    }, this)\n                                ]\n                            }, void 0, true, {\n                                fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Navbar.js\",\n                                lineNumber: 126,\n                                columnNumber: 15\n                            }, this)\n                        ]\n                    }, void 0, true)\n            }, void 0, false, {\n                fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Navbar.js\",\n                lineNumber: 34,\n                columnNumber: 9\n            }, this)\n        }, void 0, false, {\n            fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/components/Navbar.js\",\n            lineNumber: 33,\n            columnNumber: 7\n        }, this)\n    }, void 0, false));\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,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LFNBQVMsRUFBQyxDQUFNOzt3SUFDbEJELENBQUc7Z0VBQUNDLFNBQVMsRUFBQyxDQUErQzswRUFBRWhCLElBQUksQ0FBQ0MsSUFBSTs7Ozs7O3dJQUN4RWMsQ0FBRztnRUFBQ0MsU0FBUyxFQUFDLENBQWdEOzBFQUFFaEIsSUFBSSxDQUFDRSxLQUFLOzs7Ozs7Ozs7Ozs7Z0lBRTVFNkIsQ0FBTTt3REFDTEMsSUFBSSxFQUFDLENBQVE7d0RBQ2JoQixTQUFTLEVBQUMsQ0FBZ0w7Ozs7Ozs7Ozs7Ozt3SEFJN0xELENBQUc7Z0RBQUNDLFNBQVMsRUFBQyxDQUFxQjswREFDakNULGNBQWMsQ0FBQ2UsR0FBRyxFQUFFQyxJQUFJLCtFQUN0QjlCLGdFQUFpQjt3REFFaEJ3QixFQUFFLEVBQUMsQ0FBRzt3REFDTlosSUFBSSxFQUFFa0IsSUFBSSxDQUFDbEIsSUFBSTt3REFDZlcsU0FBUyxFQUFDLENBQW1HO2tFQUU1R08sSUFBSSxDQUFDdEIsSUFBSTt1REFMTHNCLElBQUksQ0FBQ3RCLElBQUk7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQWlCdEMsQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovL3Byb2ZpbGUvLi9jb21wb25lbnRzL05hdmJhci5qcz9mYmNhIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEZyYWdtZW50IH0gZnJvbSAncmVhY3QnXG5pbXBvcnQgeyBEaXNjbG9zdXJlLCBNZW51LCBUcmFuc2l0aW9uIH0gZnJvbSAnQGhlYWRsZXNzdWkvcmVhY3QnXG5pbXBvcnQgeyBCZWxsSWNvbiwgTWVudUljb24sIFhJY29uIH0gZnJvbSAnQGhlcm9pY29ucy9yZWFjdC9vdXRsaW5lJ1xuaW1wb3J0IHsgdXNlUm91dGVyIH0gZnJvbSAnbmV4dC9yb3V0ZXInXG5cbmNvbnN0IHVzZXIgPSB7XG4gIG5hbWU6ICdQcmFzaGhhbnRoIE5lbGFrYW50aScsXG4gIGVtYWlsOiAncHJhc2hoYW50aC5uZWxha2FudGlAZ21haWwuY29tJyxcbiAgaW1hZ2VVcmw6XG4gICAgJ2h0dHBzOi8vbWVkaWEtZXhwMS5saWNkbi5jb20vZG1zL2ltYWdlL0M1NjAzQVFFajRBV3RIOE44OUEvcHJvZmlsZS1kaXNwbGF5cGhvdG8tc2hyaW5rXzIwMF8yMDAvMC8xNjA1NzgxMjQ1Njc4P2U9MTY0OTg5NDQwMCZ2PWJldGEmdD1xbjJSdVMyOUdXTTJHcEc3WnJrQnJQMzNId2drVW4tRngweUtiMTlhT0lZJyxcbn1cbmNvbnN0IG5hdmlnYXRpb24gPSBbXG4gIHsgbmFtZTogJ0hvbWUnLCBocmVmOiAnL2hvbWUnLCBjdXJyZW50OiB0cnVlIH0sXG4gIHsgbmFtZTogJ0Fib3V0JywgaHJlZjogJy9hYm91dCcsIGN1cnJlbnQ6IGZhbHNlIH0sXG4gIHsgbmFtZTogJ0luZm8nLCBocmVmOiAnL2luZm8nLCBjdXJyZW50OiBmYWxzZSB9LFxuICB7IG5hbWU6ICdQcm9qZWN0cycsIGhyZWY6ICcvcHJvamVjdHMnLCBjdXJyZW50OiBmYWxzZSB9LFxuICB7IG5hbWU6ICdGb3JtcycsIGhyZWY6ICcvc3VibWl0JywgY3VycmVudDogZmFsc2UgfSxcbl1cbmNvbnN0IHVzZXJOYXZpZ2F0aW9uID0gW1xuICB7IG5hbWU6ICdZb3VyIFByb2ZpbGUnLCBocmVmOiAnIycgfSxcbiAgeyBuYW1lOiAnU2V0dGluZ3MnLCBocmVmOiAnIycgfSxcbiAgeyBuYW1lOiAnU2lnbiBvdXQnLCBocmVmOiAnIycgfSxcbl1cblxuZnVuY3Rpb24gY2xhc3NOYW1lcyguLi5jbGFzc2VzKSB7XG4gIHJldHVybiBjbGFzc2VzLmZpbHRlcihCb29sZWFuKS5qb2luKCcgJylcbn1cblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gTmF2YmFyKCkge1xuICAgIGNvbnN0IHJvdXRlciA9IHVzZVJvdXRlcigpO1xuICByZXR1cm4gKFxuICAgIDw+XG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cIm1pbi1oLWZ1bGxcIj5cbiAgICAgICAgPERpc2Nsb3N1cmUgYXM9XCJuYXZcIiBjbGFzc05hbWU9XCJiZy1ncmF5LTgwMFwiPlxuICAgICAgICAgIHsoeyBvcGVuIH0pID0+IChcbiAgICAgICAgICAgIDw+XG4gICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibWF4LXctN3hsIG14LWF1dG8gcHgtNCBzbTpweC02IGxnOnB4LThcIj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiBoLTE2XCI+XG4gICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyXCI+XG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleC1zaHJpbmstMFwiPlxuICAgICAgICAgICAgICAgICAgICAgIDxpbWdcbiAgICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cImgtOCB3LThcIlxuICAgICAgICAgICAgICAgICAgICAgICAgc3JjPVwiaHR0cHM6Ly90YWlsd2luZHVpLmNvbS9pbWcvbG9nb3Mvd29ya2Zsb3ctbWFyay1pbmRpZ28tNTAwLnN2Z1wiXG4gICAgICAgICAgICAgICAgICAgICAgICBhbHQ9XCJXb3JrZmxvd1wiXG4gICAgICAgICAgICAgICAgICAgICAgLz5cbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaGlkZGVuIG1kOmJsb2NrXCI+XG4gICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJtbC0xMCBmbGV4IGl0ZW1zLWJhc2VsaW5lIHNwYWNlLXgtNFwiPlxuICAgICAgICAgICAgICAgICAgICAgICAge25hdmlnYXRpb24ubWFwKChpdGVtKSA9PiAoXG4gICAgICAgICAgICAgICAgICAgICAgICAgIDxhXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAga2V5PXtpdGVtLm5hbWV9XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgaHJlZj17aXRlbS5ocmVmfVxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT17Y2xhc3NOYW1lcyggICAgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAndGV4dC1ncmF5LTMwMCBob3ZlcjpiZy1ncmF5LTcwMCBob3Zlcjp0ZXh0LXdoaXRlJyxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICdweC0zIHB5LTIgcm91bmRlZC1tZCB0ZXh0LXNtIGZvbnQtbWVkaXVtJ1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICl9XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgYXJpYS1jdXJyZW50PXtpdGVtLmN1cnJlbnQgPyAncGFnZScgOiB1bmRlZmluZWR9XG4gICAgICAgICAgICAgICAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICB7aXRlbS5uYW1lfVxuICAgICAgICAgICAgICAgICAgICAgICAgICA8L2E+XG4gICAgICAgICAgICAgICAgICAgICAgICApKX1cbiAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgIHsvKiA8ZGl2IGNsYXNzTmFtZT1cImhpZGRlbiBtZDpibG9ja1wiPlxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm1sLTQgZmxleCBpdGVtcy1jZW50ZXIgbWQ6bWwtNlwiPlxuICAgICAgICAgICAgICAgICAgICAgIDxidXR0b25cbiAgICAgICAgICAgICAgICAgICAgICAgIHR5cGU9XCJidXR0b25cIlxuICAgICAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwiYmctZ3JheS04MDAgcC0xIHJvdW5kZWQtZnVsbCB0ZXh0LWdyYXktNDAwIGhvdmVyOnRleHQtd2hpdGUgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctMiBmb2N1czpyaW5nLW9mZnNldC0yIGZvY3VzOnJpbmctb2Zmc2V0LWdyYXktODAwIGZvY3VzOnJpbmctd2hpdGVcIlxuICAgICAgICAgICAgICAgICAgICAgICAgb25DbGljaz17KCkgPT4gcm91dGVyLnB1c2goJy9ub3RpZmljYXRpb24nKX0gPlxuICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwic3Itb25seVwiPlZpZXcgbm90aWZpY2F0aW9uczwvc3Bhbj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxCZWxsSWNvbiBjbGFzc05hbWU9XCJoLTYgdy02XCIgYXJpYS1oaWRkZW49XCJ0cnVlXCIgLz5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9XCJhYnNvbHV0ZSB0b3AtNiByaWdodC0yMSAtbXItMSAtbXQtMSB3LTUgaC01IHJvdW5kZWQtZnVsbCBiZy1ncmF5LTUwIGFuaW1hdGUtcGluZ1wiPjwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgIDwvYnV0dG9uPiAgICAgICAgICAgXG4gICAgICAgICAgICAgICAgICAgICAgPE1lbnUgYXM9XCJkaXZcIiBjbGFzc05hbWU9XCJtbC0zIHJlbGF0aXZlXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgICA8TWVudS5CdXR0b24gY2xhc3NOYW1lPVwibWF4LXcteHMgYmctZ3JheS04MDAgcm91bmRlZC1mdWxsIGZsZXggaXRlbXMtY2VudGVyIHRleHQtc20gZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctMiBmb2N1czpyaW5nLW9mZnNldC0yIGZvY3VzOnJpbmctb2Zmc2V0LWdyYXktODAwIGZvY3VzOnJpbmctd2hpdGVcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJzci1vbmx5XCI+T3BlbiB1c2VyIG1lbnU8L3NwYW4+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGltZyBjbGFzc05hbWU9XCJoLTggdy04IHJvdW5kZWQtZnVsbFwiIHNyYz17dXNlci5pbWFnZVVybH0gYWx0PVwiXCIgLz5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgPC9NZW51LkJ1dHRvbj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgPFRyYW5zaXRpb25cbiAgICAgICAgICAgICAgICAgICAgICAgICAgYXM9e0ZyYWdtZW50fVxuICAgICAgICAgICAgICAgICAgICAgICAgICBlbnRlcj1cInRyYW5zaXRpb24gZWFzZS1vdXQgZHVyYXRpb24tMTAwXCJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgZW50ZXJGcm9tPVwidHJhbnNmb3JtIG9wYWNpdHktMCBzY2FsZS05NVwiXG4gICAgICAgICAgICAgICAgICAgICAgICAgIGVudGVyVG89XCJ0cmFuc2Zvcm0gb3BhY2l0eS0xMDAgc2NhbGUtMTAwXCJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgbGVhdmU9XCJ0cmFuc2l0aW9uIGVhc2UtaW4gZHVyYXRpb24tNzVcIlxuICAgICAgICAgICAgICAgICAgICAgICAgICBsZWF2ZUZyb209XCJ0cmFuc2Zvcm0gb3BhY2l0eS0xMDAgc2NhbGUtMTAwXCJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgbGVhdmVUbz1cInRyYW5zZm9ybSBvcGFjaXR5LTAgc2NhbGUtOTVcIlxuICAgICAgICAgICAgICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgICAgICAgICAgICA8TWVudS5JdGVtcyBjbGFzc05hbWU9XCJvcmlnaW4tdG9wLXJpZ2h0IGFic29sdXRlIHJpZ2h0LTAgbXQtMiB3LTQ4IHJvdW5kZWQtbWQgc2hhZG93LWxnIHB5LTEgYmctd2hpdGUgcmluZy0xIHJpbmctYmxhY2sgcmluZy1vcGFjaXR5LTUgZm9jdXM6b3V0bGluZS1ub25lXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAge3VzZXJOYXZpZ2F0aW9uLm1hcCgoaXRlbSkgPT4gKFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPE1lbnUuSXRlbSBrZXk9e2l0ZW0ubmFtZX0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHsoeyBhY3RpdmUgfSkgPT4gKFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxhXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBocmVmPXtpdGVtLmhyZWZ9XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjbGFzc05hbWU9e2NsYXNzTmFtZXMoXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGFjdGl2ZSA/ICdiZy1ncmF5LTEwMCcgOiAnJyxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJ2Jsb2NrIHB4LTQgcHktMiB0ZXh0LXNtIHRleHQtZ3JheS03MDAnXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICApfVxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHtpdGVtLm5hbWV9XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9hPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICApfVxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9NZW51Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgKSl9XG4gICAgICAgICAgICAgICAgICAgICAgICAgIDwvTWVudS5JdGVtcz5cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvVHJhbnNpdGlvbj5cbiAgICAgICAgICAgICAgICAgICAgICA8L01lbnU+XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgPC9kaXY+ICovfVxuICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCItbXItMiBmbGV4IG1kOmhpZGRlblwiPlxuICAgICAgICAgICAgICAgICAgICB7LyogTW9iaWxlIG1lbnUgYnV0dG9uICovfVxuICAgICAgICAgICAgICAgICAgICA8RGlzY2xvc3VyZS5CdXR0b24gY2xhc3NOYW1lPVwiYmctZ3JheS04MDAgaW5saW5lLWZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIHAtMiByb3VuZGVkLW1kIHRleHQtZ3JheS00MDAgaG92ZXI6dGV4dC13aGl0ZSBob3ZlcjpiZy1ncmF5LTcwMCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6cmluZy0yIGZvY3VzOnJpbmctb2Zmc2V0LTIgZm9jdXM6cmluZy1vZmZzZXQtZ3JheS04MDAgZm9jdXM6cmluZy13aGl0ZVwiPlxuICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInNyLW9ubHlcIj5PcGVuIG1haW4gbWVudTwvc3Bhbj5cbiAgICAgICAgICAgICAgICAgICAgICB7b3BlbiA/IChcbiAgICAgICAgICAgICAgICAgICAgICAgIDxYSWNvbiBjbGFzc05hbWU9XCJibG9jayBoLTYgdy02XCIgYXJpYS1oaWRkZW49XCJ0cnVlXCIgLz5cbiAgICAgICAgICAgICAgICAgICAgICApIDogKFxuICAgICAgICAgICAgICAgICAgICAgICAgPE1lbnVJY29uIGNsYXNzTmFtZT1cImJsb2NrIGgtNiB3LTZcIiBhcmlhLWhpZGRlbj1cInRydWVcIiAvPlxuICAgICAgICAgICAgICAgICAgICAgICl9XG4gICAgICAgICAgICAgICAgICAgIDwvRGlzY2xvc3VyZS5CdXR0b24+XG4gICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgICAgPERpc2Nsb3N1cmUuUGFuZWwgY2xhc3NOYW1lPVwibWQ6aGlkZGVuXCI+XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJweC0yIHB0LTIgcGItMyBzcGFjZS15LTEgc206cHgtM1wiPlxuICAgICAgICAgICAgICAgICAge25hdmlnYXRpb24ubWFwKChpdGVtKSA9PiAoXG4gICAgICAgICAgICAgICAgICAgIDxEaXNjbG9zdXJlLkJ1dHRvblxuICAgICAgICAgICAgICAgICAgICAgIGtleT17aXRlbS5uYW1lfVxuICAgICAgICAgICAgICAgICAgICAgIGFzPVwiYVwiXG4gICAgICAgICAgICAgICAgICAgICAgaHJlZj17aXRlbS5ocmVmfVxuICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT17Y2xhc3NOYW1lcyhcbiAgICAgICAgICAgICAgICAgICAgICAgIGl0ZW0uY3VycmVudCA/ICdiZy1ncmF5LTkwMCB0ZXh0LXdoaXRlJyA6ICd0ZXh0LWdyYXktMzAwIGhvdmVyOmJnLWdyYXktNzAwIGhvdmVyOnRleHQtd2hpdGUnLFxuICAgICAgICAgICAgICAgICAgICAgICAgJ2Jsb2NrIHB4LTMgcHktMiByb3VuZGVkLW1kIHRleHQtYmFzZSBmb250LW1lZGl1bSdcbiAgICAgICAgICAgICAgICAgICAgICApfVxuICAgICAgICAgICAgICAgICAgICAgIGFyaWEtY3VycmVudD17aXRlbS5jdXJyZW50ID8gJ3BhZ2UnIDogdW5kZWZpbmVkfVxuICAgICAgICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgICAgICAge2l0ZW0ubmFtZX1cbiAgICAgICAgICAgICAgICAgICAgPC9EaXNjbG9zdXJlLkJ1dHRvbj5cbiAgICAgICAgICAgICAgICAgICkpfVxuICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicHQtNCBwYi0zIGJvcmRlci10IGJvcmRlci1ncmF5LTcwMFwiPlxuICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBweC01XCI+XG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleC1zaHJpbmstMFwiPlxuICAgICAgICAgICAgICAgICAgICAgIDxpbWcgY2xhc3NOYW1lPVwiaC0xMCB3LTEwIHJvdW5kZWQtZnVsbFwiIHNyYz17dXNlci5pbWFnZVVybH0gYWx0PVwiXCIgLz5cbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibWwtM1wiPlxuICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1iYXNlIGZvbnQtbWVkaXVtIGxlYWRpbmctbm9uZSB0ZXh0LXdoaXRlXCI+e3VzZXIubmFtZX08L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRleHQtc20gZm9udC1tZWRpdW0gbGVhZGluZy1ub25lIHRleHQtZ3JheS00MDBcIj57dXNlci5lbWFpbH08L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgIDxidXR0b25cbiAgICAgICAgICAgICAgICAgICAgICB0eXBlPVwiYnV0dG9uXCJcbiAgICAgICAgICAgICAgICAgICAgICBjbGFzc05hbWU9XCJtbC1hdXRvIGJnLWdyYXktODAwIGZsZXgtc2hyaW5rLTAgcC0xIHJvdW5kZWQtZnVsbCB0ZXh0LXJlZC00MDAgaG92ZXI6dGV4dC1yZWQgZm9jdXM6b3V0bGluZS1ub25lIGZvY3VzOnJpbmctMiBmb2N1czpyaW5nLW9mZnNldC0yIGZvY3VzOnJpbmctb2Zmc2V0LWdyYXktODAwIGZvY3VzOnJpbmctd2hpdGVcIlxuICAgICAgICAgICAgICAgICAgICA+ICAgICAgICAgXG4gICAgICAgICAgICAgICAgICAgIDwvYnV0dG9uPlxuICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm10LTMgcHgtMiBzcGFjZS15LTFcIj5cbiAgICAgICAgICAgICAgICAgICAge3VzZXJOYXZpZ2F0aW9uLm1hcCgoaXRlbSkgPT4gKFxuICAgICAgICAgICAgICAgICAgICAgIDxEaXNjbG9zdXJlLkJ1dHRvblxuICAgICAgICAgICAgICAgICAgICAgICAga2V5PXtpdGVtLm5hbWV9XG4gICAgICAgICAgICAgICAgICAgICAgICBhcz1cImFcIlxuICAgICAgICAgICAgICAgICAgICAgICAgaHJlZj17aXRlbS5ocmVmfVxuICAgICAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwiYmxvY2sgcHgtMyBweS0yIHJvdW5kZWQtbWQgdGV4dC1iYXNlIGZvbnQtbWVkaXVtIHRleHQtZ3JheS00MDAgaG92ZXI6dGV4dC13aGl0ZSBob3ZlcjpiZy1ncmF5LTcwMFwiXG4gICAgICAgICAgICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgICAgICAgICAge2l0ZW0ubmFtZX1cbiAgICAgICAgICAgICAgICAgICAgICA8L0Rpc2Nsb3N1cmUuQnV0dG9uPlxuICAgICAgICAgICAgICAgICAgICApKX1cbiAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICA8L0Rpc2Nsb3N1cmUuUGFuZWw+XG4gICAgICAgICAgICA8Lz5cbiAgICAgICAgICApfVxuICAgICAgICA8L0Rpc2Nsb3N1cmU+XG4gICAgICA8L2Rpdj5cbiAgICA8Lz5cbiAgKVxufVxuIl0sIm5hbWVzIjpbIkZyYWdtZW50IiwiRGlzY2xvc3VyZSIsIk1lbnUiLCJUcmFuc2l0aW9uIiwiQmVsbEljb24iLCJNZW51SWNvbiIsIlhJY29uIiwidXNlUm91dGVyIiwidXNlciIsIm5hbWUiLCJlbWFpbCIsImltYWdlVXJsIiwibmF2aWdhdGlvbiIsImhyZWYiLCJjdXJyZW50IiwidXNlck5hdmlnYXRpb24iLCJjbGFzc05hbWVzIiwiY2xhc3NlcyIsImZpbHRlciIsIkJvb2xlYW4iLCJqb2luIiwiTmF2YmFyIiwicm91dGVyIiwiZGl2IiwiY2xhc3NOYW1lIiwiYXMiLCJvcGVuIiwiaW1nIiwic3JjIiwiYWx0IiwibWFwIiwiaXRlbSIsImEiLCJhcmlhLWN1cnJlbnQiLCJ1bmRlZmluZWQiLCJCdXR0b24iLCJzcGFuIiwiYXJpYS1oaWRkZW4iLCJQYW5lbCIsImJ1dHRvbiIsInR5cGUiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./components/Navbar.js\n");
-
-/***/ }),
-
-/***/ "./pages/_app.js":
-/*!***********************!*\
-  !*** ./pages/_app.js ***!
-  \***********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Layout */ \"./components/Layout.js\");\n/* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/globals.css */ \"./styles/globals.css\");\n/* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_globals_css__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\nfunction MyApp({ Component , pageProps  }) {\n    return(/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_components_Layout__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(Component, {\n            ...pageProps\n        }, void 0, false, {\n            fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/pages/_app.js\",\n            lineNumber: 6,\n            columnNumber: 7\n        }, this)\n    }, void 0, false, {\n        fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/pages/_app.js\",\n        lineNumber: 5,\n        columnNumber: 6\n    }, this));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MyApp);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9fYXBwLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7QUFBeUM7QUFDWDtTQUNyQkMsS0FBSyxDQUFDLENBQUMsQ0FBQ0MsU0FBUyxHQUFFQyxTQUFTLEVBQUMsQ0FBQyxFQUFFLENBQUM7SUFDeEMsTUFBTSw2RUFDRkgsMERBQU07OEZBQ0xFLFNBQVM7ZUFBS0MsU0FBUzs7Ozs7Ozs7Ozs7QUFHOUIsQ0FBQztBQUVELGlFQUFlRixLQUFLIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vcHJvZmlsZS8uL3BhZ2VzL19hcHAuanM/ZTBhZCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgTGF5b3V0IGZyb20gJy4uL2NvbXBvbmVudHMvTGF5b3V0J1xuaW1wb3J0ICcuLi9zdHlsZXMvZ2xvYmFscy5jc3MnXG5mdW5jdGlvbiBNeUFwcCh7IENvbXBvbmVudCwgcGFnZVByb3BzIH0pIHtcbiAgcmV0dXJuKFxuICAgICA8TGF5b3V0PlxuICAgICAgPENvbXBvbmVudCB7Li4ucGFnZVByb3BzfSAvPlxuICAgICA8L0xheW91dD5cbiAgKSAgIFxufVxuXG5leHBvcnQgZGVmYXVsdCBNeUFwcFxuIl0sIm5hbWVzIjpbIkxheW91dCIsIk15QXBwIiwiQ29tcG9uZW50IiwicGFnZVByb3BzIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./pages/_app.js\n");
-
-/***/ }),
-
-/***/ "./styles/globals.css":
-/*!****************************!*\
-  !*** ./styles/globals.css ***!
-  \****************************/
-/***/ (() => {
-
-
-
-/***/ }),
-
-/***/ "@headlessui/react":
-/*!************************************!*\
-  !*** external "@headlessui/react" ***!
-  \************************************/
+/***/ 8768:
 /***/ ((module) => {
 
-"use strict";
-module.exports = require("@headlessui/react");
-
-/***/ }),
-
-/***/ "@heroicons/react/outline":
-/*!*******************************************!*\
-  !*** external "@heroicons/react/outline" ***!
-  \*******************************************/
-/***/ ((module) => {
-
-"use strict";
 module.exports = require("@heroicons/react/outline");
 
 /***/ }),
 
-/***/ "next/router":
-/*!******************************!*\
-  !*** external "next/router" ***!
-  \******************************/
+/***/ 6689:
 /***/ ((module) => {
 
-"use strict";
-module.exports = require("next/router");
-
-/***/ }),
-
-/***/ "react":
-/*!************************!*\
-  !*** external "react" ***!
-  \************************/
-/***/ ((module) => {
-
-"use strict";
 module.exports = require("react");
 
 /***/ }),
 
-/***/ "react/jsx-dev-runtime":
-/*!****************************************!*\
-  !*** external "react/jsx-dev-runtime" ***!
-  \****************************************/
+/***/ 997:
 /***/ ((module) => {
 
-"use strict";
-module.exports = require("react/jsx-dev-runtime");
+module.exports = require("react/jsx-runtime");
 
 /***/ })
 
@@ -128,7 +278,7 @@ module.exports = require("react/jsx-dev-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("./pages/_app.js"));
+var __webpack_exports__ = (__webpack_exec__(1132));
 module.exports = __webpack_exports__;
 
 })();
