@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { BeakerIcon, BellIcon, CodeIcon, LinkIcon, LocationMarkerIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
@@ -37,12 +37,12 @@ const about = {
   },
 }
 
-const About = ({data}) => {
-  useEffect(()=>{
-    Aos.init({duration:2000})
- },[])
+const About = ({ data }) => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 })
+  }, [])
   return (<>
-    <div class="grid grid-cols-3 gap-3">
+    <div className="grid grid-cols-3 gap-3">
       <img data-aos="fade-left" className="h-30 w-30 rounded-full" src={user.imageUrl} alt="" />
       <h1 data-aos="fade-up" className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
         <span className="block text-indigo-600 xl:inline">Prashhanth</span>
@@ -54,92 +54,123 @@ const About = ({data}) => {
         </div>
       </h1>
     </div>
-    <div data-aos="zoom-in-down" className="py-15 lg:pt-6 lg:pb-16 lg:col-start-1 lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
+    <div data-aos="zoom-in-down" className="space-y-4 py-15 lg:pt-6 lg:pb-16 lg:col-start-1 lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
       <div className="space-y-8">
-        <p className="underline text-4xl text-gray-900">Work Summary</p>
+        <p className="text-5xl font-bold dark:text-coolGray-50">Work Summary</p>
       </div>
       <div>
         <p className="text-xl text-gray-900">{about.summary}</p>
       </div>
       <div className="space-y-8">
-        <p className="underline text-4xl text-gray-900">Techical Stack</p>
+        <p className="text-5xl font-bold dark:text-coolGray-50">Techical Stack</p>
       </div>
-      <div class="flex justify-center">
-        <div class="block rounded-lg shadow-lg bg-white max-w-md text-center">
-          <div class="p-8">
-            <h5 class="text-gray-900 text-xl font-medium mb-2">Back-End</h5>
-            <div class="flex space-x-3 items-center justify-center">
-              <span class=" px-3 py-2 bg-blue-600 text-white font-medium text-xs leading-tight">Java-8</span>
-              <span class=" px-3 py-2 bg-blue-600 text-white font-medium text-xs leading-tight">Spring Data Jpa</span>
-              <span class=" px-3 py-2 bg-blue-600 text-white font-medium text-xs leading-tight">MicroServices</span>
-            </div> 
-            <div class="text-base mb-4"></div>
-            <div class="flex space-x-3 items-center justify-center">
-              <span class=" px-3 py-2 bg-blue-600 text-white font-medium text-xs leading-tight">AWS</span>
-              <span class=" px-3 py-2 bg-blue-600 text-white font-medium text-xs leading-tight">Spring Boot</span>
-              <span class=" px-3 py-2 bg-blue-600 text-white font-medium text-xs leading-tight">MongoDB</span>
+      <div className="flex justify-center">
+        <div className="block rounded-lg shadow-lg bg-white max-w-md text-center">
+          <div className="p-8">
+            <h5 className="text-gray-900 text-xl font-medium mb-2">Back-End</h5>
+            <div className="flex space-x-3 items-center justify-center">
+              <span className=" px-3 py-2 bg-blue-500 text-white font-medium text-xs leading-tight">Java-8</span>
+              <span className=" px-3 py-2 bg-blue-500 text-white font-medium text-xs leading-tight">Spring Data Jpa</span>
+              <span className=" px-3 py-2 bg-blue-500 text-white font-medium text-xs leading-tight">MicroServices</span>
             </div>
-            <div class="text-base mb-4"></div>
-            <div class="flex space-x-3 items-center justify-center">
-              <span class=" px-3 py-2 bg-blue-600 text-white font-medium text-xs leading-tight">NodeJs</span>
-              <span class=" px-3 py-2 bg-blue-600 text-white font-medium text-xs leading-tight">Python</span>
-            </div>          
+            <div className="text-base mb-4"></div>
+            <div className="flex space-x-3 items-center justify-center">
+              <span className=" px-3 py-2 bg-blue-500 text-white font-medium text-xs leading-tight">AWS</span>
+              <span className=" px-3 py-2 bg-blue-500 text-white font-medium text-xs leading-tight">Spring Boot</span>
+              <span className=" px-3 py-2 bg-blue-500 text-white font-medium text-xs leading-tight">MongoDB</span>
+            </div>
+            <div className="text-base mb-4"></div>
+            <div className="flex space-x-3 items-center justify-center">
+              <span className=" px-3 py-2 bg-blue-500 text-white font-medium text-xs leading-tight">NodeJs</span>
+              <span className=" px-3 py-2 bg-blue-500 text-white font-medium text-xs leading-tight">Python</span>
+            </div>
           </div>
         </div>
       </div>
-      <div class="text-base mb-4"></div>
-      <div class="flex justify-center">
-        <div class="block rounded-lg shadow-lg bg-white max-w-md text-center">
-          <div class="p-8">
-            <h5 class="text-gray-900 text-xl font-medium mb-2">Front-End</h5>
-            <div class="flex space-x-3 items-center justify-center">
-              <span class=" px-3 py-2 bg-red-600 text-white font-medium text-xs leading-tight">Angular</span>
-              <span class=" px-3 py-2 bg-red-600 text-white font-medium text-xs leading-tight">NextJs</span>
-              <span class=" px-3 py-2 bg-red-600 text-white font-medium text-xs leading-tight">ReactJs</span>
-            </div> 
-            <div class="text-base mb-4"></div>
-            <div class="flex space-x-3 items-center justify-center">
-              <span class=" px-3 py-2 bg-red-600 text-white font-medium text-xs leading-tight">PrimeNg</span>
-              <span class=" px-3 py-2 bg-red-600 text-white font-medium text-xs leading-tight">Bootstrap</span>
-              <span class=" px-3 py-2 bg-red-600 text-white font-medium text-xs leading-tight">Tailwind</span>
-            </div>         
+      <div className="text-base mb-4"></div>
+      <div className="flex justify-center">
+        <div className="block rounded-lg shadow-lg bg-white max-w-md text-center">
+          <div className="p-8">
+            <h5 className="text-gray-900 text-xl font-medium mb-2">Front-End</h5>
+            <div className="flex space-x-3 items-center justify-center">
+              <span className=" px-3 py-2 bg-red-500 text-white font-medium text-xs leading-tight">Angular</span>
+              <span className=" px-3 py-2 bg-red-500 text-white font-medium text-xs leading-tight">NextJs</span>
+              <span className=" px-3 py-2 bg-red-500 text-white font-medium text-xs leading-tight">ReactJs</span>
+            </div>
+            <div className="text-base mb-4"></div>
+            <div className="flex space-x-3 items-center justify-center">
+              <span className=" px-3 py-2 bg-red-500 text-white font-medium text-xs leading-tight">PrimeNg</span>
+              <span className=" px-3 py-2 bg-red-500 text-white font-medium text-xs leading-tight">Bootstrap</span>
+              <span className=" px-3 py-2 bg-red-500 text-white font-medium text-xs leading-tight">Tailwind</span>
+            </div>
           </div>
         </div>
       </div>
-      {/* 
-      <div className="text-2xl grid grid-cols-2 gap-2 text-indigo-400">
-        <div>Back-End</div>
-      </div>
-      <div className="text-2xl grid grid-cols-3 gap-2">
-        <div></div>
-        <div class="flex space-x-5 items-center justify-center">
-          <span class="text-xs inline-block py-3 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-blue-600 text-white rounded">Java-8</span>
-          <span class="text-xs inline-block py-3 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-blue-600 text-white rounded">Spring Boot</span>
-          <span class="text-xs inline-block py-3 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-blue-600 text-white rounded">Spring Data Jpa</span>
-          <span class="text-xs inline-block py-3 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-blue-600 text-white rounded">Spring Rest</span>
-          <span class="text-xs inline-block py-3 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-blue-600 text-white rounded">MicroServices</span>
-          <span class="text-xs inline-block py-3 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-blue-600 text-white rounded">AWS</span>
-          <span class="text-xs inline-block py-3 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-blue-600 text-white rounded">Mongo</span>
-          <span class="text-xs inline-block py-3 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-blue-600 text-white rounded">MySql</span>
-          <span class="text-xs inline-block py-3 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-blue-600 text-white rounded">ActiveMq</span>
-          <span class="text-xs inline-block py-3 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-blue-600 text-white rounded">Python</span>
+      <p className="text-5xl font-bold dark:text-coolGray-50">Education</p>
+      <div className="grid gap-3 row-gap-0 lg:grid-cols-4">
+        <div className="relative text-center">
+          <div className="flex items-center justify-center w-10 h-10 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
+            <svg className="w-12 h-12 text-indigo-200 sm:w-16 sm:h-16" stroke="currentColor" viewBox="0 0 52 52">
+              <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+            </svg>
+          </div>
+          <h6 className="mb-2 text-2xl font-extrabold">Schooling</h6>
+          <p className="max-w-md mb-3 text-sm text-gray-900 sm:mx-auto">
+            Completed in the year 2008
+          </p>
+          <div className="top-0 right-0 flex items-center justify-center h-24 lg:-mr-4 lg:absolute">
+            <svg className="w-8 text-gray-700 transform rotate-90 lg:rotate-0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <line fill="none" stroke-miterlimit="10" x1="2" y1="12" x2="22" y2="12"></line>
+              <polyline fill="none" stroke-miterlimit="10" points="15,5 22,12 15,19 "></polyline>
+            </svg>
+          </div>
+        </div>
+        <div className="relative text-center">
+          <div className="flex items-center justify-center w-10 h-10 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
+            <svg className="w-12 h-12 text-indigo-400 sm:w-16 sm:h-16" stroke="currentColor" viewBox="0 0 52 52">
+              <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+            </svg>
+          </div>
+          <h6 className="mb-2 text-2xl font-extrabold">12<sup>th</sup> Standard</h6>
+          <p className="max-w-md mb-3 text-sm text-gray-900 sm:mx-auto">
+            Completed in the year 2010
+          </p>
+          <div className="top-0 right-0 flex items-center justify-center h-24 lg:-mr-4 lg:absolute">
+            <svg className="w-8 text-gray-700 transform rotate-90 lg:rotate-0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <line fill="none" stroke-miterlimit="10" x1="2" y1="12" x2="22" y2="12"></line>
+              <polyline fill="none" stroke-miterlimit="10" points="15,5 22,12 15,19 "></polyline>
+            </svg>
+          </div>
+        </div>
+        <div className="relative text-center">
+          <div className="flex items-center justify-center w-10 h-10 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
+            <svg className="w-12 h-12 text-indigo-600 sm:w-16 sm:h-16" stroke="currentColor" viewBox="0 0 52 52">
+              <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+            </svg>
+          </div>
+          <h6 className="mb-2 text-2xl font-extrabold">Graduation</h6>
+          <p className="max-w-md mb-3 text-sm text-gray-900 sm:mx-auto">
+            Completed in the year 2013
+          </p>
+          <div className="top-0 right-0 flex items-center justify-center h-24 lg:-mr-4 lg:absolute">
+            <svg className="w-8 text-gray-700 transform rotate-90 lg:rotate-0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <line fill="none" stroke-miterlimit="10" x1="2" y1="12" x2="22" y2="12"></line>
+              <polyline fill="none" stroke-miterlimit="10" points="15,5 22,12 15,19 "></polyline>
+            </svg>
+          </div>
+        </div>
+        <div className="relative text-center">
+          <div className="flex items-center justify-center w-10 h-10 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
+            <svg className="w-12 h-12 text-indigo-800 sm:w-16 sm:h-16" stroke="currentColor" viewBox="0 0 52 52">
+              <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+            </svg>
+          </div>
+          <h6 className="mb-2 text-2xl font-extrabold">Masters</h6>
+          <p className="max-w-md mb-3 text-sm text-gray-900 sm:mx-auto">
+            Completed in the year 2017
+          </p>
         </div>
       </div>
-      <div className="text-2xl grid grid-cols-2 gap-2 text-red-400">
-        <div></div>
-        <div></div>
-        <div>Front-End</div>
-      </div>
-      <div className="grid grid-cols-1">
-        <div class="flex space-x-10 justify-center">
-          <span class="text-xs inline-block py-3 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-red-400 text-white rounded">Angular</span>
-          <span class="text-xs inline-block py-3 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-red-400 text-white rounded">PrimeNg</span>
-          <span class="text-xs inline-block py-3 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-red-400 text-white rounded">NextJs</span>
-          <span class="text-xs inline-block py-3 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-red-400 text-white rounded">Bootstrap</span>
-          <span class="text-xs inline-block py-3 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-red-400 text-white rounded">Tailwind</span>
-        </div>
-      </div> */}
-
     </div>
 
   </>
