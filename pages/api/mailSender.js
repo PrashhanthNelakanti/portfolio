@@ -17,7 +17,8 @@ async function sendOtp(req, res) {
             auth: {
                 user: 'prashhanth.online@gmail.com',
                 pass: 'rock@1234A'
-            }
+            },
+            secure: true,
         });
         var mailOptions = {
             from: 'prashhanth.online@gmail.com',
@@ -25,7 +26,7 @@ async function sendOtp(req, res) {
             subject: body.fname,
             html: `<h1>Here is the Otp</h1>`
         };
-
+    await new Promise((resolve, reject) => {
         transporter.sendMail(mailOptions, function (error, info) {
             if (error) {
                 console.log(error);
@@ -33,9 +34,10 @@ async function sendOtp(req, res) {
                 console.log('Email sent: ' + info.response);
             }
         });
+    });
 
         return res.json({
-            message: `Post added successfully ${req.body}`,
+            message: `Post added successfully`,
             success: true,
         });
     } catch (error) {
