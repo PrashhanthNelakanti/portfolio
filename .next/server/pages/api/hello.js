@@ -12,10 +12,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ handler)
 /* harmony export */ });
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 function handler(req, res) {
     res.status(200).json({
-        name: 'John Doe'
+        name: `John Doe ${process.env.MONGO_PWD}`
     });
 };
 

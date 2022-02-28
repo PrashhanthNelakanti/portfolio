@@ -1,4 +1,3 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 const { connectToDatabase } = require('../../lib/mongodb');
 const ObjectId = require('mongodb').ObjectId;
 
@@ -47,9 +46,9 @@ async function getPosts(req, res) {
 async function addPost(req, res) {
     try {
         let { db } = await connectToDatabase();
-        await db.collection('info').insertOne(JSON.parse(req.body));
+        await db.collection('info').insertOne(req.body);
         return res.json({
-            message: 'Post added successfully',
+            message: `Post added successfully ${req.body}`,
             success: true,
         });
     } catch (error) {

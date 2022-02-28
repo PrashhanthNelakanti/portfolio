@@ -19,7 +19,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ handler)
 /* harmony export */ });
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 const { connectToDatabase  } = __webpack_require__(6057);
 const ObjectId = (__webpack_require__(8013).ObjectId);
 async function handler(req, res) {
@@ -63,9 +62,9 @@ async function getPosts(req, res) {
 async function addPost(req, res) {
     try {
         let { db  } = await connectToDatabase();
-        await db.collection('info').insertOne(JSON.parse(req.body));
+        await db.collection('info').insertOne(req.body);
         return res.json({
-            message: 'Post added successfully',
+            message: `Post added successfully ${req.body}`,
             success: true
         });
     } catch (error) {

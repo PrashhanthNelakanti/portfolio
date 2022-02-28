@@ -14,6 +14,7 @@ export default function AddPost() {
         // reset error and message
         setError('');
         setMessage('');
+        console.log(email)
 
         // fields check
         if (!fname || !email) return setError('All fields are required');
@@ -26,8 +27,12 @@ export default function AddPost() {
             address
         };
         // save the post
-        let response = await fetch('/api/personalnfo', {
+        let response = await fetch('/api/mailSender', {
             method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
             body: JSON.stringify(info),
         });
 
@@ -144,6 +149,7 @@ export default function AddPost() {
             <div className="border-t border-gray-200" />
           </div>
         </div> 
+      
       </>
     );
   }

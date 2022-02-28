@@ -1,16 +1,18 @@
-import React,{useEffect} from "react";
+import React,{useEffect, useState} from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Skeleton } from "@chakra-ui/react";
 
 export default function Info({ data }) {
+  
     useEffect(()=>{
         Aos.init({duration:2000})
     },[])
   return (
-    <div>
+    <Skeleton isLoaded={!(data == null)}>
         <div className="bg-white shadow overflow-hidden sm:rounded-lg">
                         <div className="px-4 py-5 sm:px-6">
-                          <h3 className="text-lg leading-6 font-medium text-gray-900">Applicant Information</h3>
+                          <h3 className="text-lg leading-6 font-medium text-gray-900">{data.message}</h3>
                           <p className="mt-1 max-w-2xl text-sm text-gray-500">Personal details and application.</p>
                         </div>
             {data.length === 0 ? (
@@ -43,22 +45,23 @@ export default function Info({ data }) {
                 </ul>
             )}
         </div>
-</div>
+</Skeleton>
 );
     
 
 }
 
 export async function getServerSideProps(ctx) {
+    
     // get the current environment
     let dev = process.env.NODE_ENV !== 'production';
     let { DEV_URL, PROD_URL } = process.env;
 
     // request posts from api
-    let response = await fetch(`${dev ? DEV_URL : PROD_URL}/api/personalnfo`);
+    let response =  await fetch(`${dev ? DEV_URL : PROD_URL}/api/personalnfo`);
     // extract the data
-    let data = await response.json();
-
+    let data =  await response.json();
+    
     return {
         props: {
             data: data['message'],
