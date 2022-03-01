@@ -15,8 +15,8 @@ async function sendOtp(req, res) {
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: rocess.env.EMAIL,
-                pass: rocess.env.EMAIL_PWD
+                user: process.env.EMAIL,
+                pass: pocess.env.EMAIL_PWD
             },
             secure: true,
         });
