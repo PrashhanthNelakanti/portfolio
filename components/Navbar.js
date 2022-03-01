@@ -14,7 +14,7 @@ const navigation = [
   { name: 'About', href: '/about', current: false },
   { name: 'Info', href: '/info', current: false },
   { name: 'Projects', href: '/projects', current: false },
-  { name: 'Forms', href: '/submit', current: false },
+  { name: 'Register', href: '/register', current: false },
 ]
 const userNavigation = [
   { name: 'Your Profile', href: '#' },

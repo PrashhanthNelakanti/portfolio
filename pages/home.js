@@ -8,19 +8,27 @@ const Home = () => {
             <span className="block text-indigo-600 xl:inline">Full Stack Dev.</span>
           </h1>
           <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-          Just a normal Developer who dives in the brilliance of the code. Happiness is when your code listens to mind. 
-          I love to covert coffee ☕️ to code 👨🏽‍💻.
+            Just a normal Developer who dives in the brilliance of the code. Happiness is when your code listens to mind.
+            I love to covert coffee ☕️ to code 👨🏽‍💻.
           </p>
           <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-          "In some ways, programming is like painting. You start with a blank canvas and certain basic raw materials. You use a combination of science, art, and craft to determine what to do with them." - Andrew Hunt
+            "In some ways, programming is like painting. You start with a blank canvas and certain basic raw materials. You use a combination of science, art, and craft to determine what to do with them." - Andrew Hunt
           </p>
           <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
             <div className="rounded-md shadow">
               <a
-                href="projects"
+                href="register"
                 className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
-              >
-                Know more!
+               >
+                Get started
+              </a>
+            </div>
+            <div className="mt-3 sm:mt-0 sm:ml-3">
+              <a
+                href="/profile_pdf/profile.pdf"
+                className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
+               download >
+                Profile Here
               </a>
             </div>
           </div>

@@ -18,9 +18,9 @@ const project = {
   description:
     "GCM is Enterprise Application Software which is uses the internal framework called VEC Framework which is built on the Spring Frame framework itself. The application interacts with various other application in the organisation and play a vital role in gather the information of the user issues such as ticket creations, status of the ticket, ticket implementation etc.",
   highlights: [
-    'Implemented performace tuning feature where the time complexity is reduced',
+    'Implemented performance tuning feature where the time complexity is reduced',
     'Developed web pages to users to display customer data based on business requirement both in UI and backend',
-    'Integrated third party APIs like CISCO to analyze the reports and billing generated based on contract',
+    'Integrated third party APIs like CISCO to analyse the reports and billing generated based on contract',
   ],
   details:
     'Worked on Cloud platforms like AWS and PCF. Having 4.5 years of experience at in developing Spring framework and 2 years into Angular 7 applications.',
