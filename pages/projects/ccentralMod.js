@@ -2,7 +2,7 @@
 import { StarIcon } from '@heroicons/react/solid'
 
 const project = {
-  projectName: 'GCM',
+  projectName: 'Client Central Modernization',
   tech: 'Environment',
   href: '#',
   breadcrumbs: [
@@ -10,27 +10,29 @@ const project = {
     { id: 2, name: 'Projects', href: '/projects' },
   ],
   org: {
-    name: 'Verizon'
+    name: 'Mphasis'
   },
   duration: {
-    tenure: 'Sep 2017 - Dec 2019'
+    tenure: 'Jan 2020 - Jun 2021'
   },
   description:
-    "GCM is a Enterprise Application Software which is uses the internal framework called VEC Framework which is built on the Spring Frame framework itself. The application interacts with various other application in the organisation and play a vital role in gather the information of the user issues such as ticket creations, status of the ticket, ticket implementation etc.",
+    " Client Central Modernization is application which monitors the interaction of the customer based timeframe as per the business",
   highlights: [
-    'Implemented performace tuning feature where the time complexity is reduced',
-    'Developed web pages to users to display customer data based on business requirement both in UI and backend',
-    'Integrated third party APIs like CISCO to analyze the reports and billing generated based on contract',
+    'Collecting the datapoint from the users and analyzing for later use',
+    'Developed app integration with REST and other APIs for other services used within the system.',
+    'Managed time-sensitive updates, including content changes and database upgrades',
   ],
   details:
-    'Worked on Cloud platforms like AWS and PCF. Having 4.5 years of experience at in developing Spring framework and 2 years into Angular 7 applications.',
+    'Attending Scrums and part of Scrum team, and also Guiding/suggesting other team members on best approaches.',
 
   reviews: [
     { average: 4, name: "Java-8" },
     { average: 4, name: "Spring Boot" },
     { average: 4, name: "Spring Data-Jpa" },
-    { average: 3, name: "Microservices" },
-    { average: 3, name: "Angular" },
+    { average: 4, name: "Microservices" },
+    { average: 3, name: "SqlServer" },
+    { average: 3, name: "PCF" },
+    { average: 3, name: "Swagger-UI" },
 
   ]
 }
@@ -40,7 +42,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Verizon() {
+export default function Mphasis() {
 
 
   return (
@@ -76,18 +78,15 @@ export default function Verizon() {
           </ol>
         </nav>
 
-        {/* Product info */}
         <div className="max-w-2xl mx-auto pt-10 pb-16 px-4 sm:px-6 lg:max-w-7xl lg:pt-16 lg:pb-24 lg:px-8 lg:grid lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8">
           <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
             <h1 className="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">{project.projectName}</h1>
           </div>
 
-          {/* Options */}
           <div className="mt-4 lg:mt-0 lg:row-span-3">
-            <h2 className="sr-only">Product information</h2>
+            <h2 className="sr-only">Project information</h2>
             <p className="text-3xl text-gray-900">{project.tech}</p>
 
-            {/* Reviews */}
               {project.reviews.map((review) => (
                 <div className="mt-1">
                   <div className="mt-1 flex space-x-1 ml-1  justify-between text-sm font-medium text-indigo-600 hover:text-indigo-500">

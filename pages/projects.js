@@ -151,7 +151,7 @@ export default function Verizon() {
                                                             Mphasis
                                                         </td>
                                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                                        <a class="text-blue-600" href='projects/lm'>Client Central</a> 
+                                                        <a class="text-blue-600" href='projects/ccentralMod'>Client Central</a> 
                                                         </td>
                                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                                             2021

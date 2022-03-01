@@ -15,13 +15,13 @@ async function sendOtp(req, res) {
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: 'prashhanth.online@gmail.com',
-                pass: 'rock@1234A'
+                user: rocess.env.EMAIL,
+                pass: rocess.env.EMAIL_PWD
             },
             secure: true,
         });
         var mailOptions = {
-            from: 'prashhanth.online@gmail.com',
+            from: process.env.EMAIL,
             to: body.email,
             subject: body.fname,
             html: `<h1>Here is the Otp</h1>`
