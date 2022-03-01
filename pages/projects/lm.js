@@ -16,7 +16,7 @@ const project = {
     tenure: 'Jan 2019 - Jun 2021'
   },
   description:
-    " LM is a Enterprise Application which takes the customer metaData and then process it based on the historical data that is been captured earlier and send notification to end user.",
+    " LM is Enterprise Application which takes the customer metaData and then process it based on the historical data that is been captured earlier and send notification to end user.",
   highlights: [
     'Fetching the data from the Talend jobs which run in the background and store the data to relational database(Mysql)',
     'Implement a config Server in MicroService',
