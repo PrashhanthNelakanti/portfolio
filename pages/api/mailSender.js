@@ -16,7 +16,7 @@ async function sendOtp(req, res) {
             service: 'gmail',
             auth: {
                 user: process.env.EMAIL,
-                pass: pocess.env.EMAIL_PWD
+                pass: process.env.EMAIL_PWD
             },
             secure: true,
         });

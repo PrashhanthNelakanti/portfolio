@@ -16,7 +16,7 @@ const project = {
     tenure: 'Sep 2017 - Dec 2019'
   },
   description:
-    "GCM is a Enterprise Application Software which is uses the internal framework called VEC Framework which is built on the Spring Frame framework itself. The application interacts with various other application in the organisation and play a vital role in gather the information of the user issues such as ticket creations, status of the ticket, ticket implementation etc.",
+    "GCM is Enterprise Application Software which is uses the internal framework called VEC Framework which is built on the Spring Frame framework itself. The application interacts with various other application in the organisation and play a vital role in gather the information of the user issues such as ticket creations, status of the ticket, ticket implementation etc.",
   highlights: [
     'Implemented performace tuning feature where the time complexity is reduced',
     'Developed web pages to users to display customer data based on business requirement both in UI and backend',
