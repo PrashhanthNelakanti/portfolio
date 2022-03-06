@@ -4,7 +4,7 @@ const ObjectId = require('mongodb').ObjectId;
 export default async function handler(req, res) {
     // switch the methods
     switch (req.method) {
-        case 'GET': {
+        case 'GET': {``
             return getUser(req, res);
         }
 
@@ -72,7 +72,7 @@ async function updateUser(req, res) {
         );
 
         return res.json({
-            message: 'Post updated successfully',
+            message: 'User updated successfully',
             success: true,
         });
     } catch (error) {
@@ -93,7 +93,7 @@ async function deleteUser(req, res) {
         });
 
         return res.json({
-            message: 'Post deleted successfully',
+            message: 'User deleted successfully',
             success: true,
         });
     } catch (error) {
