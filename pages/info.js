@@ -5,9 +5,7 @@ import { Skeleton } from "@chakra-ui/react";
 
 export default function Info({ data }) {
   
-    useEffect(()=>{
-        Aos.init({duration:2000})
-    },[])
+    
   return (
     <Skeleton isLoaded={!(data == null)}>
         <div className="bg-white shadow overflow-hidden sm:rounded-lg">
@@ -20,7 +18,7 @@ export default function Info({ data }) {
             ) : (
                 <ul>
                     {data.map((info, i) => (
-                        <div data-aos={ i%2 == 0 ? 'fade-left' :'fade-right' } className="border-t border-gray-300" key={info.id}>
+                        <div  className="border-t border-gray-300" key={info.id}>
                           <dl>
                             <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                               <dt className="text-sm font-medium text-gray-500">Full name</dt>
