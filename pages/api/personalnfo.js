@@ -5,25 +5,25 @@ export default async function handler(req, res) {
     // switch the methods
     switch (req.method) {
         case 'GET': {
-            return getPosts(req, res);
+            return getUser(req, res);
         }
 
         case 'POST': {
-            return addPost(req, res);
+            return addUser(req, res);
         }
 
         case 'PUT': {
-            return updatePost(req, res);
+            return updateUser(req, res);
         }
 
         case 'DELETE': {
-            return deletePost(req, res);
+            return deleteUser(req, res);
         }
     }
 }
 
 // Getting all posts.
-async function getPosts(req, res) {
+async function getUser(req, res) {
     try {
         let { db } = await connectToDatabase();
         let posts = await db
@@ -43,12 +43,12 @@ async function getPosts(req, res) {
 }
 
 // Adding a new post
-async function addPost(req, res) {
+async function addUser(req, res) {
     try {
         let { db } = await connectToDatabase();
         await db.collection('info').insertOne(req.body);
         return res.json({
-            message: `Post added successfully ${req.body}`,
+            message: `User added successfully`,
             success: true,
         });
     } catch (error) {
@@ -60,7 +60,7 @@ async function addPost(req, res) {
 }
 
 // Updating a post
-async function updatePost(req, res) {
+async function updateUser(req, res) {
     try {
         let { db } = await connectToDatabase();
 
@@ -84,7 +84,7 @@ async function updatePost(req, res) {
 }
 
 // deleting a post
-async function deletePost(req, res) {
+async function deleteUser(req, res) {
     try {
         let { db } = await connectToDatabase();
 

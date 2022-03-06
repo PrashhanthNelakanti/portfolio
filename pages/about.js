@@ -112,7 +112,7 @@ const About = ({ data }) => {
         <div className="relative text-center">
           <div className="flex items-center justify-center w-10 h-10 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
             <svg className="w-12 h-12 text-indigo-200 sm:w-16 sm:h-16" stroke="currentColor" viewBox="0 0 52 52">
-              <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              <polygon strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
             </svg>
           </div>
           <h6 className="mb-2 text-2xl font-extrabold">Schooling</h6>
@@ -120,16 +120,16 @@ const About = ({ data }) => {
             Completed in the year 2008
           </p>
           <div className="top-0 right-0 flex items-center justify-center h-24 lg:-mr-4 lg:absolute">
-            <svg className="w-8 text-gray-700 transform rotate-90 lg:rotate-0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-              <line fill="none" stroke-miterlimit="10" x1="2" y1="12" x2="22" y2="12"></line>
-              <polyline fill="none" stroke-miterlimit="10" points="15,5 22,12 15,19 "></polyline>
+            <svg className="w-8 text-gray-700 transform rotate-90 lg:rotate-0" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+              <line fill="none" strokeMiterlimit="10" x1="2" y1="12" x2="22" y2="12"></line>
+              <polyline fill="none" strokeMiterlimit="10" points="15,5 22,12 15,19 "></polyline>
             </svg>
           </div>
         </div>
         <div className="relative text-center">
           <div className="flex items-center justify-center w-10 h-10 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
             <svg className="w-12 h-12 text-indigo-400 sm:w-16 sm:h-16" stroke="currentColor" viewBox="0 0 52 52">
-              <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              <polygon strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
             </svg>
           </div>
           <h6 className="mb-2 text-2xl font-extrabold">12<sup>th</sup> Standard</h6>
@@ -137,16 +137,16 @@ const About = ({ data }) => {
             Completed in the year 2010
           </p>
           <div className="top-0 right-0 flex items-center justify-center h-24 lg:-mr-4 lg:absolute">
-            <svg className="w-8 text-gray-700 transform rotate-90 lg:rotate-0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-              <line fill="none" stroke-miterlimit="10" x1="2" y1="12" x2="22" y2="12"></line>
-              <polyline fill="none" stroke-miterlimit="10" points="15,5 22,12 15,19 "></polyline>
+            <svg className="w-8 text-gray-700 transform rotate-90 lg:rotate-0" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+              <line fill="none" strokeMiterlimit="10" x1="2" y1="12" x2="22" y2="12"></line>
+              <polyline fill="none" strokeMiterlimit="10" points="15,5 22,12 15,19 "></polyline>
             </svg>
           </div>
         </div>
         <div className="relative text-center">
           <div className="flex items-center justify-center w-10 h-10 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
             <svg className="w-12 h-12 text-indigo-600 sm:w-16 sm:h-16" stroke="currentColor" viewBox="0 0 52 52">
-              <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              <polygon strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
             </svg>
           </div>
           <h6 className="mb-2 text-2xl font-extrabold">Graduation</h6>
@@ -154,16 +154,16 @@ const About = ({ data }) => {
             Completed in the year 2013
           </p>
           <div className="top-0 right-0 flex items-center justify-center h-24 lg:-mr-4 lg:absolute">
-            <svg className="w-8 text-gray-700 transform rotate-90 lg:rotate-0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-              <line fill="none" stroke-miterlimit="10" x1="2" y1="12" x2="22" y2="12"></line>
-              <polyline fill="none" stroke-miterlimit="10" points="15,5 22,12 15,19 "></polyline>
+            <svg className="w-8 text-gray-700 transform rotate-90 lg:rotate-0" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+              <line fill="none" strokeMiterlimit="10" x1="2" y1="12" x2="22" y2="12"></line>
+              <polyline fill="none" strokeMiterlimit="10" points="15,5 22,12 15,19 "></polyline>
             </svg>
           </div>
         </div>
         <div className="relative text-center">
           <div className="flex items-center justify-center w-10 h-10 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-20 sm:h-20">
             <svg className="w-12 h-12 text-indigo-800 sm:w-16 sm:h-16" stroke="currentColor" viewBox="0 0 52 52">
-              <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              <polygon strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
             </svg>
           </div>
           <h6 className="mb-2 text-2xl font-extrabold">Masters</h6>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function AddPost() {
+export default function Register() {
     const [fname, setFname] = useState('');
     const [lname, setLname] = useState('');
     const [email, setEmail] = useState('');
@@ -14,7 +14,6 @@ export default function AddPost() {
         // reset error and message
         setError('');
         setMessage('');
-        console.log(email)
 
         // fields check
         if (!fname || !email) return setError('All fields are required');
@@ -27,7 +26,7 @@ export default function AddPost() {
             address
         };
         // save the post
-        let response = await fetch('/api/mailSender', {
+        let response = await fetch('/api/personalnfo', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
