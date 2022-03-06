@@ -4,7 +4,7 @@ const ObjectId = require('mongodb').ObjectId;
 export default async function handler(req, res) {
     // switch the methods
     switch (req.method) {
-        case 'GET': {``
+        case 'GET': {
             return getUser(req, res);
         }
 
@@ -31,7 +31,7 @@ async function getUser(req, res) {
             .find({})
             .toArray();
         return res.json({
-            message: JSON.parse(JSON.stringify(posts)),
+            message: JSON.parse(JSON.stringify(req.body)),
             success: true,
         });
     } catch (error) {
@@ -48,7 +48,7 @@ async function addUser(req, res) {
         let { db } = await connectToDatabase();
         await db.collection('info').insertOne(req.body);
         return res.json({
-            message: `User added successfully`,
+            message: 'User added successfully',
             success: true,
         });
     } catch (error) {
