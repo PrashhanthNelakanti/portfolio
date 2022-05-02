@@ -28,6 +28,7 @@ export default function Login() {
     console.log(info)
     // save the post
     let response = await fetch('/api/personalnfo', {
+      // Insead of GET we are using POST as next allows POST as secured
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -37,8 +38,6 @@ export default function Login() {
     });
     // get the data
     let data = await response.json();
-    
-
     if (data.success) {
       // reset the fields
       setPassword('');
@@ -69,6 +68,8 @@ export default function Login() {
                 Login in with OTP
               </a>
             </p>
+            <h3 className="block uppercase tracking-wide text-lg font-bold mb-2 text-green-500">{message}</h3>
+            <h3 className="block uppercase tracking-wide text-lg font-bold mb-2 text-red-500">{error}</h3>
           </div>
           <form onSubmit={handlePost} className="mt-8 space-y-6" action="#" method="POST">
             <input type="hidden" name="remember" defaultValue="true" />

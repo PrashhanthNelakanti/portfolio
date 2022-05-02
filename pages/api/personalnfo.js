@@ -24,7 +24,7 @@ export default async function handler(req, res) {
 
 // Getting all posts.
 async function getUser(req, res) {
-    console.log(req.body)
+
     try {
         let { db } = await connectToDatabase();
         let posts = await db
