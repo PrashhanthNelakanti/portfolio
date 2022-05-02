@@ -10,8 +10,8 @@ async function sendOtp(req, res) {
     try {
         const nodemailer = require('nodemailer');
 
-        const body = req.body;
-        console.log(await body.info)
+        const toAdd = req.body;
+        console.log(await toAdd)
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
@@ -22,8 +22,8 @@ async function sendOtp(req, res) {
         });
         var mailOptions = {
             from: process.env.EMAIL,
-            to: body.email,
-            subject: body.fname,
+            to: toAdd,
+            subject: 'OTP',
             html: `<h1>Here is the Otp</h1>`
         };
     await new Promise((resolve, reject) => {

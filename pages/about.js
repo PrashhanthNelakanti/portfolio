@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import profile from '../public/imgs/profile.jpeg'
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { FaBeer, FaLinkedin, FaLinkedinIn, FaMapPin } from 'react-icons/fa';
@@ -6,7 +7,6 @@ import { BeakerIcon, BellIcon, CodeIcon, LinkIcon, LocationMarkerIcon, MenuIcon,
 const user = {
   name: 'Prashhanth Nelakanti',
   email: 'prashhanth.nelakanti@gmail.com',
-  imageUrl: 'https://media-exp1.licdn.com/dms/image/C5603AQEj4AWtH8N89A/profile-displayphoto-shrink_200_200/0/1605781245678?e=1649894400&v=beta&t=qn2RuS29GWM2GpG7ZrkBrP33HwgkUn-Fx0yKb19aOIY',
   profileUrl: 'https://in.linkedin.com/in/prashhanth?trk=public_profile_browsemap',
 
 }
@@ -44,7 +44,7 @@ const About = ({ data }) => {
   }, [])
   return (<>
     <div className="grid grid-cols-2 gap-2">
-      <img data-aos="fade-left" className="h-25 w-25 rounded-full" src={user.imageUrl} alt="" />
+      <img data-aos="fade-left" className="h-25 w-25 rounded-full" src={profile} alt="" />
       <h1 data-aos="fade-up" className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
         <span className="block text-indigo-600 xl:inline">Prashhanth</span>
         <div className="text-2xl text-blue-500 sm:text-3xl md:text-3xl">

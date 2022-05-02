@@ -1,79 +1,161 @@
-/*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
+"use strict";
 (() => {
 var exports = {};
-exports.id = "pages/info";
-exports.ids = ["pages/info"];
+exports.id = 776;
+exports.ids = [776,229];
 exports.modules = {
 
-/***/ "./pages/info.js":
-/*!***********************!*\
-  !*** ./pages/info.js ***!
-  \***********************/
+/***/ 6820:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Info),\n/* harmony export */   \"getServerSideProps\": () => (/* binding */ getServerSideProps)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! aos */ \"aos\");\n/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! aos/dist/aos.css */ \"./node_modules/aos/dist/aos.css\");\n/* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _chakra_ui_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @chakra-ui/react */ \"@chakra-ui/react\");\n/* harmony import */ var _chakra_ui_react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_4__);\n\n\n\n\n\nfunction Info({ data  }) {\n    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{\n        aos__WEBPACK_IMPORTED_MODULE_2___default().init({\n            duration: 2000\n        });\n    }, []);\n    return(/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_4__.Skeleton, {\n        isLoaded: !(data == null),\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n            className: \"bg-white shadow overflow-hidden sm:rounded-lg\",\n            children: [\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                    className: \"px-4 py-5 sm:px-6\",\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h3\", {\n                            className: \"text-lg leading-6 font-medium text-gray-900\",\n                            children: data.message\n                        }, void 0, false, {\n                            fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/pages/info.js\",\n                            lineNumber: 15,\n                            columnNumber: 27\n                        }, this),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                            className: \"mt-1 max-w-2xl text-sm text-gray-500\",\n                            children: \"Personal details and application.\"\n                        }, void 0, false, {\n                            fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/pages/info.js\",\n                            lineNumber: 16,\n                            columnNumber: 27\n                        }, this)\n                    ]\n                }, void 0, true, {\n                    fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/pages/info.js\",\n                    lineNumber: 14,\n                    columnNumber: 25\n                }, this),\n                data.length === 0 ? /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h2\", {\n                    children: \"There is no Data yet!\"\n                }, void 0, false, {\n                    fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/pages/info.js\",\n                    lineNumber: 19,\n                    columnNumber: 17\n                }, this) : /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"ul\", {\n                    children: data.map((info, i)=>/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            \"data-aos\": i % 2 == 0 ? 'fade-left' : 'fade-right',\n                            className: \"border-t border-gray-300\",\n                            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"dl\", {\n                                children: [\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                        className: \"bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6\",\n                                        children: [\n                                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"dt\", {\n                                                className: \"text-sm font-medium text-gray-500\",\n                                                children: \"Full name\"\n                                            }, void 0, false, {\n                                                fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/pages/info.js\",\n                                                lineNumber: 26,\n                                                columnNumber: 31\n                                            }, this),\n                                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"dd\", {\n                                                className: \"mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2\",\n                                                children: info.fname\n                                            }, void 0, false, {\n                                                fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/pages/info.js\",\n                                                lineNumber: 27,\n                                                columnNumber: 31\n                                            }, this)\n                                        ]\n                                    }, void 0, true, {\n                                        fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/pages/info.js\",\n                                        lineNumber: 25,\n                                        columnNumber: 29\n                                    }, this),\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                        className: \"bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6\",\n                                        children: [\n                                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"dt\", {\n                                                className: \"text-sm font-medium text-gray-500\",\n                                                children: \"Last name for\"\n                                            }, void 0, false, {\n                                                fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/pages/info.js\",\n                                                lineNumber: 30,\n                                                columnNumber: 31\n                                            }, this),\n                                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"dd\", {\n                                                className: \"mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2\",\n                                                children: info.lname\n                                            }, void 0, false, {\n                                                fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/pages/info.js\",\n                                                lineNumber: 31,\n                                                columnNumber: 31\n                                            }, this)\n                                        ]\n                                    }, void 0, true, {\n                                        fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/pages/info.js\",\n                                        lineNumber: 29,\n                                        columnNumber: 29\n                                    }, this),\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                        className: \"bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6\",\n                                        children: [\n                                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"dt\", {\n                                                className: \"text-sm font-medium text-gray-500\",\n                                                children: \"Email address\"\n                                            }, void 0, false, {\n                                                fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/pages/info.js\",\n                                                lineNumber: 34,\n                                                columnNumber: 31\n                                            }, this),\n                                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"dd\", {\n                                                className: \"mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2\",\n                                                children: info.email\n                                            }, void 0, false, {\n                                                fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/pages/info.js\",\n                                                lineNumber: 35,\n                                                columnNumber: 31\n                                            }, this)\n                                        ]\n                                    }, void 0, true, {\n                                        fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/pages/info.js\",\n                                        lineNumber: 33,\n                                        columnNumber: 29\n                                    }, this),\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                        className: \"bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6\",\n                                        children: [\n                                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"dt\", {\n                                                className: \"text-sm font-medium text-gray-500\",\n                                                children: \"Address\"\n                                            }, void 0, false, {\n                                                fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/pages/info.js\",\n                                                lineNumber: 38,\n                                                columnNumber: 31\n                                            }, this),\n                                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"dd\", {\n                                                className: \"mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2\",\n                                                children: info.address\n                                            }, void 0, false, {\n                                                fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/pages/info.js\",\n                                                lineNumber: 39,\n                                                columnNumber: 31\n                                            }, this)\n                                        ]\n                                    }, void 0, true, {\n                                        fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/pages/info.js\",\n                                        lineNumber: 37,\n                                        columnNumber: 29\n                                    }, this)\n                                ]\n                            }, void 0, true, {\n                                fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/pages/info.js\",\n                                lineNumber: 24,\n                                columnNumber: 27\n                            }, this)\n                        }, info.id, false, {\n                            fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/pages/info.js\",\n                            lineNumber: 23,\n                            columnNumber: 25\n                        }, this)\n                    )\n                }, void 0, false, {\n                    fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/pages/info.js\",\n                    lineNumber: 21,\n                    columnNumber: 17\n                }, this)\n            ]\n        }, void 0, true, {\n            fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/pages/info.js\",\n            lineNumber: 13,\n            columnNumber: 9\n        }, this)\n    }, void 0, false, {\n        fileName: \"/Users/prashhanthsoujanya/Desktop/CodeSpace/ui/profile/pages/info.js\",\n        lineNumber: 12,\n        columnNumber: 5\n    }, this));\n};\nasync function getServerSideProps(ctx) {\n    // get the current environment\n    let dev = \"development\" !== 'production';\n    let { DEV_URL , PROD_URL  } = process.env;\n    // request posts from api\n    let response = await fetch(`${dev ? DEV_URL : PROD_URL}/api/personalnfo`);\n    // extract the data\n    let data = await response.json();\n    return {\n        props: {\n            data: data['message']\n        }\n    };\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,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QztRQUNKQyxLQUFLLEVBQUUsQ0FBQztZQUNKbEMsSUFBSSxFQUFFQSxJQUFJLENBQUMsQ0FBUztRQUN4QixDQUFDO0lBQ0wsQ0FBQztBQUNMLENBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9wcm9maWxlLy4vcGFnZXMvaW5mby5qcz9mMTBhIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCx7dXNlRWZmZWN0LCB1c2VTdGF0ZX0gZnJvbSBcInJlYWN0XCI7XG5pbXBvcnQgQW9zIGZyb20gXCJhb3NcIjtcbmltcG9ydCBcImFvcy9kaXN0L2Fvcy5jc3NcIjtcbmltcG9ydCB7IFNrZWxldG9uIH0gZnJvbSBcIkBjaGFrcmEtdWkvcmVhY3RcIjtcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gSW5mbyh7IGRhdGEgfSkge1xuICBcbiAgICB1c2VFZmZlY3QoKCk9PntcbiAgICAgICAgQW9zLmluaXQoe2R1cmF0aW9uOjIwMDB9KVxuICAgIH0sW10pXG4gIHJldHVybiAoXG4gICAgPFNrZWxldG9uIGlzTG9hZGVkPXshKGRhdGEgPT0gbnVsbCl9PlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImJnLXdoaXRlIHNoYWRvdyBvdmVyZmxvdy1oaWRkZW4gc206cm91bmRlZC1sZ1wiPlxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJweC00IHB5LTUgc206cHgtNlwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgICA8aDMgY2xhc3NOYW1lPVwidGV4dC1sZyBsZWFkaW5nLTYgZm9udC1tZWRpdW0gdGV4dC1ncmF5LTkwMFwiPntkYXRhLm1lc3NhZ2V9PC9oMz5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwibXQtMSBtYXgtdy0yeGwgdGV4dC1zbSB0ZXh0LWdyYXktNTAwXCI+UGVyc29uYWwgZGV0YWlscyBhbmQgYXBwbGljYXRpb24uPC9wPlxuICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICB7ZGF0YS5sZW5ndGggPT09IDAgPyAoXG4gICAgICAgICAgICAgICAgPGgyPlRoZXJlIGlzIG5vIERhdGEgeWV0ITwvaDI+XG4gICAgICAgICAgICApIDogKFxuICAgICAgICAgICAgICAgIDx1bD5cbiAgICAgICAgICAgICAgICAgICAge2RhdGEubWFwKChpbmZvLCBpKSA9PiAoXG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGRhdGEtYW9zPXsgaSUyPT0wID8gJ2ZhZGUtbGVmdCcgOidmYWRlLXJpZ2h0JyB9IGNsYXNzTmFtZT1cImJvcmRlci10IGJvcmRlci1ncmF5LTMwMFwiIGtleT17aW5mby5pZH0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgIDxkbD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImJnLWdyYXktNTAgcHgtNCBweS01IHNtOmdyaWQgc206Z3JpZC1jb2xzLTMgc206Z2FwLTQgc206cHgtNlwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGR0IGNsYXNzTmFtZT1cInRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1ncmF5LTUwMFwiPkZ1bGwgbmFtZTwvZHQ+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGQgY2xhc3NOYW1lPVwibXQtMSB0ZXh0LXNtIHRleHQtZ3JheS05MDAgc206bXQtMCBzbTpjb2wtc3Bhbi0yXCIgPntpbmZvLmZuYW1lfTwvZGQ+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJiZy13aGl0ZSBweC00IHB5LTUgc206Z3JpZCBzbTpncmlkLWNvbHMtMyBzbTpnYXAtNCBzbTpweC02XCI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZHQgY2xhc3NOYW1lPVwidGV4dC1zbSBmb250LW1lZGl1bSB0ZXh0LWdyYXktNTAwXCI+TGFzdCBuYW1lIGZvcjwvZHQ+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGQgY2xhc3NOYW1lPVwibXQtMSB0ZXh0LXNtIHRleHQtZ3JheS05MDAgc206bXQtMCBzbTpjb2wtc3Bhbi0yXCI+e2luZm8ubG5hbWV9PC9kZD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImJnLWdyYXktNTAgcHgtNCBweS01IHNtOmdyaWQgc206Z3JpZC1jb2xzLTMgc206Z2FwLTQgc206cHgtNlwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGR0IGNsYXNzTmFtZT1cInRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1ncmF5LTUwMFwiPkVtYWlsIGFkZHJlc3M8L2R0PlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRkIGNsYXNzTmFtZT1cIm10LTEgdGV4dC1zbSB0ZXh0LWdyYXktOTAwIHNtOm10LTAgc206Y29sLXNwYW4tMlwiPntpbmZvLmVtYWlsfTwvZGQ+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJiZy13aGl0ZSBweC00IHB5LTUgc206Z3JpZCBzbTpncmlkLWNvbHMtMyBzbTpnYXAtNCBzbTpweC02XCI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZHQgY2xhc3NOYW1lPVwidGV4dC1zbSBmb250LW1lZGl1bSB0ZXh0LWdyYXktNTAwXCI+QWRkcmVzczwvZHQ+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGQgY2xhc3NOYW1lPVwibXQtMSB0ZXh0LXNtIHRleHQtZ3JheS05MDAgc206bXQtMCBzbTpjb2wtc3Bhbi0yXCI+e2luZm8uYWRkcmVzc308L2RkPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgICA8L2RsPlxuICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgICBcbiAgICAgICAgICAgICAgICAgICAgKSl9XG4gICAgICAgICAgICAgICAgPC91bD5cbiAgICAgICAgICAgICl9XG4gICAgICAgIDwvZGl2PlxuPC9Ta2VsZXRvbj5cbik7XG4gICAgXG5cbn1cblxuZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGdldFNlcnZlclNpZGVQcm9wcyhjdHgpIHtcbiAgICBcbiAgICAvLyBnZXQgdGhlIGN1cnJlbnQgZW52aXJvbm1lbnRcbiAgICBsZXQgZGV2ID0gcHJvY2Vzcy5lbnYuTk9ERV9FTlYgIT09ICdwcm9kdWN0aW9uJztcbiAgICBsZXQgeyBERVZfVVJMLCBQUk9EX1VSTCB9ID0gcHJvY2Vzcy5lbnY7XG5cbiAgICAvLyByZXF1ZXN0IHBvc3RzIGZyb20gYXBpXG4gICAgbGV0IHJlc3BvbnNlID0gIGF3YWl0IGZldGNoKGAke2RldiA/IERFVl9VUkwgOiBQUk9EX1VSTH0vYXBpL3BlcnNvbmFsbmZvYCk7XG4gICAgLy8gZXh0cmFjdCB0aGUgZGF0YVxuICAgIGxldCBkYXRhID0gIGF3YWl0IHJlc3BvbnNlLmpzb24oKTtcbiAgICBcbiAgICByZXR1cm4ge1xuICAgICAgICBwcm9wczoge1xuICAgICAgICAgICAgZGF0YTogZGF0YVsnbWVzc2FnZSddLFxuICAgICAgICB9LFxuICAgIH07XG59Il0sIm5hbWVzIjpbIlJlYWN0IiwidXNlRWZmZWN0IiwidXNlU3RhdGUiLCJBb3MiLCJTa2VsZXRvbiIsIkluZm8iLCJkYXRhIiwiaW5pdCIsImR1cmF0aW9uIiwiaXNMb2FkZWQiLCJkaXYiLCJjbGFzc05hbWUiLCJoMyIsIm1lc3NhZ2UiLCJwIiwibGVuZ3RoIiwiaDIiLCJ1bCIsIm1hcCIsImluZm8iLCJpIiwiZGF0YS1hb3MiLCJkbCIsImR0IiwiZGQiLCJmbmFtZSIsImxuYW1lIiwiZW1haWwiLCJhZGRyZXNzIiwiaWQiLCJnZXRTZXJ2ZXJTaWRlUHJvcHMiLCJjdHgiLCJkZXYiLCJERVZfVVJMIiwiUFJPRF9VUkwiLCJwcm9jZXNzIiwiZW52IiwicmVzcG9uc2UiLCJmZXRjaCIsImpzb24iLCJwcm9wcyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./pages/info.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Info),
+/* harmony export */   "getServerSideProps": () => (/* binding */ getServerSideProps)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9783);
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8930);
+/* harmony import */ var _chakra_ui_react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+function Info({ data  }) {
+    return(/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.Skeleton, {
+        isLoaded: !(data == null),
+        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+            className: "bg-white shadow overflow-hidden sm:rounded-lg",
+            children: [
+                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                    className: "px-4 py-5 sm:px-6",
+                    children: [
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h3", {
+                            className: "text-lg leading-6 font-medium text-gray-900",
+                            children: data.message
+                        }),
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                            className: "mt-1 max-w-2xl text-sm text-gray-500",
+                            children: "Personal details and application."
+                        })
+                    ]
+                }),
+                data.length === 0 ? /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
+                    children: "There is no Data yet!"
+                }) : /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("ul", {
+                    children: data.map((info, i)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                            className: "border-t border-gray-300",
+                            children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("dl", {
+                                children: [
+                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                        className: "bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6",
+                                        children: [
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("dt", {
+                                                className: "text-sm font-medium text-gray-500",
+                                                children: "Full name"
+                                            }),
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("dd", {
+                                                className: "mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2",
+                                                children: info.fname
+                                            })
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                        className: "bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6",
+                                        children: [
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("dt", {
+                                                className: "text-sm font-medium text-gray-500",
+                                                children: "Last name for"
+                                            }),
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("dd", {
+                                                className: "mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2",
+                                                children: info.lname
+                                            })
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                        className: "bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6",
+                                        children: [
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("dt", {
+                                                className: "text-sm font-medium text-gray-500",
+                                                children: "Email address"
+                                            }),
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("dd", {
+                                                className: "mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2",
+                                                children: info.email
+                                            })
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                        className: "bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6",
+                                        children: [
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("dt", {
+                                                className: "text-sm font-medium text-gray-500",
+                                                children: "Address"
+                                            }),
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("dd", {
+                                                className: "mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2",
+                                                children: info.address
+                                            })
+                                        ]
+                                    })
+                                ]
+                            })
+                        }, info.id)
+                    )
+                })
+            ]
+        })
+    }));
+};
+async function getServerSideProps(ctx) {
+    // get the current environment
+    let dev = "production" !== 'production';
+    let { DEV_URL , PROD_URL  } = process.env;
+    // request posts from api
+    let response = await fetch(`${dev ? DEV_URL : PROD_URL}/api/personalnfo`);
+    // extract the data
+    let data = await response.json();
+    return {
+        props: {
+            data: data['message']
+        }
+    };
+}
+
 
 /***/ }),
 
-/***/ "./node_modules/aos/dist/aos.css":
-/*!***************************************!*\
-  !*** ./node_modules/aos/dist/aos.css ***!
-  \***************************************/
-/***/ (() => {
-
-
-
-/***/ }),
-
-/***/ "@chakra-ui/react":
-/*!***********************************!*\
-  !*** external "@chakra-ui/react" ***!
-  \***********************************/
+/***/ 8930:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("@chakra-ui/react");
 
 /***/ }),
 
-/***/ "aos":
-/*!**********************!*\
-  !*** external "aos" ***!
-  \**********************/
+/***/ 9783:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("aos");
 
 /***/ }),
 
-/***/ "react":
-/*!************************!*\
-  !*** external "react" ***!
-  \************************/
+/***/ 6689:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("react");
 
 /***/ }),
 
-/***/ "react/jsx-dev-runtime":
-/*!****************************************!*\
-  !*** external "react/jsx-dev-runtime" ***!
-  \****************************************/
+/***/ 997:
 /***/ ((module) => {
 
-"use strict";
-module.exports = require("react/jsx-dev-runtime");
+module.exports = require("react/jsx-runtime");
 
 /***/ })
 
@@ -84,7 +166,7 @@ module.exports = require("react/jsx-dev-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("./pages/info.js"));
+var __webpack_exports__ = (__webpack_exec__(6820));
 module.exports = __webpack_exports__;
 
 })();
