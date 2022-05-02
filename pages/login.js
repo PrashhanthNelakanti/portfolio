@@ -27,7 +27,7 @@ export default function Login() {
     };
     console.log(info)
     // save the post
-    let response = await fetch('/api/personalnfo', {
+    let response = await fetch('/api/login', {
       // Insead of GET we are using POST as next allows POST as secured
       method: 'POST',
       headers: {
@@ -38,6 +38,7 @@ export default function Login() {
     });
     // get the data
     let data = await response.json();
+    console.log('mmm',data)
     if (data.success) {
       // reset the fields
       setPassword('');

@@ -22,7 +22,7 @@ export default async function handler(req, res) {
     }
 }
 
-// Getting all posts.
+// Getting all user.
 async function getUser(req, res) {
 
     try {
@@ -32,7 +32,6 @@ async function getUser(req, res) {
             .find({ email: email}, { $exists: true }).toArray(function (err, doc){
                 if (doc && doc.length)
                 {
-                    console("maps",doc[0].email)
                     return res.json({
                         message: 'User Already exists',
                         success: false,
@@ -52,7 +51,7 @@ async function getUser(req, res) {
     }
 }
 
-// Adding a new post
+// Adding a new user
 async function addUser(req, res) {
     const email =req.body.email;
     try {
@@ -61,19 +60,7 @@ async function addUser(req, res) {
             .collection('info')
             .find({ email: email}, { $exists: true }).toArray(function (err, doc){
                 if (doc && doc.length)
-                {
-                    if(req.body.purpose == "login" && req.body.password === doc[0].password && doc[0].isActive){
-                        console.log(doc);
-                    return res.json({
-                        message: 'User Auth Success',
-                        success: true,
-                     });
-                    }else{
-                        return res.json({
-                            message: 'User Auth failed',
-                            success: false,
-                        });
-                    }
+                {   // user found in doc
                     return res.json({
                         message: 'User Already exists',
                         success: false,
@@ -98,7 +85,7 @@ async function addUser(req, res) {
     }
 }
 
-// Updating a post
+// Updating a user
 async function updateUser(req, res) {
     try {
         let { db } = await connectToDatabase();
@@ -122,7 +109,7 @@ async function updateUser(req, res) {
     }
 }
 
-// deleting a post
+// deleting a user
 async function deleteUser(req, res) {
     try {
         let { db } = await connectToDatabase();
@@ -176,3 +163,4 @@ async function deleteUser(req, res) {
         });
     }
 }
+
