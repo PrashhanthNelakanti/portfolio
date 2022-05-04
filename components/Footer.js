@@ -32,3 +32,54 @@ export default function Footer() {
             </div>
         </main>
 
+
+
+
+        <Marquee direction='right'>
+            <div className="flex">
+                <div className="flex-initial w-64">
+                    <FaYoutube className="col-span-2" color="red" fontSize="5.5em"/>
+                </div>
+                <div className="flex-initial w-64">
+                    <FaReact color="#61DBFB" fontSize="5.5em"/>
+                </div>
+                <div className="flex-initial w-64">
+                    <FaStackOverflow color="orange" fontSize="5.5em"/>
+                </div>
+                <div className="flex-initial w-64">
+                    <FaNode color="green" fontSize="5.5em"/>
+                </div>
+                <div className="flex-initial w-64">
+                    <FaGithub color="black" fontSize="5.5em"/>
+                </div>
+                <div className="flex-initial w-64">
+                    <SiMongodb color="green" fontSize="5.5em"/>
+                </div>
+            </div>
+        </Marquee>
+
+        <Marquee direction='left'>
+            <div className="flex">
+                <div className="flex-initial w-64">
+                    <FaGoogle color="grey" fontSize="5em"/>
+                </div>
+                <div className="flex-initial w-64">
+                    <DiNpm color="red" fontSize="5.5em"/>
+                </div>
+                <div className="flex-initial w-64">
+                    <SiVisualstudiocode color="#61DBFB" fontSize="5.5em"/>
+                </div>
+                <div className="flex-initial w-64">
+                    <DiIntellij color="purple" fontSize="5.5em"/>
+                </div>
+                <div className="flex-initial w-64">
+                    <FaDiscord color="#7289da" fontSize="5.5em"/>
+                </div>
+                <div className="flex-initial w-64">
+                    <SiNextdotjs color="black" fontSize="5.5em"/>
+                </div>
+            </div>
+        </Marquee>
+    </>)
+
+}

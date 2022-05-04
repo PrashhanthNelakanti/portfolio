@@ -1,55 +1,191 @@
 "use strict";
-/*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 (() => {
 var exports = {};
-exports.id = "pages/api/personalnfo";
-exports.ids = ["pages/api/personalnfo"];
+exports.id = 105;
+exports.ids = [105];
 exports.modules = {
 
-/***/ "mongodb":
-/*!**************************!*\
-  !*** external "mongodb" ***!
-  \**************************/
+/***/ 8013:
 /***/ ((module) => {
 
 module.exports = require("mongodb");
 
 /***/ }),
 
-/***/ "nodemailer":
-/*!*****************************!*\
-  !*** external "nodemailer" ***!
-  \*****************************/
+/***/ 5184:
 /***/ ((module) => {
 
 module.exports = require("nodemailer");
 
 /***/ }),
 
-/***/ "(api)/./lib/mongodb.js":
-/*!************************!*\
-  !*** ./lib/mongodb.js ***!
-  \************************/
+/***/ 154:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"connectToDatabase\": () => (/* binding */ connectToDatabase)\n/* harmony export */ });\n/* harmony import */ var mongodb__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! mongodb */ \"mongodb\");\n/* harmony import */ var mongodb__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mongodb__WEBPACK_IMPORTED_MODULE_0__);\n\nconst MONGODB_URI = process.env.MONGODB_URI;\nconst MONGODB_DB = process.env.DB_NAME;\n// check the MongoDB URI\nif (!MONGODB_URI) {\n    throw new Error('Define the MONGODB_URI environmental variable');\n}\n// check the MongoDB DB\nif (!MONGODB_DB) {\n    throw new Error('Define the MONGODB_DB environmental variable');\n}\nlet cachedClient = null;\nlet cachedDb = null;\nasync function connectToDatabase() {\n    // check the cached.\n    if (cachedClient && cachedDb) {\n        // load from cache\n        return {\n            client: cachedClient,\n            db: cachedDb\n        };\n    }\n    // set the connection options\n    const opts = {\n        useNewUrlParser: true,\n        useUnifiedTopology: true\n    };\n    // Connect to cluster\n    let client = new mongodb__WEBPACK_IMPORTED_MODULE_0__.MongoClient(MONGODB_URI, opts);\n    await client.connect();\n    let db = client.db(MONGODB_DB);\n    // set cache\n    cachedClient = client;\n    cachedDb = db;\n    return {\n        client: cachedClient,\n        db: cachedDb\n    };\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9saWIvbW9uZ29kYi5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7QUFBcUM7QUFFckMsS0FBSyxDQUFDQyxXQUFXLEdBQUdDLE9BQU8sQ0FBQ0MsR0FBRyxDQUFDRixXQUFXO0FBQzNDLEtBQUssQ0FBQ0csVUFBVSxHQUFHRixPQUFPLENBQUNDLEdBQUcsQ0FBQ0UsT0FBTztBQUV0QyxFQUF3QjtBQUN4QixFQUFFLEdBQUdKLFdBQVcsRUFBRSxDQUFDO0lBQ2YsS0FBSyxDQUFDLEdBQUcsQ0FBQ0ssS0FBSyxDQUFDLENBQStDO0FBQ25FLENBQUM7QUFFRCxFQUF1QjtBQUN2QixFQUFFLEdBQUdGLFVBQVUsRUFBRSxDQUFDO0lBQ2QsS0FBSyxDQUFDLEdBQUcsQ0FBQ0UsS0FBSyxDQUFDLENBQThDO0FBQ2xFLENBQUM7QUFFRCxHQUFHLENBQUNDLFlBQVksR0FBRyxJQUFJO0FBQ3ZCLEdBQUcsQ0FBQ0MsUUFBUSxHQUFHLElBQUk7QUFFWixlQUFlQyxpQkFBaUIsR0FBRyxDQUFDO0lBQ3ZDLEVBQW9CO0lBQ3BCLEVBQUUsRUFBRUYsWUFBWSxJQUFJQyxRQUFRLEVBQUUsQ0FBQztRQUMzQixFQUFrQjtRQUNsQixNQUFNLENBQUMsQ0FBQztZQUNKRSxNQUFNLEVBQUVILFlBQVk7WUFDcEJJLEVBQUUsRUFBRUgsUUFBUTtRQUNoQixDQUFDO0lBQ0wsQ0FBQztJQUVELEVBQTZCO0lBQzdCLEtBQUssQ0FBQ0ksSUFBSSxHQUFHLENBQUM7UUFDVkMsZUFBZSxFQUFFLElBQUk7UUFDckJDLGtCQUFrQixFQUFFLElBQUk7SUFDNUIsQ0FBQztJQUVELEVBQXFCO0lBQ3JCLEdBQUcsQ0FBQ0osTUFBTSxHQUFHLEdBQUcsQ0FBQ1YsZ0RBQVcsQ0FBQ0MsV0FBVyxFQUFFVyxJQUFJO0lBQzlDLEtBQUssQ0FBQ0YsTUFBTSxDQUFDSyxPQUFPO0lBQ3BCLEdBQUcsQ0FBQ0osRUFBRSxHQUFHRCxNQUFNLENBQUNDLEVBQUUsQ0FBQ1AsVUFBVTtJQUU3QixFQUFZO0lBQ1pHLFlBQVksR0FBR0csTUFBTTtJQUNyQkYsUUFBUSxHQUFHRyxFQUFFO0lBRWIsTUFBTSxDQUFDLENBQUM7UUFDSkQsTUFBTSxFQUFFSCxZQUFZO1FBQ3BCSSxFQUFFLEVBQUVILFFBQVE7SUFDaEIsQ0FBQztBQUNMLENBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9wcm9maWxlLy4vbGliL21vbmdvZGIuanM/ZDkyMCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBNb25nb0NsaWVudCB9IGZyb20gJ21vbmdvZGInO1xuXG5jb25zdCBNT05HT0RCX1VSSSA9IHByb2Nlc3MuZW52Lk1PTkdPREJfVVJJO1xuY29uc3QgTU9OR09EQl9EQiA9IHByb2Nlc3MuZW52LkRCX05BTUU7XG5cbi8vIGNoZWNrIHRoZSBNb25nb0RCIFVSSVxuaWYgKCFNT05HT0RCX1VSSSkge1xuICAgIHRocm93IG5ldyBFcnJvcignRGVmaW5lIHRoZSBNT05HT0RCX1VSSSBlbnZpcm9ubWVudGFsIHZhcmlhYmxlJyk7XG59XG5cbi8vIGNoZWNrIHRoZSBNb25nb0RCIERCXG5pZiAoIU1PTkdPREJfREIpIHtcbiAgICB0aHJvdyBuZXcgRXJyb3IoJ0RlZmluZSB0aGUgTU9OR09EQl9EQiBlbnZpcm9ubWVudGFsIHZhcmlhYmxlJyk7XG59XG5cbmxldCBjYWNoZWRDbGllbnQgPSBudWxsO1xubGV0IGNhY2hlZERiID0gbnVsbDtcblxuZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGNvbm5lY3RUb0RhdGFiYXNlKCkge1xuICAgIC8vIGNoZWNrIHRoZSBjYWNoZWQuXG4gICAgaWYgKGNhY2hlZENsaWVudCAmJiBjYWNoZWREYikge1xuICAgICAgICAvLyBsb2FkIGZyb20gY2FjaGVcbiAgICAgICAgcmV0dXJuIHtcbiAgICAgICAgICAgIGNsaWVudDogY2FjaGVkQ2xpZW50LFxuICAgICAgICAgICAgZGI6IGNhY2hlZERiLFxuICAgICAgICB9O1xuICAgIH1cblxuICAgIC8vIHNldCB0aGUgY29ubmVjdGlvbiBvcHRpb25zXG4gICAgY29uc3Qgb3B0cyA9IHtcbiAgICAgICAgdXNlTmV3VXJsUGFyc2VyOiB0cnVlLFxuICAgICAgICB1c2VVbmlmaWVkVG9wb2xvZ3k6IHRydWUsXG4gICAgfTtcblxuICAgIC8vIENvbm5lY3QgdG8gY2x1c3RlclxuICAgIGxldCBjbGllbnQgPSBuZXcgTW9uZ29DbGllbnQoTU9OR09EQl9VUkksIG9wdHMpO1xuICAgIGF3YWl0IGNsaWVudC5jb25uZWN0KCk7XG4gICAgbGV0IGRiID0gY2xpZW50LmRiKE1PTkdPREJfREIpO1xuXG4gICAgLy8gc2V0IGNhY2hlXG4gICAgY2FjaGVkQ2xpZW50ID0gY2xpZW50O1xuICAgIGNhY2hlZERiID0gZGI7XG5cbiAgICByZXR1cm4ge1xuICAgICAgICBjbGllbnQ6IGNhY2hlZENsaWVudCxcbiAgICAgICAgZGI6IGNhY2hlZERiLFxuICAgIH07XG59Il0sIm5hbWVzIjpbIk1vbmdvQ2xpZW50IiwiTU9OR09EQl9VUkkiLCJwcm9jZXNzIiwiZW52IiwiTU9OR09EQl9EQiIsIkRCX05BTUUiLCJFcnJvciIsImNhY2hlZENsaWVudCIsImNhY2hlZERiIiwiY29ubmVjdFRvRGF0YWJhc2UiLCJjbGllbnQiLCJkYiIsIm9wdHMiLCJ1c2VOZXdVcmxQYXJzZXIiLCJ1c2VVbmlmaWVkVG9wb2xvZ3kiLCJjb25uZWN0Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(api)/./lib/mongodb.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ handler)
+/* harmony export */ });
+const { connectToDatabase  } = __webpack_require__(6057);
+const ObjectId = (__webpack_require__(8013).ObjectId);
+const otp = new Date().getTime().toString(36);
+async function handler(req, res) {
+    // switch the methods
+    switch(req.method){
+        case 'GET':
+            {
+                return getUser(req, res);
+            }
+        case 'POST':
+            {
+                return addUser(req, res);
+            }
+        case 'PUT':
+            {
+                return updateUser(req, res);
+            }
+        case 'DELETE':
+            {
+                return deleteUser(req, res);
+            }
+    }
+};
+// Getting all user.
+async function getUser(req, res) {
+    try {
+        let { db  } = await connectToDatabase();
+        let posts = await db.collection('info').find({
+            email: email
+        }, {
+            $exists: true
+        }).toArray(function(err, doc) {
+            if (doc && doc.length) {
+                return res.json({
+                    message: 'User Already exists',
+                    success: false
+                });
+            } else {
+                return res.json({
+                    message: 'User Password or Email Address In-correct',
+                    success: true
+                });
+            }
+        });
+    } catch (error) {
+        return res.json({
+            message: new Error(error).message,
+            success: false
+        });
+    }
+}
+// Adding a new user
+async function addUser(req, res) {
+    const email = req.body.email;
+    try {
+        let { db  } = await connectToDatabase();
+        let posts = await db.collection('info').find({
+            email: email
+        }, {
+            $exists: true
+        }).toArray(function(err, doc) {
+            if (doc && doc.length) {
+                return res.json({
+                    message: 'User Already exists',
+                    success: false
+                });
+            } else {
+                sendOtp(email);
+                // get the data
+                req.body.otp = otp;
+                req.body.isActive = false;
+                db.collection('info').insertOne(req.body);
+                return res.json({
+                    message: 'An OTP is sent to your Email Address',
+                    success: true
+                });
+            }
+        });
+    } catch (error) {
+        return res.json({
+            message: new Error(error).message,
+            success: false
+        });
+    }
+}
+// Updating a user
+async function updateUser(req, res) {
+    try {
+        let { db  } = await connectToDatabase();
+        await db.collection('info').updateOne({
+            _id: new ObjectId(req.body)
+        }, {
+            $set: {
+                published: true
+            }
+        });
+        return res.json({
+            message: 'User updated successfully',
+            success: true
+        });
+    } catch (error) {
+        return res.json({
+            message: new Error(error).message,
+            success: false
+        });
+    }
+}
+// deleting a user
+async function deleteUser(req, res) {
+    try {
+        let { db  } = await connectToDatabase();
+        await db.collection('info').deleteOne({
+            _id: new ObjectId(req.body)
+        });
+        return res.json({
+            message: 'User deleted successfully',
+            success: true
+        });
+    } catch (error) {
+        return res.json({
+            message: new Error(error).message,
+            success: false
+        });
+    }
+}
+function sendOtp(to_emailAddress) {
+    try {
+        const nodemailer = __webpack_require__(5184);
+        const transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: process.env.EMAIL,
+                pass: process.env.EMAIL_PWD
+            },
+            secure: true
+        });
+        var mailOptions = {
+            from: process.env.EMAIL,
+            to: to_emailAddress,
+            subject: 'OTP',
+            html: `<h1>Here is the Otp</h1><p>${otp}</p>`
+        };
+        new Promise((resolve, reject)=>{
+            transporter.sendMail(mailOptions, function(error, info) {
+                if (error) {
+                    console.log(error);
+                } else {
+                    console.log('Email sent: ' + info.response);
+                }
+            });
+        });
+    } catch (error) {
+        return res.json({
+            message: new Error(error).message,
+            success: false
+        });
+    }
+}
 
-/***/ }),
-
-/***/ "(api)/./pages/api/personalnfo.js":
-/*!**********************************!*\
-  !*** ./pages/api/personalnfo.js ***!
-  \**********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ handler)\n/* harmony export */ });\nconst { connectToDatabase  } = __webpack_require__(/*! ../../lib/mongodb */ \"(api)/./lib/mongodb.js\");\nconst ObjectId = (__webpack_require__(/*! mongodb */ \"mongodb\").ObjectId);\nconst otp = new Date().getTime().toString(36);\nasync function handler(req, res) {\n    // switch the methods\n    switch(req.method){\n        case 'GET':\n            {\n                return getUser(req, res);\n            }\n        case 'POST':\n            {\n                console.log(req.body);\n                if (req.body.purpose == \"login\") {\n                    return login(req, res);\n                } else {\n                    return addUser(req, res);\n                }\n            }\n        case 'PUT':\n            {\n                return updateUser(req, res);\n            }\n        case 'DELETE':\n            {\n                return deleteUser(req, res);\n            }\n    }\n};\n// Getting all user.\nasync function getUser(req, res) {\n    try {\n        let { db  } = await connectToDatabase();\n        let posts = await db.collection('info').find({\n            email: email\n        }, {\n            $exists: true\n        }).toArray(function(err, doc) {\n            if (doc && doc.length) {\n                console(\"maps\", doc[0].email);\n                return res.json({\n                    message: 'User Already exists',\n                    success: false\n                });\n            } else {\n                return res.json({\n                    message: 'User Password or Email Address In-correct',\n                    success: true\n                });\n            }\n        });\n    } catch (error) {\n        return res.json({\n            message: new Error(error).message,\n            success: false\n        });\n    }\n}\n// Adding a new user\nasync function addUser(req, res) {\n    const email = req.body.email;\n    try {\n        let { db  } = await connectToDatabase();\n        let posts = await db.collection('info').find({\n            email: email\n        }, {\n            $exists: true\n        }).toArray(function(err, doc) {\n            if (doc && doc.length) {\n                if (req.body.purpose == \"login\" && req.body.password === doc[0].password && doc[0].isActive) {\n                    console.log(doc);\n                    return res.json({\n                        message: 'User Auth Success',\n                        success: true\n                    });\n                } else {\n                    return res.json({\n                        message: 'User Auth failed',\n                        success: false\n                    });\n                }\n                return res.json({\n                    message: 'User Already exists',\n                    success: false\n                });\n            } else {\n                sendOtp(email);\n                // get the data\n                req.body.otp = otp;\n                req.body.isActive = false;\n                db.collection('info').insertOne(req.body);\n                return res.json({\n                    message: 'An OTP is sent to your Email Address',\n                    success: true\n                });\n            }\n        });\n    } catch (error) {\n        return res.json({\n            message: new Error(error).message,\n            success: false\n        });\n    }\n}\n// Updating a user\nasync function updateUser(req, res) {\n    try {\n        let { db  } = await connectToDatabase();\n        await db.collection('info').updateOne({\n            _id: new ObjectId(req.body)\n        }, {\n            $set: {\n                published: true\n            }\n        });\n        return res.json({\n            message: 'User updated successfully',\n            success: true\n        });\n    } catch (error) {\n        return res.json({\n            message: new Error(error).message,\n            success: false\n        });\n    }\n}\n// deleting a user\nasync function deleteUser(req, res) {\n    try {\n        let { db  } = await connectToDatabase();\n        await db.collection('info').deleteOne({\n            _id: new ObjectId(req.body)\n        });\n        return res.json({\n            message: 'User deleted successfully',\n            success: true\n        });\n    } catch (error) {\n        return res.json({\n            message: new Error(error).message,\n            success: false\n        });\n    }\n}\nfunction sendOtp(to_emailAddress) {\n    try {\n        const nodemailer = __webpack_require__(/*! nodemailer */ \"nodemailer\");\n        const transporter = nodemailer.createTransport({\n            service: 'gmail',\n            auth: {\n                user: process.env.EMAIL,\n                pass: process.env.EMAIL_PWD\n            },\n            secure: true\n        });\n        var mailOptions = {\n            from: process.env.EMAIL,\n            to: to_emailAddress,\n            subject: 'OTP',\n            html: `<h1>Here is the Otp</h1><p>${otp}</p>`\n        };\n        new Promise((resolve, reject)=>{\n            transporter.sendMail(mailOptions, function(error, info) {\n                if (error) {\n                    console.log(error);\n                } else {\n                    console.log('Email sent: ' + info.response);\n                }\n            });\n        });\n    } catch (error) {\n        return res.json({\n            message: new Error(error).message,\n            success: false\n        });\n    }\n}\nasync function login(req, res) {\n    console.log('in login');\n    const email = req.body.email;\n    try {\n        let { db  } = await connectToDatabase();\n        let posts = await db.collection('info').find({\n            email: email\n        }, {\n            $exists: true\n        }).toArray(function(err, doc) {\n            if (doc && doc.length) {\n                if (req.body.purpose == \"login\" && req.body.password === doc[0].password && doc[0].isActive) {\n                    console.log(doc);\n                    return res.json({\n                        message: 'User Auth Success',\n                        success: true\n                    });\n                } else {\n                    return res.json({\n                        message: 'User Auth failed',\n                        success: false\n                    });\n                }\n                return res.json({\n                    message: 'User Already exists',\n                    success: false\n                });\n            } else {\n                sendOtp(email);\n                // get the data\n                req.body.otp = otp;\n                req.body.isActive = false;\n                db.collection('info').insertOne(req.body);\n                return res.json({\n                    message: 'An OTP is sent to your Email Address',\n                    success: true\n                });\n            }\n        });\n    } catch (error) {\n        return res.json({\n            message: new Error(error).message,\n            success: false\n        });\n    }\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,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QzVCQyxPQUFPLEVBQUUsSUFBSTtvQkFDaEIsQ0FBQztnQkFDRixDQUFDLE1BQUksQ0FBQztvQkFDRixNQUFNLENBQUN2QixHQUFHLENBQUNxQixJQUFJLENBQUMsQ0FBQzt3QkFDYkMsT0FBTyxFQUFFLENBQWtCO3dCQUMzQkMsT0FBTyxFQUFFLEtBQUs7b0JBQ2xCLENBQUM7Z0JBQ0wsQ0FBQztnQkFDRCxNQUFNLENBQUN2QixHQUFHLENBQUNxQixJQUFJLENBQUMsQ0FBQztvQkFDYkMsT0FBTyxFQUFFLENBQXFCO29CQUM5QkMsT0FBTyxFQUFFLEtBQUs7Z0JBQ2xCLENBQUM7WUFDTCxDQUFDLE1BQUksQ0FBQztnQkFDRkssT0FBTyxDQUFDYixLQUFLO2dCQUNYLEVBQWU7Z0JBQ2hCaEIsR0FBRyxDQUFDTSxJQUFJLENBQUNYLEdBQUcsR0FBQ0EsR0FBRztnQkFDaEJLLEdBQUcsQ0FBQ00sSUFBSSxDQUFDc0IsUUFBUSxHQUFDLEtBQUs7Z0JBQ3ZCaEIsRUFBRSxDQUFDRSxVQUFVLENBQUMsQ0FBTSxPQUFFZ0IsU0FBUyxDQUFDOUIsR0FBRyxDQUFDTSxJQUFJO2dCQUN6QyxNQUFNLENBQUNMLEdBQUcsQ0FBQ3FCLElBQUksQ0FBQyxDQUFDO29CQUNiQyxPQUFPLEVBQUUsQ0FBc0M7b0JBQy9DQyxPQUFPLEVBQUUsSUFBSTtnQkFDakIsQ0FBQztZQUNMLENBQUM7UUFDTCxDQUFDO0lBQ1QsQ0FBQyxDQUFDLEtBQUssRUFBRUMsS0FBSyxFQUFFLENBQUM7UUFDYixNQUFNLENBQUN4QixHQUFHLENBQUNxQixJQUFJLENBQUMsQ0FBQztZQUNiQyxPQUFPLEVBQUUsR0FBRyxDQUFDRyxLQUFLLENBQUNELEtBQUssRUFBRUYsT0FBTztZQUNqQ0MsT0FBTyxFQUFFLEtBQUs7UUFDbEIsQ0FBQztJQUNMLENBQUM7QUFDTCxDQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vcHJvZmlsZS8uL3BhZ2VzL2FwaS9wZXJzb25hbG5mby5qcz9iMTI3Il0sInNvdXJjZXNDb250ZW50IjpbImNvbnN0IHsgY29ubmVjdFRvRGF0YWJhc2UgfSA9IHJlcXVpcmUoJy4uLy4uL2xpYi9tb25nb2RiJyk7XG5jb25zdCBPYmplY3RJZCA9IHJlcXVpcmUoJ21vbmdvZGInKS5PYmplY3RJZDtcbmNvbnN0IG90cCA9KG5ldyBEYXRlKCkpLmdldFRpbWUoKS50b1N0cmluZygzNik7XG5leHBvcnQgZGVmYXVsdCBhc3luYyBmdW5jdGlvbiBoYW5kbGVyKHJlcSwgcmVzKSB7XG4gICAgLy8gc3dpdGNoIHRoZSBtZXRob2RzXG4gICAgc3dpdGNoIChyZXEubWV0aG9kKSB7XG4gICAgICAgIGNhc2UgJ0dFVCc6IHtcbiAgICAgICAgICAgIHJldHVybiBnZXRVc2VyKHJlcSwgcmVzKTtcbiAgICAgICAgfVxuXG4gICAgICAgIGNhc2UgJ1BPU1QnOiB7XG4gICAgICAgICAgICBjb25zb2xlLmxvZyhyZXEuYm9keSlcbiAgICAgICAgICAgIGlmKHJlcS5ib2R5LnB1cnBvc2UgPT0gXCJsb2dpblwiKXtcbiAgICAgICAgICAgICAgICByZXR1cm4gbG9naW4ocmVxLHJlcyk7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICBlbHNle1xuICAgICAgICAgICAgICAgIHJldHVybiBhZGRVc2VyKHJlcSwgcmVzKTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfVxuXG4gICAgICAgIGNhc2UgJ1BVVCc6IHtcbiAgICAgICAgICAgIHJldHVybiB1cGRhdGVVc2VyKHJlcSwgcmVzKTtcbiAgICAgICAgfVxuXG4gICAgICAgIGNhc2UgJ0RFTEVURSc6IHtcbiAgICAgICAgICAgIHJldHVybiBkZWxldGVVc2VyKHJlcSwgcmVzKTtcbiAgICAgICAgfVxuICAgIH1cbn1cblxuLy8gR2V0dGluZyBhbGwgdXNlci5cbmFzeW5jIGZ1bmN0aW9uIGdldFVzZXIocmVxLCByZXMpIHtcblxuICAgIHRyeSB7XG4gICAgICAgIGxldCB7IGRiIH0gPSBhd2FpdCBjb25uZWN0VG9EYXRhYmFzZSgpO1xuICAgICAgICBsZXQgcG9zdHMgPSBhd2FpdCBkYlxuICAgICAgICAgICAgLmNvbGxlY3Rpb24oJ2luZm8nKVxuICAgICAgICAgICAgLmZpbmQoeyBlbWFpbDogZW1haWx9LCB7ICRleGlzdHM6IHRydWUgfSkudG9BcnJheShmdW5jdGlvbiAoZXJyLCBkb2Mpe1xuICAgICAgICAgICAgICAgIGlmIChkb2MgJiYgZG9jLmxlbmd0aClcbiAgICAgICAgICAgICAgICB7XG4gICAgICAgICAgICAgICAgICAgIGNvbnNvbGUoXCJtYXBzXCIsZG9jWzBdLmVtYWlsKVxuICAgICAgICAgICAgICAgICAgICByZXR1cm4gcmVzLmpzb24oe1xuICAgICAgICAgICAgICAgICAgICAgICAgbWVzc2FnZTogJ1VzZXIgQWxyZWFkeSBleGlzdHMnLFxuICAgICAgICAgICAgICAgICAgICAgICAgc3VjY2VzczogZmFsc2UsXG4gICAgICAgICAgICAgICAgICAgIH0pO1xuICAgICAgICAgICAgICAgIH1lbHNle1xuICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIHJlcy5qc29uKHtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBtZXNzYWdlOiAnVXNlciBQYXNzd29yZCBvciBFbWFpbCBBZGRyZXNzIEluLWNvcnJlY3QnLFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHN1Y2Nlc3M6IHRydWUsXG4gICAgICAgICAgICAgICAgICAgICAgICB9KTtcbiAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgIH0pO1xuICAgIH0gY2F0Y2ggKGVycm9yKSB7XG4gICAgICAgIHJldHVybiByZXMuanNvbih7XG4gICAgICAgICAgICBtZXNzYWdlOiBuZXcgRXJyb3IoZXJyb3IpLm1lc3NhZ2UsXG4gICAgICAgICAgICBzdWNjZXNzOiBmYWxzZSxcbiAgICAgICAgfSk7XG4gICAgfVxufVxuXG4vLyBBZGRpbmcgYSBuZXcgdXNlclxuYXN5bmMgZnVuY3Rpb24gYWRkVXNlcihyZXEsIHJlcykge1xuICAgIGNvbnN0IGVtYWlsID1yZXEuYm9keS5lbWFpbDtcbiAgICB0cnkge1xuICAgICAgICBsZXQgeyBkYiB9ID0gYXdhaXQgY29ubmVjdFRvRGF0YWJhc2UoKTtcbiAgICAgICAgbGV0IHBvc3RzID0gYXdhaXQgZGJcbiAgICAgICAgICAgIC5jb2xsZWN0aW9uKCdpbmZvJylcbiAgICAgICAgICAgIC5maW5kKHsgZW1haWw6IGVtYWlsfSwgeyAkZXhpc3RzOiB0cnVlIH0pLnRvQXJyYXkoZnVuY3Rpb24gKGVyciwgZG9jKXtcbiAgICAgICAgICAgICAgICBpZiAoZG9jICYmIGRvYy5sZW5ndGgpXG4gICAgICAgICAgICAgICAge1xuICAgICAgICAgICAgICAgICAgICBpZihyZXEuYm9keS5wdXJwb3NlID09IFwibG9naW5cIiAmJiByZXEuYm9keS5wYXNzd29yZCA9PT0gZG9jWzBdLnBhc3N3b3JkICYmIGRvY1swXS5pc0FjdGl2ZSl7XG4gICAgICAgICAgICAgICAgICAgICAgICBjb25zb2xlLmxvZyhkb2MpO1xuICAgICAgICAgICAgICAgICAgICByZXR1cm4gcmVzLmpzb24oe1xuICAgICAgICAgICAgICAgICAgICAgICAgbWVzc2FnZTogJ1VzZXIgQXV0aCBTdWNjZXNzJyxcbiAgICAgICAgICAgICAgICAgICAgICAgIHN1Y2Nlc3M6IHRydWUsXG4gICAgICAgICAgICAgICAgICAgICB9KTtcbiAgICAgICAgICAgICAgICAgICAgfWVsc2V7XG4gICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gcmVzLmpzb24oe1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgIG1lc3NhZ2U6ICdVc2VyIEF1dGggZmFpbGVkJyxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBzdWNjZXNzOiBmYWxzZSxcbiAgICAgICAgICAgICAgICAgICAgICAgIH0pO1xuICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgICAgIHJldHVybiByZXMuanNvbih7XG4gICAgICAgICAgICAgICAgICAgICAgICBtZXNzYWdlOiAnVXNlciBBbHJlYWR5IGV4aXN0cycsXG4gICAgICAgICAgICAgICAgICAgICAgICBzdWNjZXNzOiBmYWxzZSxcbiAgICAgICAgICAgICAgICAgICAgfSk7XG4gICAgICAgICAgICAgICAgfWVsc2V7XG4gICAgICAgICAgICAgICAgICAgIHNlbmRPdHAoZW1haWwpXG4gICAgICAgICAgICAgICAgICAgICAgLy8gZ2V0IHRoZSBkYXRhXG4gICAgICAgICAgICAgICAgICAgICByZXEuYm9keS5vdHA9b3RwO1xuICAgICAgICAgICAgICAgICAgICAgcmVxLmJvZHkuaXNBY3RpdmU9ZmFsc2U7XG4gICAgICAgICAgICAgICAgICAgICBkYi5jb2xsZWN0aW9uKCdpbmZvJykuaW5zZXJ0T25lKHJlcS5ib2R5KTtcbiAgICAgICAgICAgICAgICAgICAgcmV0dXJuIHJlcy5qc29uKHtcbiAgICAgICAgICAgICAgICAgICAgICAgIG1lc3NhZ2U6ICdBbiBPVFAgaXMgc2VudCB0byB5b3VyIEVtYWlsIEFkZHJlc3MnLFxuICAgICAgICAgICAgICAgICAgICAgICAgc3VjY2VzczogdHJ1ZSxcbiAgICAgICAgICAgICAgICAgICAgfSk7XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgfSk7ICAgICAgICAgICAgIFxuICAgIH0gY2F0Y2ggKGVycm9yKSB7XG4gICAgICAgIHJldHVybiByZXMuanNvbih7XG4gICAgICAgICAgICBtZXNzYWdlOiBuZXcgRXJyb3IoZXJyb3IpLm1lc3NhZ2UsXG4gICAgICAgICAgICBzdWNjZXNzOiBmYWxzZSxcbiAgICAgICAgfSk7XG4gICAgfVxufVxuXG4vLyBVcGRhdGluZyBhIHVzZXJcbmFzeW5jIGZ1bmN0aW9uIHVwZGF0ZVVzZXIocmVxLCByZXMpIHtcbiAgICB0cnkge1xuICAgICAgICBsZXQgeyBkYiB9ID0gYXdhaXQgY29ubmVjdFRvRGF0YWJhc2UoKTtcblxuICAgICAgICBhd2FpdCBkYi5jb2xsZWN0aW9uKCdpbmZvJykudXBkYXRlT25lKFxuICAgICAgICAgICAge1xuICAgICAgICAgICAgICAgIF9pZDogbmV3IE9iamVjdElkKHJlcS5ib2R5KSxcbiAgICAgICAgICAgIH0sXG4gICAgICAgICAgICB7ICRzZXQ6IHsgcHVibGlzaGVkOiB0cnVlIH0gfVxuICAgICAgICApO1xuXG4gICAgICAgIHJldHVybiByZXMuanNvbih7XG4gICAgICAgICAgICBtZXNzYWdlOiAnVXNlciB1cGRhdGVkIHN1Y2Nlc3NmdWxseScsXG4gICAgICAgICAgICBzdWNjZXNzOiB0cnVlLFxuICAgICAgICB9KTtcbiAgICB9IGNhdGNoIChlcnJvcikge1xuICAgICAgICByZXR1cm4gcmVzLmpzb24oe1xuICAgICAgICAgICAgbWVzc2FnZTogbmV3IEVycm9yKGVycm9yKS5tZXNzYWdlLFxuICAgICAgICAgICAgc3VjY2VzczogZmFsc2UsXG4gICAgICAgIH0pO1xuICAgIH1cbn1cblxuLy8gZGVsZXRpbmcgYSB1c2VyXG5hc3luYyBmdW5jdGlvbiBkZWxldGVVc2VyKHJlcSwgcmVzKSB7XG4gICAgdHJ5IHtcbiAgICAgICAgbGV0IHsgZGIgfSA9IGF3YWl0IGNvbm5lY3RUb0RhdGFiYXNlKCk7XG5cbiAgICAgICAgYXdhaXQgZGIuY29sbGVjdGlvbignaW5mbycpLmRlbGV0ZU9uZSh7XG4gICAgICAgICAgICBfaWQ6IG5ldyBPYmplY3RJZChyZXEuYm9keSksXG4gICAgICAgIH0pO1xuXG4gICAgICAgIHJldHVybiByZXMuanNvbih7XG4gICAgICAgICAgICBtZXNzYWdlOiAnVXNlciBkZWxldGVkIHN1Y2Nlc3NmdWxseScsXG4gICAgICAgICAgICBzdWNjZXNzOiB0cnVlLFxuICAgICAgICB9KTtcbiAgICB9IGNhdGNoIChlcnJvcikge1xuICAgICAgICByZXR1cm4gcmVzLmpzb24oe1xuICAgICAgICAgICAgbWVzc2FnZTogbmV3IEVycm9yKGVycm9yKS5tZXNzYWdlLFxuICAgICAgICAgICAgc3VjY2VzczogZmFsc2UsXG4gICAgICAgIH0pO1xuICAgIH1cbn1cblxuIGZ1bmN0aW9uIHNlbmRPdHAodG9fZW1haWxBZGRyZXNzKSB7XG4gICAgdHJ5IHtcbiAgICAgICAgY29uc3Qgbm9kZW1haWxlciA9IHJlcXVpcmUoJ25vZGVtYWlsZXInKTtcbiAgICAgICAgY29uc3QgdHJhbnNwb3J0ZXIgPSBub2RlbWFpbGVyLmNyZWF0ZVRyYW5zcG9ydCh7XG4gICAgICAgICAgICBzZXJ2aWNlOiAnZ21haWwnLFxuICAgICAgICAgICAgYXV0aDoge1xuICAgICAgICAgICAgICAgIHVzZXI6IHByb2Nlc3MuZW52LkVNQUlMLFxuICAgICAgICAgICAgICAgIHBhc3M6IHByb2Nlc3MuZW52LkVNQUlMX1BXRFxuICAgICAgICAgICAgfSxcbiAgICAgICAgICAgIHNlY3VyZTogdHJ1ZSxcbiAgICAgICAgfSk7XG4gICAgICAgIHZhciBtYWlsT3B0aW9ucyA9IHtcbiAgICAgICAgICAgIGZyb206IHByb2Nlc3MuZW52LkVNQUlMLFxuICAgICAgICAgICAgdG86IHRvX2VtYWlsQWRkcmVzcyxcbiAgICAgICAgICAgIHN1YmplY3Q6ICdPVFAnLFxuICAgICAgICAgICAgaHRtbDogYDxoMT5IZXJlIGlzIHRoZSBPdHA8L2gxPjxwPiR7b3RwfTwvcD5gXG4gICAgICAgIH07XG4gICAgICAgICBuZXcgUHJvbWlzZSgocmVzb2x2ZSwgcmVqZWN0KSA9PiB7XG4gICAgICAgIHRyYW5zcG9ydGVyLnNlbmRNYWlsKG1haWxPcHRpb25zLCBmdW5jdGlvbiAoZXJyb3IsIGluZm8pIHtcbiAgICAgICAgICAgIGlmIChlcnJvcikge1xuICAgICAgICAgICAgICAgIGNvbnNvbGUubG9nKGVycm9yKTtcbiAgICAgICAgICAgIH0gZWxzZSB7XG4gICAgICAgICAgICAgICAgY29uc29sZS5sb2coJ0VtYWlsIHNlbnQ6ICcgKyBpbmZvLnJlc3BvbnNlKTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfSk7XG4gICAgfSk7XG4gICAgfSBjYXRjaCAoZXJyb3IpIHtcbiAgICAgICAgcmV0dXJuIHJlcy5qc29uKHtcbiAgICAgICAgICAgIG1lc3NhZ2U6IG5ldyBFcnJvcihlcnJvcikubWVzc2FnZSxcbiAgICAgICAgICAgIHN1Y2Nlc3M6IGZhbHNlLFxuICAgICAgICB9KTtcbiAgICB9XG59XG5cbmFzeW5jIGZ1bmN0aW9uIGxvZ2luKHJlcSwgcmVzKSB7XG4gICAgY29uc29sZS5sb2coJ2luIGxvZ2luJylcbiAgICBjb25zdCBlbWFpbCA9cmVxLmJvZHkuZW1haWw7XG4gICAgdHJ5IHtcbiAgICAgICAgbGV0IHsgZGIgfSA9IGF3YWl0IGNvbm5lY3RUb0RhdGFiYXNlKCk7XG4gICAgICAgIGxldCBwb3N0cyA9IGF3YWl0IGRiXG4gICAgICAgICAgICAuY29sbGVjdGlvbignaW5mbycpXG4gICAgICAgICAgICAuZmluZCh7IGVtYWlsOiBlbWFpbH0sIHsgJGV4aXN0czogdHJ1ZSB9KS50b0FycmF5KGZ1bmN0aW9uIChlcnIsIGRvYyl7XG4gICAgICAgICAgICAgICAgaWYgKGRvYyAmJiBkb2MubGVuZ3RoKVxuICAgICAgICAgICAgICAgIHtcbiAgICAgICAgICAgICAgICAgICAgaWYocmVxLmJvZHkucHVycG9zZSA9PSBcImxvZ2luXCIgJiYgcmVxLmJvZHkucGFzc3dvcmQgPT09IGRvY1swXS5wYXNzd29yZCAmJiBkb2NbMF0uaXNBY3RpdmUpe1xuICAgICAgICAgICAgICAgICAgICAgICAgY29uc29sZS5sb2coZG9jKTtcbiAgICAgICAgICAgICAgICAgICAgcmV0dXJuIHJlcy5qc29uKHtcbiAgICAgICAgICAgICAgICAgICAgICAgIG1lc3NhZ2U6ICdVc2VyIEF1dGggU3VjY2VzcycsXG4gICAgICAgICAgICAgICAgICAgICAgICBzdWNjZXNzOiB0cnVlLFxuICAgICAgICAgICAgICAgICAgICAgfSk7XG4gICAgICAgICAgICAgICAgICAgIH1lbHNle1xuICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIHJlcy5qc29uKHtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBtZXNzYWdlOiAnVXNlciBBdXRoIGZhaWxlZCcsXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgc3VjY2VzczogZmFsc2UsXG4gICAgICAgICAgICAgICAgICAgICAgICB9KTtcbiAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgICAgICByZXR1cm4gcmVzLmpzb24oe1xuICAgICAgICAgICAgICAgICAgICAgICAgbWVzc2FnZTogJ1VzZXIgQWxyZWFkeSBleGlzdHMnLFxuICAgICAgICAgICAgICAgICAgICAgICAgc3VjY2VzczogZmFsc2UsXG4gICAgICAgICAgICAgICAgICAgIH0pO1xuICAgICAgICAgICAgICAgIH1lbHNle1xuICAgICAgICAgICAgICAgICAgICBzZW5kT3RwKGVtYWlsKVxuICAgICAgICAgICAgICAgICAgICAgIC8vIGdldCB0aGUgZGF0YVxuICAgICAgICAgICAgICAgICAgICAgcmVxLmJvZHkub3RwPW90cDtcbiAgICAgICAgICAgICAgICAgICAgIHJlcS5ib2R5LmlzQWN0aXZlPWZhbHNlO1xuICAgICAgICAgICAgICAgICAgICAgZGIuY29sbGVjdGlvbignaW5mbycpLmluc2VydE9uZShyZXEuYm9keSk7XG4gICAgICAgICAgICAgICAgICAgIHJldHVybiByZXMuanNvbih7XG4gICAgICAgICAgICAgICAgICAgICAgICBtZXNzYWdlOiAnQW4gT1RQIGlzIHNlbnQgdG8geW91ciBFbWFpbCBBZGRyZXNzJyxcbiAgICAgICAgICAgICAgICAgICAgICAgIHN1Y2Nlc3M6IHRydWUsXG4gICAgICAgICAgICAgICAgICAgIH0pO1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIH0pOyAgICAgICAgICAgICBcbiAgICB9IGNhdGNoIChlcnJvcikge1xuICAgICAgICByZXR1cm4gcmVzLmpzb24oe1xuICAgICAgICAgICAgbWVzc2FnZTogbmV3IEVycm9yKGVycm9yKS5tZXNzYWdlLFxuICAgICAgICAgICAgc3VjY2VzczogZmFsc2UsXG4gICAgICAgIH0pO1xuICAgIH1cbn0iXSwibmFtZXMiOlsiY29ubmVjdFRvRGF0YWJhc2UiLCJyZXF1aXJlIiwiT2JqZWN0SWQiLCJvdHAiLCJEYXRlIiwiZ2V0VGltZSIsInRvU3RyaW5nIiwiaGFuZGxlciIsInJlcSIsInJlcyIsIm1ldGhvZCIsImdldFVzZXIiLCJjb25zb2xlIiwibG9nIiwiYm9keSIsInB1cnBvc2UiLCJsb2dpbiIsImFkZFVzZXIiLCJ1cGRhdGVVc2VyIiwiZGVsZXRlVXNlciIsImRiIiwicG9zdHMiLCJjb2xsZWN0aW9uIiwiZmluZCIsImVtYWlsIiwiJGV4aXN0cyIsInRvQXJyYXkiLCJlcnIiLCJkb2MiLCJsZW5ndGgiLCJqc29uIiwibWVzc2FnZSIsInN1Y2Nlc3MiLCJlcnJvciIsIkVycm9yIiwicGFzc3dvcmQiLCJpc0FjdGl2ZSIsInNlbmRPdHAiLCJpbnNlcnRPbmUiLCJ1cGRhdGVPbmUiLCJfaWQiLCIkc2V0IiwicHVibGlzaGVkIiwiZGVsZXRlT25lIiwidG9fZW1haWxBZGRyZXNzIiwibm9kZW1haWxlciIsInRyYW5zcG9ydGVyIiwiY3JlYXRlVHJhbnNwb3J0Iiwic2VydmljZSIsImF1dGgiLCJ1c2VyIiwicHJvY2VzcyIsImVudiIsIkVNQUlMIiwicGFzcyIsIkVNQUlMX1BXRCIsInNlY3VyZSIsIm1haWxPcHRpb25zIiwiZnJvbSIsInRvIiwic3ViamVjdCIsImh0bWwiLCJQcm9taXNlIiwicmVzb2x2ZSIsInJlamVjdCIsInNlbmRNYWlsIiwiaW5mbyIsInJlc3BvbnNlIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(api)/./pages/api/personalnfo.js\n");
 
 /***/ })
 
@@ -60,7 +196,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 var __webpack_require__ = require("../../webpack-api-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/personalnfo.js"));
+var __webpack_exports__ = __webpack_require__.X(0, [57], () => (__webpack_exec__(154)));
 module.exports = __webpack_exports__;
 
 })();

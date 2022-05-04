@@ -1,45 +1,66 @@
 "use strict";
-/*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 (() => {
 var exports = {};
-exports.id = "pages/api/login";
-exports.ids = ["pages/api/login"];
+exports.id = 994;
+exports.ids = [994];
 exports.modules = {
 
-/***/ "mongodb":
-/*!**************************!*\
-  !*** external "mongodb" ***!
-  \**************************/
+/***/ 8013:
 /***/ ((module) => {
 
 module.exports = require("mongodb");
 
 /***/ }),
 
-/***/ "(api)/./lib/mongodb.js":
-/*!************************!*\
-  !*** ./lib/mongodb.js ***!
-  \************************/
+/***/ 7202:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"connectToDatabase\": () => (/* binding */ connectToDatabase)\n/* harmony export */ });\n/* harmony import */ var mongodb__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! mongodb */ \"mongodb\");\n/* harmony import */ var mongodb__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mongodb__WEBPACK_IMPORTED_MODULE_0__);\n\nconst MONGODB_URI = process.env.MONGODB_URI;\nconst MONGODB_DB = process.env.DB_NAME;\n// check the MongoDB URI\nif (!MONGODB_URI) {\n    throw new Error('Define the MONGODB_URI environmental variable');\n}\n// check the MongoDB DB\nif (!MONGODB_DB) {\n    throw new Error('Define the MONGODB_DB environmental variable');\n}\nlet cachedClient = null;\nlet cachedDb = null;\nasync function connectToDatabase() {\n    // check the cached.\n    if (cachedClient && cachedDb) {\n        // load from cache\n        return {\n            client: cachedClient,\n            db: cachedDb\n        };\n    }\n    // set the connection options\n    const opts = {\n        useNewUrlParser: true,\n        useUnifiedTopology: true\n    };\n    // Connect to cluster\n    let client = new mongodb__WEBPACK_IMPORTED_MODULE_0__.MongoClient(MONGODB_URI, opts);\n    await client.connect();\n    let db = client.db(MONGODB_DB);\n    // set cache\n    cachedClient = client;\n    cachedDb = db;\n    return {\n        client: cachedClient,\n        db: cachedDb\n    };\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9saWIvbW9uZ29kYi5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7QUFBcUM7QUFFckMsS0FBSyxDQUFDQyxXQUFXLEdBQUdDLE9BQU8sQ0FBQ0MsR0FBRyxDQUFDRixXQUFXO0FBQzNDLEtBQUssQ0FBQ0csVUFBVSxHQUFHRixPQUFPLENBQUNDLEdBQUcsQ0FBQ0UsT0FBTztBQUV0QyxFQUF3QjtBQUN4QixFQUFFLEdBQUdKLFdBQVcsRUFBRSxDQUFDO0lBQ2YsS0FBSyxDQUFDLEdBQUcsQ0FBQ0ssS0FBSyxDQUFDLENBQStDO0FBQ25FLENBQUM7QUFFRCxFQUF1QjtBQUN2QixFQUFFLEdBQUdGLFVBQVUsRUFBRSxDQUFDO0lBQ2QsS0FBSyxDQUFDLEdBQUcsQ0FBQ0UsS0FBSyxDQUFDLENBQThDO0FBQ2xFLENBQUM7QUFFRCxHQUFHLENBQUNDLFlBQVksR0FBRyxJQUFJO0FBQ3ZCLEdBQUcsQ0FBQ0MsUUFBUSxHQUFHLElBQUk7QUFFWixlQUFlQyxpQkFBaUIsR0FBRyxDQUFDO0lBQ3ZDLEVBQW9CO0lBQ3BCLEVBQUUsRUFBRUYsWUFBWSxJQUFJQyxRQUFRLEVBQUUsQ0FBQztRQUMzQixFQUFrQjtRQUNsQixNQUFNLENBQUMsQ0FBQztZQUNKRSxNQUFNLEVBQUVILFlBQVk7WUFDcEJJLEVBQUUsRUFBRUgsUUFBUTtRQUNoQixDQUFDO0lBQ0wsQ0FBQztJQUVELEVBQTZCO0lBQzdCLEtBQUssQ0FBQ0ksSUFBSSxHQUFHLENBQUM7UUFDVkMsZUFBZSxFQUFFLElBQUk7UUFDckJDLGtCQUFrQixFQUFFLElBQUk7SUFDNUIsQ0FBQztJQUVELEVBQXFCO0lBQ3JCLEdBQUcsQ0FBQ0osTUFBTSxHQUFHLEdBQUcsQ0FBQ1YsZ0RBQVcsQ0FBQ0MsV0FBVyxFQUFFVyxJQUFJO0lBQzlDLEtBQUssQ0FBQ0YsTUFBTSxDQUFDSyxPQUFPO0lBQ3BCLEdBQUcsQ0FBQ0osRUFBRSxHQUFHRCxNQUFNLENBQUNDLEVBQUUsQ0FBQ1AsVUFBVTtJQUU3QixFQUFZO0lBQ1pHLFlBQVksR0FBR0csTUFBTTtJQUNyQkYsUUFBUSxHQUFHRyxFQUFFO0lBRWIsTUFBTSxDQUFDLENBQUM7UUFDSkQsTUFBTSxFQUFFSCxZQUFZO1FBQ3BCSSxFQUFFLEVBQUVILFFBQVE7SUFDaEIsQ0FBQztBQUNMLENBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9wcm9maWxlLy4vbGliL21vbmdvZGIuanM/ZDkyMCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBNb25nb0NsaWVudCB9IGZyb20gJ21vbmdvZGInO1xuXG5jb25zdCBNT05HT0RCX1VSSSA9IHByb2Nlc3MuZW52Lk1PTkdPREJfVVJJO1xuY29uc3QgTU9OR09EQl9EQiA9IHByb2Nlc3MuZW52LkRCX05BTUU7XG5cbi8vIGNoZWNrIHRoZSBNb25nb0RCIFVSSVxuaWYgKCFNT05HT0RCX1VSSSkge1xuICAgIHRocm93IG5ldyBFcnJvcignRGVmaW5lIHRoZSBNT05HT0RCX1VSSSBlbnZpcm9ubWVudGFsIHZhcmlhYmxlJyk7XG59XG5cbi8vIGNoZWNrIHRoZSBNb25nb0RCIERCXG5pZiAoIU1PTkdPREJfREIpIHtcbiAgICB0aHJvdyBuZXcgRXJyb3IoJ0RlZmluZSB0aGUgTU9OR09EQl9EQiBlbnZpcm9ubWVudGFsIHZhcmlhYmxlJyk7XG59XG5cbmxldCBjYWNoZWRDbGllbnQgPSBudWxsO1xubGV0IGNhY2hlZERiID0gbnVsbDtcblxuZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGNvbm5lY3RUb0RhdGFiYXNlKCkge1xuICAgIC8vIGNoZWNrIHRoZSBjYWNoZWQuXG4gICAgaWYgKGNhY2hlZENsaWVudCAmJiBjYWNoZWREYikge1xuICAgICAgICAvLyBsb2FkIGZyb20gY2FjaGVcbiAgICAgICAgcmV0dXJuIHtcbiAgICAgICAgICAgIGNsaWVudDogY2FjaGVkQ2xpZW50LFxuICAgICAgICAgICAgZGI6IGNhY2hlZERiLFxuICAgICAgICB9O1xuICAgIH1cblxuICAgIC8vIHNldCB0aGUgY29ubmVjdGlvbiBvcHRpb25zXG4gICAgY29uc3Qgb3B0cyA9IHtcbiAgICAgICAgdXNlTmV3VXJsUGFyc2VyOiB0cnVlLFxuICAgICAgICB1c2VVbmlmaWVkVG9wb2xvZ3k6IHRydWUsXG4gICAgfTtcblxuICAgIC8vIENvbm5lY3QgdG8gY2x1c3RlclxuICAgIGxldCBjbGllbnQgPSBuZXcgTW9uZ29DbGllbnQoTU9OR09EQl9VUkksIG9wdHMpO1xuICAgIGF3YWl0IGNsaWVudC5jb25uZWN0KCk7XG4gICAgbGV0IGRiID0gY2xpZW50LmRiKE1PTkdPREJfREIpO1xuXG4gICAgLy8gc2V0IGNhY2hlXG4gICAgY2FjaGVkQ2xpZW50ID0gY2xpZW50O1xuICAgIGNhY2hlZERiID0gZGI7XG5cbiAgICByZXR1cm4ge1xuICAgICAgICBjbGllbnQ6IGNhY2hlZENsaWVudCxcbiAgICAgICAgZGI6IGNhY2hlZERiLFxuICAgIH07XG59Il0sIm5hbWVzIjpbIk1vbmdvQ2xpZW50IiwiTU9OR09EQl9VUkkiLCJwcm9jZXNzIiwiZW52IiwiTU9OR09EQl9EQiIsIkRCX05BTUUiLCJFcnJvciIsImNhY2hlZENsaWVudCIsImNhY2hlZERiIiwiY29ubmVjdFRvRGF0YWJhc2UiLCJjbGllbnQiLCJkYiIsIm9wdHMiLCJ1c2VOZXdVcmxQYXJzZXIiLCJ1c2VVbmlmaWVkVG9wb2xvZ3kiLCJjb25uZWN0Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(api)/./lib/mongodb.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Login)
+/* harmony export */ });
+const { connectToDatabase  } = __webpack_require__(6057);
+async function Login(req, res) {
+    switch(req.method){
+        case 'POST':
+            {
+                return login(req, res);
+            }
+    }
+};
+async function login(req, res) {
+    console.log('in login');
+    const email = req.body.email;
+    try {
+        let { db  } = await connectToDatabase();
+        let posts = await db.collection('info').find({
+            email: email
+        }, {
+            $exists: true
+        }).toArray(function(err, doc) {
+            if (doc && doc.length) {
+                if (req.body.purpose == "login" && req.body.password === doc[0].password && doc[0].isActive) {
+                    console.log(doc);
+                    return res.json({
+                        message: 'User Auth Success',
+                        success: true
+                    });
+                }
+            } else {
+                return res.json({
+                    message: 'User Auth failed',
+                    success: false
+                });
+            }
+        });
+    } catch (error) {
+        return res.json({
+            message: new Error(error).message,
+            success: false
+        });
+    }
+}
 
-/***/ }),
-
-/***/ "(api)/./pages/api/login.js":
-/*!****************************!*\
-  !*** ./pages/api/login.js ***!
-  \****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Login)\n/* harmony export */ });\nconst { connectToDatabase  } = __webpack_require__(/*! ../../lib/mongodb */ \"(api)/./lib/mongodb.js\");\nasync function Login(req, res) {\n    switch(req.method){\n        case 'POST':\n            {\n                return login(req, res);\n            }\n    }\n};\nasync function login(req, res) {\n    console.log('in login');\n    const email = req.body.email;\n    try {\n        let { db  } = await connectToDatabase();\n        let posts = await db.collection('info').find({\n            email: email\n        }, {\n            $exists: true\n        }).toArray(function(err, doc) {\n            if (doc && doc.length) {\n                if (req.body.purpose == \"login\" && req.body.password === doc[0].password && doc[0].isActive) {\n                    console.log(doc);\n                    return res.json({\n                        message: 'User Auth Success',\n                        success: true\n                    });\n                }\n            } else {\n                return res.json({\n                    message: 'User Auth failed',\n                    success: false\n                });\n            }\n        });\n    } catch (error) {\n        return res.json({\n            message: new Error(error).message,\n            success: false\n        });\n    }\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvbG9naW4uanMuanMiLCJtYXBwaW5ncyI6Ijs7OztBQUFBLEtBQUssQ0FBQyxDQUFDQSxDQUFBQSxpQkFBaUIsR0FBQyxHQUFHQyxtQkFBTyxDQUFDLGlEQUFtQjtBQUV4QyxlQUFlQyxLQUFLLENBQUNDLEdBQUcsRUFBRUMsR0FBRyxFQUFFLENBQUM7SUFFM0MsTUFBTSxDQUFFRCxHQUFHLENBQUNFLE1BQU07UUFDZCxJQUFJLENBQUMsQ0FBTTtZQUFFLENBQUM7Z0JBQ1YsTUFBTSxDQUFDQyxLQUFLLENBQUNILEdBQUcsRUFBRUMsR0FBRztZQUV6QixDQUFDOztBQUVULENBQUM7ZUFFY0UsS0FBSyxDQUFDSCxHQUFHLEVBQUVDLEdBQUcsRUFBRSxDQUFDO0lBQzVCRyxPQUFPLENBQUNDLEdBQUcsQ0FBQyxDQUFVO0lBQ3RCLEtBQUssQ0FBQ0MsS0FBSyxHQUFFTixHQUFHLENBQUNPLElBQUksQ0FBQ0QsS0FBSztJQUMzQixHQUFHLENBQUMsQ0FBQztRQUNELEdBQUcsQ0FBQyxDQUFDLENBQUNFLEVBQUUsRUFBQyxDQUFDLEdBQUcsS0FBSyxDQUFDWCxpQkFBaUI7UUFDcEMsR0FBRyxDQUFDWSxLQUFLLEdBQUcsS0FBSyxDQUFDRCxFQUFFLENBQ2ZFLFVBQVUsQ0FBQyxDQUFNLE9BQ2pCQyxJQUFJLENBQUMsQ0FBQztZQUFDTCxLQUFLLEVBQUVBLEtBQUs7UUFBQSxDQUFDLEVBQUUsQ0FBQztZQUFDTSxPQUFPLEVBQUUsSUFBSTtRQUFDLENBQUMsRUFBRUMsT0FBTyxDQUFDLFFBQVEsQ0FBRUMsR0FBRyxFQUFFQyxHQUFHLEVBQUMsQ0FBQztZQUNsRSxFQUFFLEVBQUVBLEdBQUcsSUFBSUEsR0FBRyxDQUFDQyxNQUFNLEVBQ3JCLENBQUM7Z0JBQ0csRUFBRSxFQUFDaEIsR0FBRyxDQUFDTyxJQUFJLENBQUNVLE9BQU8sSUFBSSxDQUFPLFVBQUlqQixHQUFHLENBQUNPLElBQUksQ0FBQ1csUUFBUSxLQUFLSCxHQUFHLENBQUMsQ0FBQyxFQUFFRyxRQUFRLElBQUlILEdBQUcsQ0FBQyxDQUFDLEVBQUVJLFFBQVEsRUFBQyxDQUFDO29CQUN4RmYsT0FBTyxDQUFDQyxHQUFHLENBQUNVLEdBQUc7b0JBQ2YsTUFBTSxDQUFDZCxHQUFHLENBQUNtQixJQUFJLENBQUMsQ0FBQzt3QkFDYkMsT0FBTyxFQUFFLENBQW1CO3dCQUM1QkMsT0FBTyxFQUFFLElBQUk7b0JBQ2pCLENBQUM7Z0JBQ0wsQ0FBQztZQUNMLENBQUMsTUFDRyxDQUFDO2dCQUNELE1BQU0sQ0FBQ3JCLEdBQUcsQ0FBQ21CLElBQUksQ0FBQyxDQUFDO29CQUNiQyxPQUFPLEVBQUUsQ0FBa0I7b0JBQzNCQyxPQUFPLEVBQUUsS0FBSztnQkFDbEIsQ0FBQztZQUNMLENBQUM7UUFDTCxDQUFDO0lBQ1QsQ0FBQyxDQUFDLEtBQUssRUFBRUMsS0FBSyxFQUFFLENBQUM7UUFDYixNQUFNLENBQUN0QixHQUFHLENBQUNtQixJQUFJLENBQUMsQ0FBQztZQUNiQyxPQUFPLEVBQUUsR0FBRyxDQUFDRyxLQUFLLENBQUNELEtBQUssRUFBRUYsT0FBTztZQUNqQ0MsT0FBTyxFQUFFLEtBQUs7UUFDbEIsQ0FBQztJQUNMLENBQUM7QUFDTCxDQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vcHJvZmlsZS8uL3BhZ2VzL2FwaS9sb2dpbi5qcz9hZTg4Il0sInNvdXJjZXNDb250ZW50IjpbImNvbnN0IHtjb25uZWN0VG9EYXRhYmFzZX0gPSByZXF1aXJlKCcuLi8uLi9saWIvbW9uZ29kYicpO1xuXG5leHBvcnQgZGVmYXVsdCBhc3luYyBmdW5jdGlvbiBMb2dpbihyZXEsIHJlcykge1xuXG4gICAgc3dpdGNoIChyZXEubWV0aG9kKSB7XG4gICAgICAgIGNhc2UgJ1BPU1QnOiB7XG4gICAgICAgICAgICByZXR1cm4gbG9naW4ocmVxLCByZXMpO1xuXG4gICAgICAgIH1cbiAgICB9XG59XG5cbmFzeW5jIGZ1bmN0aW9uIGxvZ2luKHJlcSwgcmVzKSB7XG4gICAgY29uc29sZS5sb2coJ2luIGxvZ2luJylcbiAgICBjb25zdCBlbWFpbCA9cmVxLmJvZHkuZW1haWw7XG4gICAgdHJ5IHtcbiAgICAgICAgbGV0IHsgZGIgfSA9IGF3YWl0IGNvbm5lY3RUb0RhdGFiYXNlKCk7XG4gICAgICAgIGxldCBwb3N0cyA9IGF3YWl0IGRiXG4gICAgICAgICAgICAuY29sbGVjdGlvbignaW5mbycpXG4gICAgICAgICAgICAuZmluZCh7IGVtYWlsOiBlbWFpbH0sIHsgJGV4aXN0czogdHJ1ZSB9KS50b0FycmF5KGZ1bmN0aW9uIChlcnIsIGRvYyl7XG4gICAgICAgICAgICAgICAgaWYgKGRvYyAmJiBkb2MubGVuZ3RoKVxuICAgICAgICAgICAgICAgIHtcbiAgICAgICAgICAgICAgICAgICAgaWYocmVxLmJvZHkucHVycG9zZSA9PSBcImxvZ2luXCIgJiYgcmVxLmJvZHkucGFzc3dvcmQgPT09IGRvY1swXS5wYXNzd29yZCAmJiBkb2NbMF0uaXNBY3RpdmUpe1xuICAgICAgICAgICAgICAgICAgICAgICAgY29uc29sZS5sb2coZG9jKTtcbiAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiByZXMuanNvbih7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgbWVzc2FnZTogJ1VzZXIgQXV0aCBTdWNjZXNzJyxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBzdWNjZXNzOiB0cnVlLFxuICAgICAgICAgICAgICAgICAgICAgICAgfSk7XG4gICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgZWxzZXtcbiAgICAgICAgICAgICAgICAgICAgcmV0dXJuIHJlcy5qc29uKHtcbiAgICAgICAgICAgICAgICAgICAgICAgIG1lc3NhZ2U6ICdVc2VyIEF1dGggZmFpbGVkJyxcbiAgICAgICAgICAgICAgICAgICAgICAgIHN1Y2Nlc3M6IGZhbHNlLFxuICAgICAgICAgICAgICAgICAgICB9KTtcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICB9KTtcbiAgICB9IGNhdGNoIChlcnJvcikge1xuICAgICAgICByZXR1cm4gcmVzLmpzb24oe1xuICAgICAgICAgICAgbWVzc2FnZTogbmV3IEVycm9yKGVycm9yKS5tZXNzYWdlLFxuICAgICAgICAgICAgc3VjY2VzczogZmFsc2UsXG4gICAgICAgIH0pO1xuICAgIH1cbn0iXSwibmFtZXMiOlsiY29ubmVjdFRvRGF0YWJhc2UiLCJyZXF1aXJlIiwiTG9naW4iLCJyZXEiLCJyZXMiLCJtZXRob2QiLCJsb2dpbiIsImNvbnNvbGUiLCJsb2ciLCJlbWFpbCIsImJvZHkiLCJkYiIsInBvc3RzIiwiY29sbGVjdGlvbiIsImZpbmQiLCIkZXhpc3RzIiwidG9BcnJheSIsImVyciIsImRvYyIsImxlbmd0aCIsInB1cnBvc2UiLCJwYXNzd29yZCIsImlzQWN0aXZlIiwianNvbiIsIm1lc3NhZ2UiLCJzdWNjZXNzIiwiZXJyb3IiLCJFcnJvciJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(api)/./pages/api/login.js\n");
 
 /***/ })
 
@@ -50,7 +71,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 var __webpack_require__ = require("../../webpack-api-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/login.js"));
+var __webpack_exports__ = __webpack_require__.X(0, [57], () => (__webpack_exec__(7202)));
 module.exports = __webpack_exports__;
 
 })();
