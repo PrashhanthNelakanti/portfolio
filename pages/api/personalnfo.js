@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     // switch the methods
     switch (req.method) {
         case 'GET': {
-            return getUser(req, res);
+            return getAllUser(req, res);
         }
 
         case 'POST': {
@@ -23,13 +23,13 @@ export default async function handler(req, res) {
 }
 
 // Getting all user.
-async function getUser(req, res) {
+async function getAllUser(req, res) {
 
     try {
         let { db } = await connectToDatabase();
         let posts = await db
             .collection('info')
-            .find({ email: email}, { $exists: true }).toArray(function (err, doc){
+            .find({ email: email}).toArray(function (err, doc){
                 if (doc && doc.length)
                 {
                     return res.json({
