@@ -29,17 +29,17 @@ async function getAllUser(req, res) {
         let { db } = await connectToDatabase();
         let posts = await db
             .collection('info')
-            .find({ email: email}).toArray(function (err, doc){
+            .find().toArray(function (err, doc){
                 if (doc && doc.length)
                 {
                     return res.json({
-                        message: 'User Already exists',
-                        success: false,
+                        message: doc,
+                        success: true,
                     });
                 }else{
                         return res.json({
-                            message: 'User Password or Email Address In-correct',
-                            success: true,
+                            message: 'An Error Occurred with fetching all the users',
+                            success: false,
                         });
                     }
                 });

@@ -18,7 +18,7 @@ export default function Info({ data }) {
             ) : (
                 <ul>
                     {data.map((info, i) => (
-                        <div  className="border-t border-gray-300" key={info.id}>
+                        <div  className="border-t border-gray-300" key={info._id}>
                           <dl>
                             <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                               <dt className="text-sm font-medium text-gray-500">Full name</dt>
