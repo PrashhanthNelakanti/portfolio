@@ -49,7 +49,7 @@ export default function Info({ data }) {
 
 }
 
-export async function getStaticProps(ctx) {
+export async function getServerSideProps(ctx) {
     
     // get the current environment
     let dev = process.env.NODE_ENV !== 'production';
