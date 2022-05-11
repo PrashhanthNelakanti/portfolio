@@ -1,7 +1,8 @@
 import React,{useEffect, useState} from "react";
+
 import Aos from "aos";
 import "aos/dist/aos.css";
-import {ProgressBar} from "react-bootstrap";
+import ProgressBar from "@ramonak/react-progress-bar";
 
 export default function Info() {
     const [data, setData] = useState(null)
@@ -17,7 +18,7 @@ export default function Info() {
             })
     }, [])
 
-    if (isLoading) return <ProgressBar variant="success" animated now={90} />
+    if (isLoading) return <ProgressBar completed={Math.floor(Math.random() * 49)+50} />
     if (!data) return <p>No profile data</p>
 
     return (
