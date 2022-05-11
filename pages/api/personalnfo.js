@@ -33,7 +33,8 @@ async function getAllUser(req, res) {
                 if (doc && doc.length)
                 {
                     return res.json({
-                        message: doc,
+                        doc:doc,
+                        message: 'All Users fetch completed',
                         success: true,
                     });
                 }else{
