@@ -1,5 +1,6 @@
 import Marquee from "react-fast-marquee";
 import Footer from "../components/Footer";
+import {Charts} from "./charts";
 const Home = () => {
   return (
     <div>
@@ -36,6 +37,7 @@ const Home = () => {
           </div>
         </div>
       </main>
+      <Charts/>
       <Footer/>
     </div>
   );

@@ -1,8 +1,9 @@
 import React,{useEffect, useState} from "react";
 
-import Aos from "aos";
 import "aos/dist/aos.css";
-import ProgressBar from "@ramonak/react-progress-bar";
+import BouncingBall from "./loading";
+import ThreeDotsWave from "./loading";
+import Link from "next/link";
 
 export default function Info() {
     const [data, setData] = useState(null)
@@ -18,7 +19,18 @@ export default function Info() {
             })
     }, [])
 
-    if (isLoading) return <ProgressBar completed={Math.floor(Math.random() * 49)+50} />
+
+    if (isLoading) return(
+        <body>
+            <div className="w-9/12 m-auto py-16 min-h-screen flex items-center justify-center">
+                <div className="bg-white shadow overflow-hidden sm:rounded-lg pb-8">
+                    <div className="border-t border-gray-200 text-center pt-8">
+                        <ThreeDotsWave/>
+                    </div>
+                </div>
+            </div>
+        </body>
+       );
     if (!data) return <p>No profile data</p>
 
     return (
