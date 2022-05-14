@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 import BouncingBall from "./loading";
 import ThreeDotsWave from "./loading";
 import Link from "next/link";
+import Spinner from "./utils/spinner";
 
 export default function Info() {
     const [data, setData] = useState(null)
@@ -21,15 +22,7 @@ export default function Info() {
 
 
     if (isLoading) return(
-        <body>
-            <div className="w-9/12 m-auto py-16 min-h-screen flex items-center justify-center">
-                <div className="bg-white shadow overflow-hidden sm:rounded-lg pb-8">
-                    <div className="border-t border-gray-200 text-center pt-8">
-                        <ThreeDotsWave/>
-                    </div>
-                </div>
-            </div>
-        </body>
+           <Spinner/>
        );
     if (!data) return <p>No profile data</p>
 

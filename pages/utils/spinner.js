@@ -1,10 +1,12 @@
+import {FaReact} from "react-icons/fa";
+
 export default function Spinner() {
     return (
         <>
-            <div class="p-10 min-h-screen flex items-center justify-center">
+            <div class="py-8 min-h-screen flex items-center justify-center">
                 <div class="animate-spin">
-                    <div class="h-16 w-16 bg-white bg-opacity-50 rounded-full flex items-center justify-center">
-                        <span class="text-8xl">🌎</span>
+                    <div class="h-20 w-20 bg-white rounded-full flex items-center justify-center">
+                        <span class="text-8xl"><FaReact/></span>
                     </div>
                 </div>
             </div>
