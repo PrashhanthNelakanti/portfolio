@@ -1,4 +1,4 @@
-import {Charts} from "./chart";
+import Charts from "./chart";
 
 const userPage = () => {
     return (<><Charts/></>);
