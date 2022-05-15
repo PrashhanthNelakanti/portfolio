@@ -1,5 +1,7 @@
+import {Charts} from "./chart";
+
 const userPage = () => {
-    return (<><h1>Hello</h1></>);
+    return (<><Charts/></>);
 }
  
 export default userPage;
