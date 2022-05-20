@@ -1,23 +1,18 @@
 import { LockClosedIcon } from '@heroicons/react/solid'
-import {useState, useEffect} from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/router'
-import React from "react";
-import { connect } from "react-redux";
-import {createStore} from "redux";
+import {useDispatch, useSelector} from "react-redux";
+import {decrement, increment, login} from "./actions";
 
-export default  function Login() {
+export default function Login() {
   const router = useRouter();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [message, setMessage] = useState('');
-
-  useEffect(() => {
-    if (window) {
-      sessionStorage.setItem("login","not yet");
-    }
-  }, []);
-
+  const counter = useSelector(state=>state.counter);
+  const loggedIn = useSelector(state=>state.isLogged);
+  const dispatch = useDispatch();
   const handlePost = async (e) => {
     e.preventDefault();
 
@@ -47,9 +42,8 @@ export default  function Login() {
     });
     // get the data
     let data = await response.json();
-    console.log('mmm',data)
     if (data.success) {
-      sessionStorage.setItem("login","done");
+      dispatch(login());
       // reset the fields
       setPassword('');
       setEmail('');
@@ -115,4 +109,3 @@ export default  function Login() {
     </>
   )
 }
-

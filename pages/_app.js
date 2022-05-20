@@ -1,16 +1,24 @@
-import { ChakraProvider } from '@chakra-ui/react'
+import {ChakraProvider} from '@chakra-ui/react'
 import Layout from '../components/Layout'
 import '../styles/globals.css'
+import {createStore} from 'redux'
+import allReducers from "./reducer";
+import {Provider} from "react-redux";
 
-function MyApp({ Component, pageProps }) {
-  return(
-    <ChakraProvider>
-       <Layout>
-      <Component {...pageProps} />
-     </Layout>
-    </ChakraProvider>
-    
-  )   
+const store = createStore(
+    allReducers);
+
+function MyApp({Component, pageProps}) {
+    return (
+        <Provider store={store}>
+        <ChakraProvider>
+            <Layout>
+                <Component {...pageProps} />
+            </Layout>
+        </ChakraProvider>
+        </Provider>
+
+    )
 }
 
 export default MyApp

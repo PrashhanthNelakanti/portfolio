@@ -1,7 +1,8 @@
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { Disclosure } from '@headlessui/react'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { useRouter } from 'next/router'
+import {useDispatch, useSelector} from "react-redux";
+import {decrement, increment} from "../pages/actions";
 
 const user = {
   name: 'Prashhanth Nelakanti',
@@ -28,9 +29,15 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
+    const counter = useSelector(state=>state.counter);
+    const loggedIn = useSelector(state=>state.isLogged);
+    const dispact = useDispatch();
+
+    console.log(loggedIn)
     const router = useRouter();
   return (
     <>
+
       <div className="min-h-full">
         <Disclosure as="nav" className="bg-gray-800">
           {({ open }) => (
@@ -38,6 +45,7 @@ export default function Navbar() {
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                   <div className="flex items-center">
+
                     <div className="flex-shrink-0">
                       <img
                         className="h-8 w-8"
@@ -48,7 +56,7 @@ export default function Navbar() {
                     <div className="hidden md:block">
                       <div className="ml-10 flex items-baseline space-x-4">
                         {navigation.map((item) => (
-                          <a
+                            (loggedIn && item.name!='Login') ?  <a
                             key={item.name}
                             href={item.href}
                             className={classNames(    
@@ -58,11 +66,22 @@ export default function Navbar() {
                             aria-current={item.current ? 'page' : undefined}
                           >
                             {item.name}
-                          </a>
+                          </a> : (!loggedIn && item.name=='Login') ?  <a
+                                key={item.name}
+                                href={item.href}
+                                className={classNames(
+                                    'text-gray-300 hover:bg-gray-700 hover:text-white',
+                                    'px-3 py-2 rounded-md text-sm font-medium'
+                                )}
+                                aria-current={item.current ? 'page' : undefined}
+                            >
+                                {item.name}
+                            </a>:''
                         ))}
                       </div>
                     </div>
                   </div>
+
                   {/* <div className="hidden md:block">
                     <div className="ml-4 flex items-center md:ml-6">
                       <button
