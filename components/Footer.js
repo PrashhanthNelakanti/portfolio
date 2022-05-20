@@ -14,16 +14,15 @@ import {SiMongodb, SiNextdotjs, SiVisualstudiocode} from "react-icons/si";
 import {DiIntellij, DiNpm} from "react-icons/di";
 
 
-
 export default function Footer() {
-    let play=true;
+    let play = true;
 
-    function someHandler(){
+    function someHandler() {
         console.log(play)
-        play=false;
+        play = false;
     }
 
-    return(<>
+    return (<>
         <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-10">
             <div className="sm:text-center lg:text-left">
                 <h3 className="text-4xl tracking-tight font-extrabold text-gray-200 sm:text-5xl md:text-6xl">
@@ -31,8 +30,6 @@ export default function Footer() {
                 </h3>
             </div>
         </main>
-
-
 
 
         <Marquee speed='5' direction='right'>

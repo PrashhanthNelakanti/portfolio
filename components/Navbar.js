@@ -2,7 +2,7 @@ import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { useRouter } from 'next/router'
 import {useDispatch, useSelector} from "react-redux";
-import {decrement, increment} from "../pages/actions";
+import {decrement, increment} from "./actions";
 
 const user = {
   name: 'Prashhanth Nelakanti',
