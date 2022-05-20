@@ -35,7 +35,7 @@ export default function Footer() {
 
 
 
-        <Marquee direction='right'>
+        <Marquee speed='5' direction='right'>
             <div className="flex">
                 <div className="flex-initial w-64">
                     <FaYoutube className="col-span-2" color="red" fontSize="5.5em"/>
@@ -58,7 +58,7 @@ export default function Footer() {
             </div>
         </Marquee>
 
-        <Marquee direction='left'>
+        <Marquee speed='5' direction='left'>
             <div className="flex">
                 <div className="flex-initial w-64">
                     <FaGoogle color="grey" fontSize="5em"/>
