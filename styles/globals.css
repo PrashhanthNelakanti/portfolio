@@ -20,3 +20,20 @@ a {
   box-sizing: border-box;
 }
 
+.temporary-bounce {
+  -webkit-animation-iteration-count: 10;
+  animation-iteration-count: 10;
+}
+
+
+.tooltip {
+  @apply invisible absolute;
+}
+
+.has-tooltip:hover .tooltip {
+  @apply visible z-50;
+}
+
+@tailwind utilities;
+
+

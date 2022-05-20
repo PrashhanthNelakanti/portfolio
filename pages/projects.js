@@ -151,7 +151,7 @@ export default function Verizon() {
                                                             Mphasis
                                                         </td>
                                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                                        <a class="text-blue-600" href='projects/ccentralMod'>Client Central</a> 
+                                                        <a class="text-blue-600" href='components/projects/ccentralMod'>Client Central</a>
                                                         </td>
                                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                                             2021
@@ -162,7 +162,7 @@ export default function Verizon() {
                                                             Mphasis
                                                         </td>
                                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                                        <a class="text-blue-600" href='projects/lm'>Lead Management</a> 
+                                                        <a class="text-blue-600" href='components/projects/lm'>Lead Management</a>
                                                         </td>
                                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                                             2020
@@ -173,7 +173,7 @@ export default function Verizon() {
                                                             Verizon
                                                         </td>
                                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                                        <a class="text-blue-600" href='projects/gcm'>GCM</a> 
+                                                        <a class="text-blue-600" href='components/projects/gcm'>GCM</a>
                                                         </td>
                                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                                             2018

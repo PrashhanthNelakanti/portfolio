@@ -39,6 +39,7 @@
     "react-icons": "^4.3.1",
     "react-lineicons": "^3.0.0",
     "react-redux": "^8.0.1",
+    "react-router-dom": "^5.3.0",
     "redux": "^4.2.0",
     "redux-devtools-extension": "^2.13.9",
     "superagent": "^7.1.1",

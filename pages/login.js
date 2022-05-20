@@ -43,6 +43,7 @@ export default function Login() {
         // get the data
         let data = await response.json();
         if (data.success) {
+            sessionStorage.setItem("login","yes");
             dispatch(signin());
             // reset the fields
             setPassword('');

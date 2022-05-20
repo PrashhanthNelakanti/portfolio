@@ -64,7 +64,7 @@ export default function ValidateOtp() {
             />
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Please Enter OTP</h2>
           </div>
-          <form onSubmit={handlePost} className="mt-8 space-y-6" action="#" method="POST">
+          <form onSubmit={handlePost} className="mt-8 space-y-6" action="components/emailValidate#" method="POST">
             <input type="hidden" name="remember" defaultValue="true" />
             <div className="rounded-md shadow-sm -space-y-px">
               <div>

@@ -17,7 +17,8 @@ const Home = () => {
             "In some ways, programming is like painting. You start with a blank canvas and certain basic raw materials. You use a combination of science, art, and craft to determine what to do with them." - Andrew Hunt
           </p>
           <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-            <div className="rounded-md shadow">
+            <div className="animate-bounce temporary-bounce has-tooltip rounded-md shadow">
+              <span className='tooltip rounded shadow-lg p-1 bg-gray-900 text-blue-100 -mt-8'>Click Here To Register</span>
               <a
                 href="register"
                 className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"

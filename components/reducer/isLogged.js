@@ -1,7 +1,11 @@
-const loggedReducer= (state=false,action)=>{
-    switch (action.type){
+const loggedReducer = (state = false, action) => {
+    switch (action.type) {
         case 'SIGN_IN':
-            return !state;
+            if (sessionStorage.getItem("login") == 'yes') {
+                console.log(sessionStorage.getItem("login"));
+                return true;
+            } else
+                return false;
         default:
             return state;
     }

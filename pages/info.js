@@ -1,10 +1,8 @@
 import React,{useEffect, useState} from "react";
 
 import "aos/dist/aos.css";
-import BouncingBall from "./loading";
-import ThreeDotsWave from "./loading";
 import Link from "next/link";
-import Spinner from "./utils/spinner";
+import Spinner from "../components/utils/spinner";
 
 export default function Info() {
     const [data, setData] = useState(null)
@@ -66,7 +64,6 @@ export default function Info() {
 
 }
 
-/*
 export async function getServerSideProps(ctx) {
 
     // get the current environment
@@ -83,4 +80,4 @@ export async function getServerSideProps(ctx) {
             data: data['message'],
         },
     };
-}*/
+}
