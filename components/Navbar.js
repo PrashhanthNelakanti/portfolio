@@ -64,7 +64,7 @@ export default function Navbar() {
                             aria-current={item.current ? 'page' : undefined}
                           >
                                   {item.name}</a>
-                            </Link> : item.name=='Login' && !loggedIn ? <Link href={item.href}>
+                            </Link> : (item.name =='Login' || item.name =='About' || item.name =='Projects') && !loggedIn ? <Link href={item.href}>
                                 <a key={item.name}
                                    className={classNames(
                                        'text-gray-300 hover:bg-gray-700 hover:text-white',
@@ -154,7 +154,7 @@ export default function Navbar() {
                       aria-current={item.current ? 'page' : undefined}
                     >
                       {item.name}
-                    </Disclosure.Button> : item.name=='Login' && !loggedIn ?<Disclosure.Button
+                    </Disclosure.Button> : (item.name=='Login' || item.name=='About' || item.name=='Projects' ) && !loggedIn ?<Disclosure.Button
                           key={item.name}
                           as="a"
                           href={item.href}
@@ -168,34 +168,36 @@ export default function Navbar() {
                       </Disclosure.Button> : ''
                   ))}
                 </div>
-                <div className="pt-4 pb-3 border-t border-gray-700">
-                  <div className="flex items-center px-5">
-                    <div className="flex-shrink-0">
-                      <img className="h-10 w-10 rounded-full" src={user.imageUrl} alt="" />
-                    </div>
-                    <div className="ml-3">
-                      <div className="text-base font-medium leading-none text-white">{user.name}</div>
-                      <div className="text-sm font-medium leading-none text-gray-400">{user.email}</div>
-                    </div>
-                    <button
-                      type="button"
-                      className="ml-auto bg-gray-800 flex-shrink-0 p-1 rounded-full text-red-400 hover:text-red focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                    >
-                    </button>
-                  </div>
-                  <div className="mt-3 px-2 space-y-1">
-                    {userNavigation.map((item) => (
-                      <Disclosure.Button
-                        key={item.name}
-                        as="a"
-                        href={item.href}
-                        className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
-                      >
-                        {item.name}
-                      </Disclosure.Button>
-                    ))}
-                  </div>
-                </div>
+                  { loggedIn ?
+                      <div className="pt-4 pb-3 border-t border-gray-700">
+                          <div className="flex items-center px-5">
+                              <div className="flex-shrink-0">
+                                  <img className="h-10 w-10 rounded-full" src={user.imageUrl} alt=""/>
+                              </div>
+                              <div className="ml-3">
+                                  <div className="text-base font-medium leading-none text-white">{user.name}</div>
+                                  <div className="text-sm font-medium leading-none text-gray-400">{user.email}</div>
+                              </div>
+                              <button
+                                  type="button"
+                                  className="ml-auto bg-gray-800 flex-shrink-0 p-1 rounded-full text-red-400 hover:text-red focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                              >
+                              </button>
+                          </div>
+                          <div className="mt-3 px-2 space-y-1">
+                              {userNavigation.map((item) => (
+                                  <Disclosure.Button
+                                      key={item.name}
+                                      as="a"
+                                      href={item.href}
+                                      className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
+                                  >
+                                      {item.name}
+                                  </Disclosure.Button>
+                              ))}
+                          </div>
+                      </div> : ''
+                  }
               </Disclosure.Panel>
             </>
           )}
