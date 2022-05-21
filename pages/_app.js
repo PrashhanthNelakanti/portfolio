@@ -4,18 +4,28 @@ import '../styles/globals.css'
 import {createStore} from 'redux'
 import allReducers from "../components/reducer";
 import {Provider} from "react-redux";
+import {persistStore, persistReducer} from 'redux-persist';
+import storage from 'redux-persist/lib/storage'
+import {PersistGate} from "redux-persist/integration/react";
 
-const store = createStore(
-    allReducers);
+const persistConfig = {
+    key: 'root',
+    storage,
+}
+const persistedReducer = persistReducer(persistConfig, allReducers);
 
 function MyApp({Component, pageProps}) {
+    let store = createStore(persistedReducer)
+    let persistor = persistStore(store)
     return (
         <Provider store={store}>
-        <ChakraProvider>
-            <Layout>
-                <Component {...pageProps} />
-            </Layout>
-        </ChakraProvider>
+            <PersistGate loading={null} persistor={persistor}>
+                <ChakraProvider>
+                    <Layout>
+                        <Component {...pageProps} />
+                    </Layout>
+                </ChakraProvider>
+            </PersistGate>
         </Provider>
 
     )
