@@ -4,7 +4,6 @@ import { useRouter } from 'next/router'
 import {useDispatch, useSelector} from "react-redux";
 import {decrement, increment} from "./actions";
 import Link from "next/link";
-import {useState} from "react";
 const user = {
   name: 'Prashhanth Nelakanti',
   email: 'prashhanth.nelakanti@gmail.com',
@@ -30,8 +29,10 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
+    const counter = useSelector(state=>state.counter);
     const loggedIn = useSelector(state=>state.isLogged);
-    const [isLogged, setIsLogged] = useState(false)
+
+    console.log(loggedIn)
     const router = useRouter();
   return (
     <>
@@ -63,7 +64,7 @@ export default function Navbar() {
                             aria-current={item.current ? 'page' : undefined}
                           >
                                   {item.name}</a>
-                            </Link> :  item.name=='Login' && !loggedIn ? <Link href={item.href}>
+                            </Link> : item.name=='Login' && !loggedIn ? <Link href={item.href}>
                                 <a key={item.name}
                                    className={classNames(
                                        'text-gray-300 hover:bg-gray-700 hover:text-white',
@@ -72,7 +73,7 @@ export default function Navbar() {
                                    aria-current={item.current ? 'page' : undefined}
                                 >
                                     {item.name}</a>
-                            </Link> : ''
+                            </Link> :''
                         ))}
                       </div>
                     </div>
@@ -142,10 +143,10 @@ export default function Navbar() {
               <Disclosure.Panel className="md:hidden">
                 <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                   {navigation.map((item) => (
-                      item.name!='Login' && loggedIn ? <Link href={item.href}>
-                    <Disclosure.Button
+                      item.name!='Login' && loggedIn ?  <Disclosure.Button
                       key={item.name}
                       as="a"
+                      href={item.href}
                       className={classNames(
                         item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                         'block px-3 py-2 rounded-md text-base font-medium'
@@ -153,19 +154,18 @@ export default function Navbar() {
                       aria-current={item.current ? 'page' : undefined}
                     >
                       {item.name}
-                    </Disclosure.Button></Link> :  item.name=='Login' && !loggedIn ? <Link href={item.href}>
-                          <Disclosure.Button
-                              key={item.name}
-                              as="a"
-                              className={classNames(
-                                  item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                  'block px-3 py-2 rounded-md text-base font-medium'
-                              )}
-                              aria-current={item.current ? 'page' : undefined}
-                          >
-                              {item.name}
-                          </Disclosure.Button>
-                      </Link> : ''
+                    </Disclosure.Button> : item.name=='Login' && !loggedIn ?<Disclosure.Button
+                          key={item.name}
+                          as="a"
+                          href={item.href}
+                          className={classNames(
+                              item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                              'block px-3 py-2 rounded-md text-base font-medium'
+                          )}
+                          aria-current={item.current ? 'page' : undefined}
+                      >
+                          {item.name}
+                      </Disclosure.Button> : ''
                   ))}
                 </div>
                 <div className="pt-4 pb-3 border-t border-gray-700">
