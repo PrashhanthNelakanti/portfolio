@@ -12,7 +12,7 @@ export default async function handler(req, res) {
 
 // Getting all posts.
 async function validate(req, res) {
-    const email =req.body.email;
+    const email =req.body.emailId;
     const otp =req.body.otp;
     console.log(req.body)
     try {

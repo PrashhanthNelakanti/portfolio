@@ -1,15 +1,16 @@
 import { LockClosedIcon } from '@heroicons/react/solid'
 import { useState } from 'react';
 import { useRouter } from 'next/router'
+import signin from "../components/actions";
+import {useDispatch} from "react-redux";
 
 export default function ValidateOtp() {
   const router = useRouter();
   const { emailId } = router.query
-  const [email, setEmail] = useState('');
   const [otp, setOtp] = useState('');
   const [error, setError] = useState('');
-  const [message, setMessage] = useState('');  
-  
+  const [message, setMessage] = useState('');
+  const dispatch = useDispatch();
 
   const handlePost = async (e) => {
     e.preventDefault();
@@ -19,13 +20,14 @@ export default function ValidateOtp() {
     setMessage('');
 
     // fields check
-    if (!email || !otp) return setError('All fields are required');
+    if (!otp) return setError('Please enter the OTP');
 
     // post structure
     let info = {
-      email,
+      emailId,
       otp
     };
+
     // save the post
     let response = await fetch('/api/validateOtp', {
       method: 'POST',
@@ -37,19 +39,21 @@ export default function ValidateOtp() {
     });
     // get the data
     let data = await response.json();
-    
+    console.log(info)
+    console.log(data)
 
     if (data.success) {
       // reset the fields
+      sessionStorage.setItem("login","yes");
+      dispatch(signin());
       setOtp('');
-      setEmail('');
       // set the message
       router.push('/userPage');
       return setMessage(data.message);
     } else {
       // set the error
-      console.log(message)
-      return setError(data.message);
+      console.log(error)
+      return setError(error);
     }
   };
   return (
@@ -64,14 +68,14 @@ export default function ValidateOtp() {
             />
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Please Enter OTP</h2>
           </div>
-          <form onSubmit={handlePost} className="mt-8 space-y-6" action="components/emailValidate#" method="POST">
+          <form onSubmit={handlePost} className="mt-8 space-y-6" method="POST">
             <input type="hidden" name="remember" defaultValue="true" />
             <div className="rounded-md shadow-sm -space-y-px">
               <div>
                 <label htmlFor="email-address" className="sr-only">
                   Email address
                 </label>
-                <input  name="email" disabled onChange={(e) => setEmail(e.target.value)} value={emailId} autoComplete="given-name" className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address"/>
+                <input  name="email" disabled  value={emailId} autoComplete="given-name" className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address"/>
               </div>
               <div>
                 <label htmlFor="otp" className="sr-only">

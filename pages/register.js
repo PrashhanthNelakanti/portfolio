@@ -2,6 +2,7 @@ import React,{ useState } from 'react';
 import { useRouter } from 'next/router'
 import {LockClosedIcon} from "@heroicons/react/solid";
 
+
 export default function Register() {
   const [fname, setFname] = useState('');
   const [email, setEmail] = useState('');
@@ -9,6 +10,7 @@ export default function Register() {
   const [error, setError] = useState('');
   const [message, setMessage] = useState('');  
   const router = useRouter();
+
 
   const handlePost = async (e) => {
     e.preventDefault();
@@ -51,8 +53,27 @@ export default function Register() {
       // set the message
       return setMessage(data.message);
     } else {
+      let response = await fetch('/api/personalnfoUpdate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(info),
+      });
+      // get the data
+      let data = await response.json();
+      if(data.message=='User updated successfully'){
+        setFname('');
+        setPassword('');
+        setEmail('');
+        router.push({
+          pathname: '/emailValidate',
+          query: { emailId: `${email}` },
+        });
+        return setMessage(data.message)
+      }
       // set the error
-      console.log(message)
       return setError(data.message);
     }
   };

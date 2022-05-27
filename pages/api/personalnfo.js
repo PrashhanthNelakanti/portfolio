@@ -12,10 +12,6 @@ export default async function handler(req, res) {
             return addUser(req, res);
         }
 
-        case 'PUT': {
-            return updateUser(req, res);
-        }
-
         case 'DELETE': {
             return deleteUser(req, res);
         }
@@ -86,29 +82,6 @@ async function addUser(req, res) {
     }
 }
 
-// Updating a user
-async function updateUser(req, res) {
-    try {
-        let { db } = await connectToDatabase();
-
-        await db.collection('info').updateOne(
-            {
-                _id: new ObjectId(req.body),
-            },
-            { $set: { published: true } }
-        );
-
-        return res.json({
-            message: 'User updated successfully',
-            success: true,
-        });
-    } catch (error) {
-        return res.json({
-            message: new Error(error).message,
-            success: false,
-        });
-    }
-}
 
 // deleting a user
 async function deleteUser(req, res) {
@@ -164,4 +137,6 @@ async function deleteUser(req, res) {
         });
     }
 }
+
+
 
