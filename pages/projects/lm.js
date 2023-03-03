@@ -86,7 +86,7 @@ export default function Mphasis() {
             <h2 className="sr-only">Project information</h2>
             <p className="text-3xl text-gray-900">{project.tech}</p>
 
-              {project.reviews.map((review) => (
+              {/* {project.reviews.map((review) => (
                 <div className="mt-1">
                   <div className="mt-1 flex space-x-1 ml-1  justify-between text-sm font-medium text-indigo-600 hover:text-indigo-500">
                        {review.name}
@@ -102,7 +102,7 @@ export default function Mphasis() {
                       ))}
                   </div>
                 </div>
-              ))}
+              ))} */}
 
             <form className="mt-10">
               <div className="mt-10">
