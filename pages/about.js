@@ -9,7 +9,6 @@ const user = {
   name: 'Prashhanth Nelakanti',
   email: 'prashhanth.nelakanti@gmail.com',
   profileUrl: 'https://media.licdn.com/dms/image/C5603AQHqvUxTF4CaYQ/profile-displayphoto-shrink_100_100/0/1662669471801?e=1683158400&v=beta&t=CZTz-EM43uZFCsV3BCVwP_NoJyGqkmGijobodrfQeOM',
-
 }
 
 const about = {
@@ -47,10 +46,10 @@ const About = ({ data }) => {
     <div className="grid grid-cols-2 gap-2">
       <Image data-aos="fade-left" alt="profile" src={profile} layout="fixed" width={200} height={200} className="h-25 w-25 rounded-full"/>
       <h1 data-aos="fade-up" className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-        <span className="block text-blue-600 xl:inline">Prashhanth</span>
+        <span className="block text-blue-500 xl:inline">Prashhanth</span>
         <div className="text-2xl text-blue-500 sm:text-3xl md:text-3xl">
           <span>
-            <FaMapMarkerAlt className="h-5 w-5 text-blue-600" />HYDERABAD, INDIA
+            <FaMapMarkerAlt className="h-5 w-5 text-blue-500" />HYDERABAD, INDIA
             <a href={user.profileUrl}><FaLinkedin className="h-5 w-5 text-blue-500" />LinkedIn Profile</a>
           </span>
         </div>
