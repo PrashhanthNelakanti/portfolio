@@ -64,7 +64,7 @@ const About = ({ data }) => {
         <p className="text-xl text-gray-900">{about.summary}</p>
       </div>
       <div className="space-y-8">
-        <p className="text-5xl font-bold dark:text-coolGray-50">Techical Stack</p>
+        <p className="text-5xl font-bold dark:text-coolGray-50">Technical Stack</p>
       </div>
       <div className="flex justify-center">
         <div className="block rounded-lg shadow-lg bg-white max-w-md text-center">
