@@ -8,7 +8,7 @@ import { BeakerIcon, BellIcon, CodeIcon, LinkIcon, LocationMarkerIcon, MenuIcon,
 const user = {
   name: 'Prashhanth Nelakanti',
   email: 'prashhanth.nelakanti@gmail.com',
-  profileUrl: 'https://in.linkedin.com/in/prashhanth?trk=public_profile_browsemap',
+  profileUrl: 'https://media.licdn.com/dms/image/C5603AQHqvUxTF4CaYQ/profile-displayphoto-shrink_100_100/0/1662669471801?e=1683158400&v=beta&t=CZTz-EM43uZFCsV3BCVwP_NoJyGqkmGijobodrfQeOM',
 
 }
 
