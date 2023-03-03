@@ -3,7 +3,7 @@ import Image from 'next/image'
 import profile from '../public/imgs/profile.jpeg'
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { FaBeer, FaLinkedin, FaLinkedinIn, FaMapPin } from 'react-icons/fa';
+import { FaBeer, FaLinkedin, FaLinkedinIn, FaMapMarkerAlt } from 'react-icons/fa';
 import { BeakerIcon, BellIcon, CodeIcon, LinkIcon, LocationMarkerIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 const user = {
   name: 'Prashhanth Nelakanti',
@@ -47,10 +47,10 @@ const About = ({ data }) => {
     <div className="grid grid-cols-2 gap-2">
       <Image data-aos="fade-left" alt="profile" src={profile} layout="fixed" width={200} height={200} className="h-25 w-25 rounded-full"/>
       <h1 data-aos="fade-up" className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-        <span className="block text-indigo-600 xl:inline">Prashhanth</span>
+        <span className="block text-blue-600 xl:inline">Prashhanth</span>
         <div className="text-2xl text-blue-500 sm:text-3xl md:text-3xl">
           <span>
-            <FaMapPin className="h-5 w-5 text-blue-600" />HYDERABAD, INDIA
+            <FaMapMarkerAlt className="h-5 w-5 text-blue-600" />HYDERABAD, INDIA
             <a href={user.profileUrl}><FaLinkedin className="h-5 w-5 text-blue-500" />LinkedIn Profile</a>
           </span>
         </div>
