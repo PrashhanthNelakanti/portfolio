@@ -99,16 +99,6 @@ export default function Verizon() {
                             <div className="mt-1">
                                 <div className="mt-1 flex space-x-1 ml-1  justify-between text-sm font-medium text-indigo-600 hover:text-indigo-500">
                                     {review.name}
-                                    {[0, 1, 2, 3, 4].map((rating) => (
-                                        <StarIcon
-                                            key={rating}
-                                            className={classNames(
-                                                review.average > rating ? 'text-gray-900' : 'text-gray-200',
-                                                'h-5 w-5 flex-shrink-0'
-                                            )}
-                                            aria-hidden="true"
-                                        />
-                                    ))}
                                 </div>
                             </div>
                         ))}

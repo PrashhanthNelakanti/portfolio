@@ -24,11 +24,11 @@ const about = {
   details:
     'Worked on Cloud platforms like AWS and PCF. Having 4.5 years of experience in developing Spring framework and 2 years into Angular 7 applications.',
   reviews: [
-    { average: 4, name: "Java-8" },
-    { average: 4, name: "Spring Boot" },
-    { average: 4, name: "Spring Data-Jpa" },
-    { average: 3, name: "Microservices" },
-    { average: 3, name: "Angular" },
+    {  name: "Java-8" },
+    { name: "Spring Boot" },
+    {  name: "Spring Data-Jpa" },
+    {  name: "Microservices" },
+    {  name: "Angular" },
 
   ],
   org: {
