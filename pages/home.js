@@ -1,7 +1,6 @@
 import Marquee from "react-fast-marquee";
 import Footer from "../components/Footer";
 const Home = () => {
-  console.log(process.env.FREE_LANCER)
   return (
     <div>
       <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-18">
@@ -19,10 +18,9 @@ const Home = () => {
           </p>
           <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
             <div className="animate-bounce temporary-bounce has-tooltip rounded-md shadow">
-              <span className='tooltip rounded shadow-lg p-1 bg-gray-900 text-blue-100 -mt-8'>Click Here To Register</span>
               <a
                 href="register"
-                className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+                className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 hover:bg-gray-700 md:py-4 md:text-lg md:px-10"
                >
                 Get started
               </a>
@@ -30,7 +28,7 @@ const Home = () => {
             <div className="mt-3 sm:mt-0 sm:ml-3">
               <a
                 href={process.env.FREE_LANCER == 'Y' ? "/profile_pdf/profile_free.pdf" : "/profile_pdf/profile_complete.pdf"}
-                className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
+                className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 hover:bg-gray-700 md:py-4 md:text-lg md:px-10"
                download >
                 Get profile
               </a>

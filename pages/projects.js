@@ -1,6 +1,3 @@
-
-import { StarIcon } from '@heroicons/react/solid'
-
 const experience = {
     projectName: 'Projects',
     tech: 'Technologies',
@@ -8,9 +5,6 @@ const experience = {
     breadcrumbs: [
         { id: 1, name: 'Experience', href: '#' },
     ],
-    org: {
-        name: 'Verizon'
-    },
     duration: {
         tenure: 'Sep 2017 - Dec 2019'
     },
@@ -47,7 +41,7 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function Verizon() {
+export default function Projects() {
 
 
     return (
@@ -83,18 +77,13 @@ export default function Verizon() {
                     </ol>
                 </nav>
 
-                {/* Product info */}
                 <div className="max-w-2xl mx-auto pt-10 pb-16 px-4 sm:px-6 lg:max-w-7xl lg:pt-16 lg:pb-24 lg:px-8 lg:grid lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8">
-                    <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
-                        <h1 className="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">{experience.projectName}</h1>
-                    </div>
-
                     {/* Options */}
-                    <div className="mt-4 lg:mt-0 lg:row-span-3">
+                   {/* <div className="mt-4 lg:mt-0 lg:row-span-3">
                         <h2 className="sr-only">Product information</h2>
                         <p className="text-3xl text-gray-900">{experience.tech}</p>
 
-                        {/* Reviews */}
+                         Reviews
                         {experience.reviews.map((review) => (
                             <div className="mt-1">
                                 <div className="mt-1 flex space-x-1 ml-1  justify-between text-sm font-medium text-indigo-600 hover:text-indigo-500">
@@ -102,7 +91,7 @@ export default function Verizon() {
                                 </div>
                             </div>
                         ))}
-                    </div>
+                    </div>*/}
 
                     <div className="py-15 lg:pt-6 lg:pb-11 lg:col-start-1 lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-10">
                         {/* Description and details */}

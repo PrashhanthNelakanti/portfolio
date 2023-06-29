@@ -8,7 +8,7 @@ const user = {
   name: 'Prashhanth Nelakanti',
   email: 'prashhanth.nelakanti@gmail.com',
   imageUrl:
-    'https://media-exp1.licdn.com/dms/image/C5603AQEj4AWtH8N89A/profile-displayphoto-shrink_200_200/0/1605781245678?e=1649894400&v=beta&t=qn2RuS29GWM2GpG7ZrkBrP33HwgkUn-Fx0yKb19aOIY',
+      '/profile.jpeg',
 }
 const navigation = [
   { name: 'Home', href: '/home', current: true },
@@ -35,39 +35,39 @@ export default function Navbar() {
     console.log(loggedIn)
     const router = useRouter();
   return (
-    <>
+      <>
 
       <div className="min-h-full">
-        <Disclosure as="nav" className="bg-gray-800">
+        <Disclosure as="nav" className="bg-gray-100">
           {({ open }) => (
             <>
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between h-16">
+                <div className="flex items-center justify-between h-13">
                   <div className="flex items-center">
 
                     <div className="flex-shrink-0">
                         <a key='home' href='/home'> <img
-                        className="h-8 w-8"
-                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                        className="mx-auto h-12 w-auto"
+                        src="svg/nel.svg"
                         alt="Workflow"
                         /></a>
                     </div>
                     <div className="hidden md:block">
-                      <div className="ml-10 flex items-baseline space-x-4">
+                      <div className="ml-10 flex justify-end items-baseline space-x-4">
                         {navigation.map((item) => (
                             item.name!='Login' && loggedIn ? <Link href={item.href}>
                               <a key={item.name}
                             className={classNames(
-                              'text-gray-300 hover:bg-gray-700 hover:text-white',
-                              'px-3 py-2 rounded-md text-sm font-medium'
+                              'text-gray-900 hover:bg-gray-900 hover:text-white',
+                                'px-3 py-2 rounded-md text-sm font-medium'
                             )}
                             aria-current={item.current ? 'page' : undefined}
                           >
                                   {item.name}</a>
-                            </Link> : (item.name =='Login' || item.name =='About' || item.name =='Projects') && !loggedIn ? <Link href={item.href}>
+                            </Link> : (item.name =='Login' || item.name =='About' || item.name =='Projects'|| item.name =='Register') && !loggedIn ? <Link href={item.href}>
                                 <a key={item.name}
                                    className={classNames(
-                                       'text-gray-300 hover:bg-gray-700 hover:text-white',
+                                       'text-gray-900 hover:bg-gray-900 hover:text-white',
                                        'px-3 py-2 rounded-md text-sm font-medium'
                                    )}
                                    aria-current={item.current ? 'page' : undefined}
@@ -88,7 +88,7 @@ export default function Navbar() {
                         <span className="sr-only">View notifications</span>
                         <BellIcon className="h-6 w-6" aria-hidden="true" />
                         <div class="absolute top-6 right-21 -mr-1 -mt-1 w-5 h-5 rounded-full bg-gray-50 animate-ping"></div>
-                      </button>           
+                      </button>
                       <Menu as="div" className="ml-3 relative">
                         <div>
                           <Menu.Button className="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
