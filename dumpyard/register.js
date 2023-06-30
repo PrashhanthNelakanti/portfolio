@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
 export default function Register() {
-    const [fname, setFname] = useState('');
-    const [lname, setLname] = useState('');
-    const [email, setEmail] = useState('');
+    const [fname, setFname]     = useState('');
+    const [lname, setLname]     = useState('');
+    const [email, setEmail]     = useState('');
     const [address, setAddress] = useState('');
-    const [error, setError] = useState('');
+    const [error, setError]     = useState('');
     const [message, setMessage] = useState('');
 
     const handlePost = async (e) => {
