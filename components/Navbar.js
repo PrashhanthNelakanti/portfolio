@@ -2,8 +2,10 @@ import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { useRouter } from 'next/router'
 import {useDispatch, useSelector} from "react-redux";
+import Image from 'next/image'
 import {decrement, increment} from "./actions";
 import Link from "next/link";
+import logo from '../public/svg/nel.svg'
 const user = {
   name: 'Prashhanth Nelakanti',
   email: 'prashhanth.nelakanti@gmail.com',
@@ -42,13 +44,12 @@ export default function Navbar() {
           {({ open }) => (
             <>
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between h-13">
+                <div className="flex items-center justify-between h-12">
                   <div className="flex items-center">
 
                     <div className="flex-shrink-0">
-                        <a key='home' href='/home'> <img
-                        className="mx-auto h-12 w-auto"
-                        src="svg/nel.svg"
+                        <a key='home' href='/home'> <Image width={180} height={100}
+                        src={logo}
                         alt="Workflow"
                         /></a>
                     </div>
@@ -59,7 +60,7 @@ export default function Navbar() {
                               <a key={item.name}
                             className={classNames(
                               'text-gray-900 hover:bg-gray-900 hover:text-white',
-                                'px-3 py-2 rounded-md text-sm font-medium'
+                                'px-5 py-2 rounded-md text-sm font-medium'
                             )}
                             aria-current={item.current ? 'page' : undefined}
                           >
@@ -67,7 +68,7 @@ export default function Navbar() {
                             </Link> : (item.name =='Login' || item.name =='About' || item.name =='Projects'|| item.name =='Register') && !loggedIn ? <Link href={item.href}>
                                 <a key={item.name}
                                    className={classNames(
-                                       'text-gray-900 hover:bg-gray-900 hover:text-white',
+                                       'font-medium text-gray-900 hover:bg-gray-900 hover:text-white',
                                        'px-3 py-2 rounded-md text-sm font-medium'
                                    )}
                                    aria-current={item.current ? 'page' : undefined}
