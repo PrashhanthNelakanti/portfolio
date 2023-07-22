@@ -125,15 +125,16 @@ export default function Projects() {
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr class="bg-white border-b">
-                                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                                            Mphasis
+                                                    <tr className="bg-white border-b">
+                                                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                                            Hitachi Vantara
                                                         </td>
-                                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                                        <a class="text-blue-600" href='/projects/ccentralMod'>Client Central</a>
+                                                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                                            <a className="text-blue-600"
+                                                               href='/projects/nwea'>NWEA</a>
                                                         </td>
-                                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                                            2021
+                                                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                                            2021-Present
                                                         </td>
                                                     </tr>
                                                     <tr class="bg-white border-b">

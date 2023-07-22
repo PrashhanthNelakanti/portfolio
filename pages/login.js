@@ -1,5 +1,5 @@
 import {LockClosedIcon} from '@heroicons/react/solid'
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {useRouter} from 'next/router'
 import {useDispatch, useSelector} from "react-redux";
 import signin from "../components/actions";
@@ -13,6 +13,10 @@ export default function Login() {
     const counter = useSelector(state => state.counter);
     const loggedIn = useSelector(state => state.isLogged);
     const dispatch = useDispatch();
+
+    useEffect(()=>{
+        console.log("home useeffect")
+    },[email])
     const handlePost = async (e) => {
         e.preventDefault();
 
