@@ -10,9 +10,6 @@ const experience = {
   breadcrumbs: [
     { id: 1, name: 'Experience', href: '#' },
   ],
-  org: {
-    name: 'Verizon'
-  },
   duration: {
     tenure: 'Sep 2017 - Dec 2019'
   },
@@ -49,23 +46,22 @@ const About = ({ data }) => {
   }, [])
   return (<>
     <div className="grid grid-cols-1 gap-1">
-      <Image data-aos="fade-left" alt="profile" src={profile} layout="fixed" width={200} height={200} className="h-25 w-25 rounded-full"/>
+      <Image data-aos="fade-left" alt="profile" quality={75} priority={false} src={profile} layout="fixed" width={200} height={200} className="h-25 w-25 rounded-full"/>
     </div>
         <div className="bg-white">
             <div className="max-w-2xl mx-auto pt-10 pb-16 px-4 sm:px-6 lg:max-w-7xl lg:pt-16 lg:pb-24 lg:px-8 lg:grid lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8">
                   <h3 className="text-lg font-medium text-gray-900">Technologies I Experienced</h3>
               <div className="mt-4 lg:mt-0 lg:row-span-3">
                 {experience.reviews.map((review) => (
-                    <div className="mt-1">
+                    <div key={review.name} className="mt-1">
                       <div className="mt-1 flex space-x-1 ml-1  justify-between text-sm font-medium text-indigo-600 hover:text-indigo-500">
                         {review.name}
                       </div>
                     </div>
                 ))}
               </div>
-
               </div>
-            </div>
+        </div>
   </>);
 }
 

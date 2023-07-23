@@ -18,7 +18,7 @@ const Home = () => {
             "We witness superior technology as we build technology with minds and hearts for the human race."
           </p>
           <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-            <div className="animate-bounce temporary-bounce has-tooltip rounded-md shadow">
+            <div className="animate-bounce temporary-bounce delay-1000 has-tooltip rounded-md shadow">
               <a
                 href="register"
                 className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 hover:bg-gray-700 md:py-4 md:text-lg md:px-10"

@@ -56,8 +56,8 @@ export default function Navbar() {
                     <div className="hidden md:block">
                       <div className="ml-10 flex justify-end items-baseline space-x-4">
                         {navigation.map((item) => (
-                            item.name!='Login' && loggedIn ? <Link href={item.href}>
-                              <a key={item.name}
+                            item.name!='Login' && loggedIn ? <Link key={item.name} href={item.href}>
+                              <a
                             className={classNames(
                               'text-gray-900 hover:bg-gray-900 hover:text-white',
                                 'px-5 py-2 rounded-md text-sm font-medium'
@@ -65,8 +65,8 @@ export default function Navbar() {
                             aria-current={item.current ? 'page' : undefined}
                           >
                                   {item.name}</a>
-                            </Link> : (item.name =='Login' || item.name =='About' || item.name =='Projects'|| item.name =='Register') && !loggedIn ? <Link href={item.href}>
-                                <a key={item.name}
+                            </Link> : (item.name =='Login' || item.name =='About' || item.name =='Projects'|| item.name =='Register') && !loggedIn ? <Link key={item.name} href={item.href}>
+                                <a
                                    className={classNames(
                                        'font-medium text-gray-900 hover:bg-gray-900 hover:text-white',
                                        'px-3 py-2 rounded-md text-sm font-medium'
