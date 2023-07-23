@@ -1,67 +1,105 @@
 import React, { useEffect } from "react";
 import Image from 'next/image'
 import profile from '../public/imgs/profile.jpeg'
+import "/node_modules/flag-icons/css/flag-icons.min.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
-const experience = {
-  projectName: 'Projects',
-  tech: 'Technologies',
-  href: '#',
-  breadcrumbs: [
-    { id: 1, name: 'Experience', href: '#' },
-  ],
-  duration: {
-    tenure: 'Sep 2017 - Dec 2019'
-  },
-  description:
-      "Worked on Cloud platforms like AWS and PCF. Having 4.5 years of experience in developing Spring framework and 2 years into Angular 7 applications. Extensive hands on experience in Spring-Data-Jpa, Spring-Rest and Spring-Boot. Hands on experience in Hibernate, SQL. Worked on various Front End Technologies like HTML with Angular Framework. For continues Integration we use bamboo. Projects involved include web servers like Apache Tomcat and application servers.",
-  projects: [
-    '',
-    'Developed web pages to users to display customer data based on business requirement both in UI and backend',
-    'Integrated third party APIs like CISCO to analyze the reports and billing generated based on contract',
-  ],
-  reviews: [
-    { average: 5, name: "Java-8" },
-    { average: 5, name: "Spring Boot" },
-    { average: 5, name: "Spring Data-Jpa" },
-    { average: 3, name: "Microservices" },
-    { average: 3, name: "AWS" },
-    { average: 3, name: "PCF" },
-    { average: 3, name: "Jenkins" },
-    { average: 3, name: "Terraform" },
-    { average: 4, name: "Angular" },
-    { average: 5, name: "PrimeNg" },
-    { average: 5, name: "Bootsrap" },
-    { average: 5, name: "Maven" },
-    { average: 5, name: "Git" },
-    { average: 3, name: "Bamboo" },
-    { average: 5, name: "Intellij" },
-    { average: 4, name: "Python" },
-
-  ]
+import {MdEmail} from "react-icons/md";
+import {FaGithub} from "react-icons/fa";
+import {AiFillLinkedin} from "react-icons/ai";
+const about = {
+  contact: ' prashhanth.nel@gmail.com',
+  github: ' https://github.com/PrashhanthNelakanti',
+  linkedIn: ' https://www.linkedin.com/in/prashhanth',
+  quotes: '"Embrace the Future: Where Dreams Merge with Lines of Code 🌐✨"',
+  intro: "I am a Senior Cloud(AWS) Software Engineer with 6 years of experience in developing backend and front applications." +
+      "With an extensive skillset encompassing Java, Go, Angular, and React, I stands at the forefront of the digital revolution, continuously pushing the envelope of what's possible." +
+      " I am from Hyderabad IND ",
 }
 const About = ({ data }) => {
   useEffect(() => {
     Aos.init({ duration: 2000 })
   }, [])
   return (<>
-    <div className="grid grid-cols-1 gap-1">
-      <Image data-aos="fade-left" alt="profile" quality={75} priority={false} src={profile} layout="fixed" width={200} height={200} className="h-25 w-25 rounded-full"/>
+    <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+    <div className="md:flex">
+      <div className="md:shrink-0">
+        <Image alt="profile" quality={75} priority={false} src={profile} layout="fixed" width={150} height={150} className="h-25 w-25 rounded-full"/>
+      </div>
+      <div className="p-8">
+        <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Meet Prashhanth</div>
+        <a className="block mt-1 text-lg leading-tight font-medium text-black">{about.quotes}</a>
+        <p className="mt-2 text-slate-500">{about.intro}<span className="fi fi-in"></span></p>
+      </div>
     </div>
-        <div className="bg-white">
-            <div className="max-w-2xl mx-auto pt-10 pb-16 px-4 sm:px-6 lg:max-w-7xl lg:pt-16 lg:pb-24 lg:px-8 lg:grid lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8">
-                  <h3 className="text-lg font-medium text-gray-900">Technologies I Experienced</h3>
-              <div className="mt-4 lg:mt-0 lg:row-span-3">
-                {experience.reviews.map((review) => (
-                    <div key={review.name} className="mt-1">
-                      <div className="mt-1 flex space-x-1 ml-1  justify-between text-sm font-medium text-indigo-600 hover:text-indigo-500">
-                        {review.name}
-                      </div>
-                    </div>
-                ))}
-              </div>
-              </div>
+      <div className="text-gray-500 font-thin grid grid-rows-2 md:grid-rows-3">
+        <div style={{display: "flex", justifyContent: "center"}}>
+          <MdEmail size={20}/><a>{about.contact}</a>
         </div>
+        <div style={{display: "flex", justifyContent: "center"}}>
+          <FaGithub size={20}/><a className="underline underline-offset-4" href={about.github}>{about.github}</a>
+        </div>
+        <div style={{display: "flex", justifyContent: "center"}}>
+          <AiFillLinkedin color="#0077B5" size={25}/><a className="underline underline-offset-4" href={about.linkedIn}>{about.linkedIn}</a>
+        </div>
+      </div>
+  </div>
+
+    <div className="bg-white">
+        <div className="max-w mx-auto pt-10 pb-16 px-4 sm:px-6 lg:max-w-7xl lg:pt-1 lg:pb-24 lg:px-8 lg:grid lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8">
+          <div className="pb-15 lg:pt-6 lg:pb-11 lg:col-start-1 lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-10">
+            <div className="mt-10">
+              <div className="flex flex-col">
+                <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                  <div className="py-4 inline-block min-w-full sm:px-6 lg:px-8">
+                    <div className="overflow-hidden">
+                      <table className="min-w-full text-center">
+                        <thead className="border-b bg-gray-800">
+                        <tr>
+                          <th scope="col" className="text-sm font-medium text-white px-6 py-4">
+                            Degree
+                          </th>
+                          <th scope="col" className="text-sm font-medium text-white px-6 py-4">
+                            University
+                          </th>
+                          <th scope="col" className="text-sm font-medium text-white px-6 py-4">
+                            Year
+                          </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr className="bg-white border-b">
+                          <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Master of Computers
+                          </td>
+                          <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Osmania University
+                          </td>
+                          <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            2017
+                          </td>
+                        </tr>
+                        <tr className="bg-white border-b">
+                          <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Bachelors in Electronics
+                          </td>
+                          <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Osmania University
+                          </td>
+                          <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            2013
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   </>);
 }
 

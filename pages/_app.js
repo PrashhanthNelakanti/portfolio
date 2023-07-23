@@ -1,4 +1,3 @@
-import {ChakraProvider} from '@chakra-ui/react'
 import Layout from '../components/Layout'
 import '../styles/globals.css'
 import {createStore} from 'redux'
@@ -20,11 +19,9 @@ function MyApp({Component, pageProps}) {
     return (
         <Provider store={store}>
             <PersistGate loading={null} persistor={persistor}>
-                <ChakraProvider>
                     <Layout>
                         <Component {...pageProps} />
                     </Layout>
-                </ChakraProvider>
             </PersistGate>
         </Provider>
 
