@@ -1,6 +1,3 @@
-
-import { StarIcon } from '@heroicons/react/solid'
-
 const project = {
   projectName: 'Lead Management',
   tech: 'Environment',

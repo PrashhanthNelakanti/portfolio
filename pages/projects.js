@@ -8,13 +8,7 @@ const experience = {
     duration: {
         tenure: 'Sep 2017 - Dec 2019'
     },
-    description:
-        "Worked on Cloud platforms like AWS and PCF. Having 4.5 years of experience in developing Spring framework and 2 years into Angular 7 applications. Extensive hands on experience in Spring-Data-Jpa, Spring-Rest and Spring-Boot. Hands on experience in Hibernate, SQL. Worked on various Front End Technologies like HTML with Angular Framework. For continues Integration we use bamboo. Projects involved include web servers like Apache Tomcat and application servers.",
-    projects: [
-        '',
-        'Developed web pages to users to display customer data based on business requirement both in UI and backend',
-        'Integrated third party APIs like CISCO to analyze the reports and billing generated based on contract',
-    ],
+
     reviews: [
         { average: 5, name: "Java-8" },
         { average: 5, name: "Spring Boot" },
@@ -95,13 +89,6 @@ export default function Projects() {
 
                     <div className="py-15 lg:pt-6 lg:pb-11 lg:col-start-1 lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-10">
                         {/* Description and details */}
-                        <div>
-                            <h3 className="sr-only">Description</h3>
-
-                            <div className="space-y-6">
-                                <p className="text-base text-gray-900">{experience.description}</p>
-                            </div>
-                        </div>
 
                         <div className="mt-10">
                             <h3 className="text-lg font-medium text-gray-900">Projects</h3>
@@ -125,15 +112,16 @@ export default function Projects() {
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr class="bg-white border-b">
-                                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                                            Mphasis
+                                                    <tr className="bg-white border-b">
+                                                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                                            Hitachi Vantara
                                                         </td>
-                                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                                        <a class="text-blue-600" href='/projects/ccentralMod'>Client Central</a>
+                                                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                                            <a className="text-blue-600"
+                                                               href='/projects/nwea'>NWEA</a>
                                                         </td>
-                                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                                            2021
+                                                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                                            2021-Present
                                                         </td>
                                                     </tr>
                                                     <tr class="bg-white border-b">
