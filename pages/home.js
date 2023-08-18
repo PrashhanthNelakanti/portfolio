@@ -1,6 +1,51 @@
 import Marquee from "react-fast-marquee";
 import Footer from "../components/Footer";
-const Home = () => {
+import pool from '../util/pgdb';
+
+async function getData() {
+  const client = await pool.connect();
+
+  try {
+    const result = await client.query('SELECT * FROM public.my_table limit 100000');
+    return result.rows;
+  } finally {
+    client.release();
+  }
+}
+
+const handleInsertData = async () => {
+  try {
+    const response = await fetch('/api/insertData', {
+      method: 'POST',
+      body: JSON.stringify({id:'21' , name: 'John1 Doe', email: 'john1@example.com' }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    console.log(response)
+    if (response.ok) {
+      console.log('Data inserted successfully!');
+    } else {
+      console.error('Error inserting data:', response.statusText);
+    }
+  } catch (error) {
+    console.error('Error inserting data:', error);
+  }
+};
+
+export async function getStaticProps() {
+  const data = await getData();
+
+
+  return {
+    props: {
+      data,
+    },
+  };
+}
+const Home = ({ data }) => {
+  console.log(data)
+  //handleInsertData();
   return (
     <div>
       <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-18">

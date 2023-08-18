@@ -29,7 +29,7 @@ export default function Register() {
       password
     };
     // save the post
-    let response = await fetch('/api/personalnfo', {
+    let response = await fetch('/api/v1/pg/registerUser', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ export default function Register() {
       // set the message
       return setMessage(data.message);
     } else {
-      let response = await fetch('/api/personalnfoUpdate', {
+      let response = await fetch('/api/v1/pg/registerUser', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
